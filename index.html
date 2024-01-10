@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - TONI'S TRAMEZZINERIA</title>
+    <style>
+        /* Reset dei margini e dei padding */
+        body,
+        h1,
+        p,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Stile del body */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Stile dell'header */
+        header {
+            background-color: #896E4E;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap; /* Per gestire il wrap degli elementi su schermi più piccoli */
+        }
+
+        /* Stile delle scritte "Menu" e "About Us" */
+        .menu-item {
+            color: #F2F0CF;
+            text-decoration: none;
+        }
+
+        /* Stile dell'immagine centrale */
+        .logo-container {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 100px;
+            height: auto;
+        }
+
+        /* Stile del tasto di login */
+        .login-button {
+            background-color: #F2F0CF;
+            color: #012622;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Aggiungi uno stile quando il cursore è sopra il tasto di login */
+        .login-button:hover {
+            background-color: #012622;
+            color: #F2F0CF;
+        }
+
+        /* Media query per dispositivi con larghezza massima di 600px */
+        @media screen and (max-width: 600px) {
+            header {
+                max-width: 100%; /* Imposta la larghezza massima dell'header al 100% dello schermo */
+            }
+
+            /* Riduci la dimensione del testo per le scritte "Menu" e "About Us" */
+            .menu-item {
+                font-size: 14px; /* Puoi regolare questo valore in base alle tue preferenze */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- Scritte "Menu" e "About Us" con link alle pagine -->
+        <a href="#" class="menu-item">Menu</a>
+        <a href="#" class="menu-item">About Us</a>
+
+        <!-- Contenitore per l'immagine centrale -->
+        <div class="logo-container">
+            <!-- Immagine centrale -->
+            <img src="resources/images/logo.png" alt="Logo" class="logo">
+        </div>
+
+        <!-- Tasto di login -->
+        <button class="login-button" onclick="openLoginPopup()">LOGIN</button>
+    </header>
+
+    <!-- Altri contenuti del tuo sito vanno qui -->
+
+    <script>
+        function openLoginPopup() {
+            // Aggiungi il codice per aprire il pop-up di login
+            console.log("Apri il pop-up di login");
+        }
+    </script>
+
+</body>
+
+</html>
