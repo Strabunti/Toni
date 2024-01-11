@@ -1,107 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage - TONI'S TRAMEZZINERIA</title>
-    <style>
-        /* Reset dei margini e dei padding */
-        body,
-        h1,
-        p,
-        ul {
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Stile del body */
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        /* Stile dell'header */
-        header {
-            background-color: #896E4E;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap; /* Per gestire il wrap degli elementi su schermi più piccoli */
-        }
-
-        /* Stile delle scritte "Menu" e "About Us" */
-        .menu-item {
-            color: #F2F0CF;
-            text-decoration: none;
-        }
-
-        /* Stile dell'immagine centrale */
-        .logo-container {
-            flex-grow: 1;
-            text-align: center;
-        }
-
-        .logo {
-            max-width: 100px;
-            height: auto;
-        }
-
-        /* Stile del tasto di login */
-        .login-button {
-            background-color: #F2F0CF;
-            color: #012622;
-            padding: 8px 16px;
-            border: none;
-            cursor: pointer;
-        }
-
-        /* Aggiungi uno stile quando il cursore è sopra il tasto di login */
-        .login-button:hover {
-            background-color: #012622;
-            color: #F2F0CF;
-        }
-
-        /* Media query per dispositivi con larghezza massima di 600px */
-        @media screen and (max-width: 600px) {
-            header {
-                max-width: 100%; /* Imposta la larghezza massima dell'header al 100% dello schermo */
-            }
-
-            /* Riduci la dimensione del testo per le scritte "Menu" e "About Us" */
-            .menu-item {
-                font-size: 14px; /* Puoi regolare questo valore in base alle tue preferenze */
-            }
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TONI'S TRAMEZZINERIA</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
-
-    <!-- Header -->
     <header>
-        <!-- Scritte "Menu" e "About Us" con link alle pagine -->
-        <a href="#" class="menu-item">Menu</a>
-        <a href="#" class="menu-item">About Us</a>
-
-        <!-- Contenitore per l'immagine centrale -->
-        <div class="logo-container">
-            <!-- Immagine centrale -->
-            <img src="resources/images/logo.png" alt="Logo" class="logo">
-        </div>
-
-        <!-- Tasto di login -->
-        <button class="login-button" onclick="openLoginPopup()">LOGIN</button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#menu" aria-label="Vai al Menu" role="link">Menu</a></li>
+                <li><a href="#aboutUs" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
+            </ul>
+        </nav>
+        
+        <img id="headerLogo" src="resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA" >
+        <button id="loginButton" aria-label="Login" class="login-button">LOGIN</button>
     </header>
 
-    <!-- Altri contenuti del tuo sito vanno qui -->
+    <main>
+        <section>
+            <h1>TONI'S TRAMEZZINERIA</h1>
+            <h3>Il tuo paninaro e tramezzinatore di fiducia</h3>
+        </section>
+        <section>
+            <h2>TOMMY CONSIGLIA</h2>
+            <h3>IL BESTSELLER</h3>
+            <h4>PORTEO</h4>
+            <img src="resources/images/vinileSemiAperto.png" alt="Immagine del panino bestseller">
+            <p>Col suo gusto inconfondibile dato dalla miglior versione della salsa TONI’S in commercio, il Pulled Pork è senz’ombra di dubbio ciò su cui puntare per la tua prima degustazione del mondo di TONI’S!</p>
+            <h3>PANINO DEL MESE</h3>
+            <h4>PORTEO</h4>
+            <img src="resources/images/vinileSemiAperto.png" alt="Immagine del panino del mese">
+            <p>Se il freddo inverno ti mette alle strette, un solo morso del Piccantino sarà sufficiente per riuscire a scaldarti un po’!</p>
+        </section>
 
-    <script>
-        function openLoginPopup() {
-            // Aggiungi il codice per aprire il pop-up di login
-            console.log("Apri il pop-up di login");
-        }
-    </script>
+        <section>
+            <h2>DOV'E' TONI'S?</h2>
+            <p>Ti abbiamo già convinto? Ottimo! Vieni a trovarci a Padova, in zona Portello!</p>
+            <button id="goToAboutUs" aria-label="AboutUs">DOVE SIAMO</button>
+        </section>
 
+        <section>
+            <h2>LA NOSTRA SCELTA</h2>
+            <ul>
+                <li>HAMBURGER</li>
+                <li>PANINI</li>
+                <li>TRAMEZZINI</li>
+            </ul>
+            <!-- ANDRA' A CAMBIARE IN BASE ALLA CATEGORIA SELEZIONATA -->
+            <h3>PORTEO</h3>
+            <!-- ANDRA' A CAMBIARE IN BASE ALLA CATEGORIA SELEZIONATA -->
+            <img src="resources/images/vinileChiuso.png" alt ="Immagine rappresentativa della categoria di cibo selezionata">
+        </section>
+
+        <section>
+            <h2>DICONO DI TONI'S</h2>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <img src="resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA" id="footerLogo">
+            <address class="address">
+                TONI'S TRAMEZZINERIA <br/>
+                Via del Portello, 24, 35129, Padova (PD) <br>
+            </address>
+            <div class="social-media-links">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="resources/images/facebookLogo.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="resources/images/instagramLogo.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+        <div>
+            <p id="footerCopyright">&copy; 2024 Strabunti. Tutti i diritti riservati.</p>
+        </div>
+        <div class="mappa-del-sito">
+            <h2>Mappa del Sito</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#aboutUs">About Us</a></li>
+                <!-- Aggiungi altri link del sito secondo la tua struttura -->
+            </ul>
+        </div>
+    </footer>
+    
 </body>
 
 </html>

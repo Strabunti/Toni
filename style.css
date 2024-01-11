@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #896E4E;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #F2F0CF;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+#headerLogo {
+    display: block;
+    margin: 0 auto;
+    width: 10%;
+}
+
+.login-button {
+    font-family: "Poppins", sans-serif;
+    background-color: #F2F0CF;
+    color: #012622;
+    padding: 1em 3.5em;
+    border: none;
+    border-radius: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.login-button:hover {
+    background-color: #D1C68A;
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #012622;
+    color: #F2F0CF;
+}
+
+#footerLogo {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.address {
+    margin-bottom: 10px;
+}
+
+.social-media-links img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.mappa-del-sito {
+    text-align: right;
+}
+
+.mappa-del-sito ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mappa-del-sito li {
+    margin-bottom: 5px;
+}
+
+.mappa-del-sito a {
+    text-decoration: none;
+    color: #F2F0CF;
+    font-weight: bold;
+}
+
+.mappa-del-sito a:hover {
+    text-decoration: underline;
+}
+
+#footerCopyright {
+    text-align: center;
+}
