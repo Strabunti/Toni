@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/login-styles.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div id="login-container">
+        <div id="logo">
+            <img src="resources/images/logo.png" alt="Toni's Logo">
+        </div>
+        <form action="login_process.php" method="post">
+            <label for="username">Login:</label>
+            <input type="text" name="username" placeholder="Username" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Accedi</button>
+        </form>
+        <hr>
+    </div>
+</body>
+</html>
