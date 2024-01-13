@@ -1,21 +1,16 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "Inter", sans-serif;
-}
-
+/*#region HEADER*/
 header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
     background-color: #896E4E;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .main-nav ul {
-    list-style: none;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .main-nav li {
@@ -24,43 +19,26 @@ header {
 }
 
 .main-nav a {
-    text-decoration: none;
     color: #F2F0CF;
     font-weight: normal;
     font-size: 16px;
+    text-decoration: none;
 }
 
 #headerLogo {
-    display: block;
     margin: 0 auto;
     width: 10%;
 }
+/*#endregion*/
 
-.login-button {
-    font-family: "Poppins", sans-serif;
-    background-color: #F2F0CF;
-    color: #012622;
-    padding: 1em 3.5em;
-    border: none;
-    border-radius: 32px;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-.login-button:hover {
-    background-color: #D1C68A;
-}
-
-
+/*#region FOOTER*/
 footer {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
     background-color: #012622;
     color: #F2F0CF;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #footerLogo {
@@ -73,8 +51,8 @@ footer {
 }
 
 .social-media-links img {
-    width: 30px;
     margin-right: 10px;
+    width: 30px;
 }
 
 .mappa-del-sito {
@@ -82,8 +60,8 @@ footer {
 }
 
 .mappa-del-sito ul {
-    list-style: none;
     padding: 0;
+    list-style: none;
 }
 
 .mappa-del-sito li {
@@ -91,9 +69,9 @@ footer {
 }
 
 .mappa-del-sito a {
-    text-decoration: none;
     color: #F2F0CF;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .mappa-del-sito a:hover {
@@ -102,4 +80,147 @@ footer {
 
 #footerCopyright {
     text-align: center;
+}
+/*#endregion*/
+
+/*#region BODY*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+h1 {
+    margin: 0;
+    font-size: 4.5em;
+}
+
+h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+/*#endregion*/
+
+/*#region MAIN-SECTION*/
+#mainSection {
+    display: flex;
+    text-align: center;
+    background: no-repeat center url("resources/images/homeBackground.png");
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 30em;
+}
+
+.rectangle {
+    background-color: #896E4E;
+    color: #F2F0CF;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+/*#endregion*/
+
+/*#region STANDARD-BUTTON*/
+.standard-button {
+    display: flex;
+    background-color: #F2F0CF;
+    color: #012622;
+    padding: 1em 3.5em;
+    border: none;
+    border-radius: 32px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+
+.standard-button:hover {
+    background-color: #D1C68A;
+}
+/*#endregion*/
+
+#consigliSection {
+    text-align: center;
+    background-color: #EFE7C8;
+    padding: 20px;
+    position: relative;
+}
+
+.left-rectangle,
+.top-rectangle {
+    position: absolute;
+    background-color: #5D1E09;
+    width: 15px;
+    height: 100%;
+}
+
+.left-rectangle {
+    left: 0;
+    top: 0;
+}
+
+.top-rectangle {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+}
+
+#consigliSection h2.align-right {
+    text-align: right;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    color: #012622;
+}
+
+#consigliSection .side-by-side {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#consigliSection .consiglio-item {
+    width: 48%;
+    align-items: center;
+    text-align: center;
+}
+
+#consigliSection .consiglio-item h3 {
+    color: #012622;
+}
+
+#consigliSection .image-button-panino {
+    background-image: url('resources/images/vinileSemiAperto.png');
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    width: 350px;
+    height: 247px;
+}
+
+#consigliSection .image-button-panino h4 {
+    color: #E09200;
+    position: relative;
+    margin: 0;
+    left: -50px;
+    top: 100px;
+    padding: 10px;
+    font-size: initial;
+}
+
+.consiglio-item-description {
+    color: #012622;
+    margin-right: 20%;
+    margin-left: 20%;
+    text-align: center;
+    
 }
