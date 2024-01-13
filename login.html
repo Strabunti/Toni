@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/login-styles.css">
-    <script src="js/validate.js" defer></script>
+    <script src="backend/js/validate.js" defer></script>
     <title>Login Page</title>
 </head>
 <body>
     <div id="login-container">
         <div id="logo">
-            <img src="resources/images/logo.png" onsubmit="return validateLogin()" alt="Toni's Logo">
+            <img src="resources/images/logo.png" alt="Toni's Logo">
         </div>
-        <form action="login_process.php" method="post">
+        <form action="login_process.php" onsubmit="return validateLogin()" method="post">
             <label for="username">Login:</label>
-            <input type="text" name="username" id="Username" placeholder="username" onblur="return validateUsername()" required>
+            <input type="text" name="username" id="Usernsame" placeholder="username" onblur="return validateUsername()" required>
             <label for="password">Password:</label>
             <input type="password" name="password" id="Password" placeholder="password" onblur="return validatePassword()" required>
             <button type="submit">Accedi</button>
