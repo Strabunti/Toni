@@ -12,7 +12,7 @@ class DataBase
         exit();
     }
 
-    public function connect($hostname = "localhost", $username = "toni", $password = "admin", $database = "toni")
+    public static function connect($hostname = "localhost", $username = "toni", $password = "admin", $database = "toni")
     {
         try {
             if (!isset(self::$connection)) {
@@ -23,16 +23,16 @@ class DataBase
                 die("Connection failed: " . self::$connection->connect_error);
             }
         } catch (Exception $e) {
-            $this->server_error();
+            self::server_error();
         }
     }
 
-    public function runQuery($query, ...$params)
+    public static function runQuery($query, ...$params)
     {
         // Check if the connection has been established
         if (!self::$connection) {
             error_log("Error: Connection not established. Conencting with default parameters.");
-            $this->connect();
+            self::connect();
         }
 
         // Prepare the statement
@@ -77,7 +77,7 @@ class DataBase
         return $data;
     }
 
-    public function closeConnection()
+    public static function closeConnection()
     {
         // Close the database connection
         self::$connection->close();

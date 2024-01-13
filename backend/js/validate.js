@@ -1,14 +1,14 @@
 function validateLogin() {
     if (!validateUsername()){
         return false;
-    } else if (!validatePassword()){
+    } /*else if (!validatePassword()){
         return false;
-    }
+    }*/
     return true;
 }
 
 function validateUsername() {
-    var usernameInput = document.getElementById("Username");
+    var usernameInput = document.getElementById("username");
     if(usernameInput.value == null){
         return;
     }
@@ -40,7 +40,7 @@ function validateUsername() {
 }
 
 function validatePassword() {
-    var passwordInput = document.getElementById("Password");
+    var passwordInput = document.getElementById("password");
     
     if(passwordInput.value == null){
         return;

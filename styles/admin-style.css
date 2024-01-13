@@ -15,13 +15,133 @@ body {
     margin-top: 10px;
     display: block;
 }
+.comment-user {
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 3px;
+}
+
+.comment-date {
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.fade-out-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Set the height of the fade-out effect */
+    background: linear-gradient(rgba(145, 115, 82, 0), rgba(145, 115, 82, 0.8), rgba(145, 115, 82, 1));
+    pointer-events: none; /* Ensure the overlay does not interfere with interactions */
+}
+
+.comment-text {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.comment-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 2px;
+}
+
+.comment-delete{
+    background-color: #917352;
+    border: none;
+    padding: none;
+    margin-top: 5px;
+    margin-right: 20px;
+    width: 50px; /* Set the desired width */
+    height: 40px; /* Set the desired height */
+}
+
+.button-image {
+    width: 100%; /* Make the image fill the width of the container */
+    height: 100%; /* Make the image fill the height of the container */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}
 
 .comment-card {
     border: 1px solid #ccc;
+    background-color: #917352;
+    position: relative;
     border-radius: 8px;
     padding: 10px;
     margin: 10px 0;
-    width: 300px;
+    margin-left: 10px;
+    width: calc(33.33% - 20px); /* 3 cards in a row with margin in between */
+    height: 240px;
     display: inline-block;
     vertical-align: top;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    overflow: hidden;
+    word-wrap: break-word;
+    border-color: #5D1E09;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .comment-card {
+        width: calc(50% - 20px); /* 2 cards in a row with margin in between */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .comment-card {
+        width: 100%; /* 1 card per row for smaller screens */
+    }
+}
+
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60%;
+    margin: 20%;
+    padding: 2%;
+    background-color: rgb(145, 115, 82);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    border-color: #5D1E09;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.popup-comment-user {
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.close-button {
+    background-color: #917352;
+    border: none;
+    padding: none;
+    margin-top: 5px;
+    margin-right: 20px;
+    width: 40px; /* Set the desired width */
+    height: 30px; /* Set the desired height */
 }

@@ -1,5 +1,5 @@
 <?php
-require_once('user_manager.php');
+require_once('user-manager.php');
 
 class AuthFunctions
 {
@@ -15,10 +15,17 @@ class AuthFunctions
         return isset($_SESSION['is_admin']) && $_SESSION['is_admin'];
     }
 
+    public static function connectToDB($hostname = "localhost", $username = "toni", $password = "admin", $database = "toni")
+    {
+        DataBase::connect($hostname, $username, $password, $database);
+    }
+
     public static function login($username, $password)
     {
         // Check if the user is an admin
         $admin_info = user_manager::get_admin($username);
+        //log the admin info
+        error_log("checking admin info" . print_r($admin_info, true));
         if ($admin_info) {
             // Admin login logic
             // (You may want to compare passwords and handle admin-specific tasks)
@@ -26,15 +33,19 @@ class AuthFunctions
 
             // Example: Set admin-specific session variable
             $_SESSION['is_admin'] = true;
+            error_log("Is admin setted to true");
+        }else {
+            $_SESSION['is_admin'] = false;
+            error_log("Is admin setted to false");
         }
 
         // Regular user login logic
         $user_info = user_manager::get_by_username($username);
-
-        if ($user_info && password_verify($password, $user_info[0]['password'])) {
+        if ($user_info && $password == $user_info[0]['password']) {
             // Valid login, set session variables
             $_SESSION['username'] = $user_info[0]['username'];
-
+            error_log(print_r($_SESSION, true));
+            error_log("Login successful by auth.php");
             return true;
         }
 
