@@ -5,6 +5,13 @@ class DataBase
 {
     private static $connection;
 
+    private function server_error()
+    {
+        // Redirect to the error page
+        header("Location: /error.php");
+        exit();
+    }
+
     public function connect($hostname = "localhost", $username = "toni", $password = "admin", $database = "toni")
     {
         try {
@@ -13,27 +20,27 @@ class DataBase
             }
             // Check the connection
             if (self::$connection->connect_error) {
-                die("Connection failed: " . self::connection->connect_error);
+                die("Connection failed: " . self::$connection->connect_error);
             }
         } catch (Exception $e) {
-            server_error();
+            $this->server_error();
         }
     }
 
     public function runQuery($query, ...$params)
     {
         // Check if the connection has been established
-        if (!self::$conn) {
+        if (!self::$connection) {
             error_log("Error: Connection not established. Conencting with default parameters.");
             $this->connect();
         }
 
         // Prepare the statement
-        $stmt = self::$conn->prepare($query);
+        $stmt = self::$connection->prepare($query);
 
         // Check if the statement was prepared successfully
         if (!$stmt) {
-            return "Error: " . self::$conn->error;
+            return "Error: " . self::$connection->error;
         }
 
         // Dynamically bind parameters
@@ -73,8 +80,10 @@ class DataBase
     public function closeConnection()
     {
         // Close the database connection
-        $this->conn->close();
+        self::$connection->close();
     }
+
+
 }
 
 ?>
