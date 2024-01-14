@@ -1,0 +1,142 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #5D1E09;
+}
+
+header {
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #F2F0CF;
+    background-color: #896E4E;
+    padding: 0.5em;
+    max-width: fit-content;
+    width: 100%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+}
+
+@media only screen and (max-width: 600px) {
+   
+}
+
+.toni-menu-img {
+    width: 100%; /* Occupa l'intera larghezza dello schermo */
+    max-height: 250px; /* Imposta la massima altezza verticale desiderata */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.toni-menu-img .centered-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav {
+    background-color: #896E4E;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.nav-title {
+    color: #EFE7C8;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0; 
+    flex-wrap: wrap; 
+}
+
+nav li {
+    margin: 0 10px; 
+}
+
+nav a {
+    text-decoration: none;
+    color: #EFE7C8;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #896E4E;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #F2F0CF;
+    color: #012622;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+
+    h1 {
+        font-size: 2.4em;
+    }
+
+    nav {
+        flex-direction: column; /* Colonna per l'allineamento verticale su schermi più piccoli */
+        text-align: center; /* Centra il testo e i bottoni su schermi più piccoli */
+    }
+
+    nav ul {
+        width: 100%; /* Larghezza al 100% su schermi più piccoli */
+        padding: 0; /* Rimuovi il padding per evitare spazi inutili */
+    }
+
+    nav li {
+        margin: 10px 0; /* Aggiunge spazio verticale tra i bottoni su schermi più piccoli */
+        width: 100%; /* Rendi i bottoni larghi al 100% del contenitore */
+    }
+
+    nav a {
+        padding: 8px 12px; /* Riduci il padding per rendere i bottoni più piccoli */
+        border-radius: 10px; /* Riduci il bordo per mantenere l'aspetto arrotondato */
+    }
+
+}

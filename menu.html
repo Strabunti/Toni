@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/styles/stylesMenu.css" />
+        <script src="/scripts/scriptMenu.js"></script>
+		<title>Menu</title>
+    </head>
+    <body>
+        <header>
+            <h1 role="heading" aria-level="1" aria-label="Menu">MENU</h1>
+            <img src="/resources/images/ToniMenu.jpg" alt="Immagine di prodotti in vetrina di toni" class="toni-menu-img"/>         
+        </header>
+        
+        <nav>
+            <div class="nav-title">PRODOTTI</div>
+            <ul>
+                <li><a href="#tramezzini">Tramezzini</a></li>
+                <li><a href="#panini">Panini</a></li>
+                <li><a href="#burgers">Burgers</a></li>
+            </ul>
+        </nav>
+
+        <div id="popup" class="popup">
+            <div id="popup-content" class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h2 id="popup-title"></h2>
+                <p id="popup-description"></p>
+                <p id="popup-ingredients"></p>
+            </div>
+        </div>
+
+        <section id="tramezzini">
+            <article onclick="openPopup('Nome Tramezzino 1', 'Descrizione del Tramezzino 1', 'Ingredienti del Tramezzino 1')">
+                <h3 role="heading" aria-level="3">Nome Tramezzino 1</h3>
+                <img src="/resources/images/vinilePORTEO.png" alt="Tramezzino 1" />
+            </article>
+            
+            <article onclick="openPopup('Nome Tramezzino 2', 'Descrizione del Tramezzino 2', 'Ingredienti del Tramezzino 2')">
+                <h3 role="heading" aria-level="3">Nome Tramezzino 2</h3>
+                <img src="/resources/images/vinilePORTEO.png" alt="Tramezzino 2" />
+            </article>
+            <!-- Aggiungi più prodotti tramezzini secondo necessità -->
+        </section>
+    
+        <section id="panini">
+            <article onclick="openPopup('Nome Panino 1', 'Descrizione del Panino 1', 'Ingredienti del Panino 1')">
+                <h3 role="heading" aria-level="3">Nome Panino 1</h3>
+                <img src="/resources/images/vinilePORTEO.png" alt="Panino 1" />
+            </article>
+            
+            <article onclick="openPopup('Nome Panino 2', 'Descrizione del Panino 2', 'Ingredienti del Panino 2')">
+                <h3 role="heading" aria-level="3">Nome Panino 2</h3>
+                <img src="/resources/images/vinilePORTEO.png" alt="Panino 2" />
+            </article>
+        </section>
+    
+        <section id="burgers">
+            <article onclick="openPopup('Nome Burger 1', 'Descrizione del Burger 1', 'Ingredienti del Burger 1')">
+                <h3 role="heading" aria-level="3">Nome Burger 1</h3>
+                <img src="/resources/images/vinilePORTEO.png" alt="Burger 1" />
+            </article>
+            
+            <article onclick="openPopup('Nome Burger 2', 'Descrizione del Burger 2', 'Ingredienti del Burger 2')">
+                <h3 role="heading" aria-level="3">Nome Burger 2</h3>
+                <img src="/resources/images/vinilePORTEO.png" alt="Burger 2" />
+            </article>
+        </section>
+
+        
+
+     </body>
+</html>
