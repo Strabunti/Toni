@@ -12,14 +12,21 @@
 <body>
     <!-- HEADER -->
     <header>
+        <div id="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        
         <nav class="main-nav">
             <ul>
                 <li><a href="#menu" aria-label="Vai al Menu" role="link">Menu</a></li>
                 <li><a href="#aboutUs" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
             </ul>
         </nav>
-        
-        <img id="headerLogo" src="resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA" >
+
+        <div class="toggle"></div>
+        <img id="headerLogo" src="resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA">
         <button id="loginButton" aria-label="Login" class="standard-button">LOGIN</button>
     </header>
 
@@ -27,7 +34,7 @@
         <!-- MAIN SECTION -->
         <section id="mainSection">
             <div class="rectangle" id="titleRectangle"><h1>TONI'S<br/>Tramezzineria</h1></div>
-            <div class="rectangle" id="subtitleRectangle"><h2>Il tuo paninaro e tramezzinatore di fiducia</h2></div>
+            <div class="rectangle" id="subtitleRectangle"><h3>Il tuo paninaro e tramezzinatore di fiducia</h3></div>
             <div class="space"></div>
             <button id="toMenuButton" aria-label="Vai al Menu" class="standard-button">GUARDA IL MENU</button>
         </section>
@@ -62,9 +69,7 @@
             <h2 class="align-left">DOV'E' TONI'S?</h2>
             <div class="side-by-side">
                 <div class="map-container">
-                    <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11204.230924611375!2d11.892494!3d45.4081754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477edaf723594ce7%3A0x822810e7e09bc854!2sToni&#39;s%20Tramezzineria!5e0!3m2!1sit!2sit!4v1705222707812!5m2!1sit!2sit" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11204.230924611375!2d11.892494!3d45.4081754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477edaf723594ce7%3A0x822810e7e09bc854!2sToni&#39;s%20Tramezzineria!5e0!3m2!1sit!2sit!4v1705222707812!5m2!1sit!2sit" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="location-info">
                     <p>Ti abbiamo già convinto? Ottimo! Vieni a trovarci a Padova, in zona Portello!</p>
@@ -73,23 +78,33 @@
             </div>
         </section>
 
+        <!-- LA NOSTRA SCELTA SECTION -->
         <section id="sceltaSection">
+
             <div class="left-rectangle"></div>
             <div class="top-rectangle"></div>
+
             <h2 class="align-right">LA NOSTRA SCELTA</h2>
+
             <div class="side-by-side">
-            <div class="buttons-container">
-                <ul>
-                    <li><button class="category-button"><h4>HAMBURGER</h4></button></li>
-                    <li><button class="category-button"><h4>PANINI</h4></button></li>
-                    <li><button class="category-button"><h4>TRAMEZZINI</h4></button></li>
-                </ul>
+                <div class="buttons-container">
+                    <ul>
+                        <li><button class="category-button"><h4>HAMBURGER</h4></button></li>
+                        <li><button class="category-button"><h4>PANINI</h4></button></li>
+                        <li><button class="category-button"><h4>TRAMEZZINI</h4></button></li>
+                    </ul>
+                </div>
+                <div class="mobile-buttons">
+                    <button class="mobile-category-button"><h4>HAMBURGER</h4></button>
+                    <button class="mobile-category-button"><h4>PANINI</h4></button>
+                    <button class="mobile-category-button"><h4>TRAMEZZINI</h4></button>
+                </div>
+                <div class="image-and-heading">
+                    <h3>PORTEO</h3>
+                    <img src="resources/images/vinileChiuso.png" alt="Immagine rappresentativa della categoria di cibo selezionata">
+                </div>
+
             </div>
-            <div class="image-and-heading">
-                <h3>PORTEO</h3>
-                <img src="resources/images/vinileChiuso.png" alt="Immagine rappresentativa della categoria di cibo selezionata">
-            </div>
-        </div>
         </section>
 
         <!-- RECENSIONI SECTION -->
@@ -119,7 +134,7 @@
             <p id="footerCopyright">&copy; 2024 Strabunti. Tutti i diritti riservati.</p>
         </div>
         <div class="mappa-del-sito">
-            <h2>Mappa del Sito</h2>
+            <h3>Mappa del Sito</h3>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#menu">Menu</a></li>
@@ -128,6 +143,24 @@
             </ul>
         </div>
     </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const menuIcon = document.getElementById('menu-icon');
+          const nav = document.querySelector('.main-nav');
+          const toggle = document.querySelector('.toggle');
+    
+          menuIcon.addEventListener('click', function () {
+            menuIcon.classList.toggle('open');
+            nav.classList.toggle('open');
+          });
+    
+          toggle.addEventListener('click', function () {
+            toggle.classList.toggle('open');
+          });
+        });
+      </script>
     
 </body>
 
