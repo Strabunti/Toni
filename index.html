@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!-- HEADER -->
     <header>
         <nav class="main-nav">
             <ul>
@@ -23,12 +24,15 @@
     </header>
 
     <main>
+        <!-- MAIN SECTION -->
         <section id="mainSection">
             <div class="rectangle" id="titleRectangle"><h1>TONI'S<br/>Tramezzineria</h1></div>
             <div class="rectangle" id="subtitleRectangle"><h2>Il tuo paninaro e tramezzinatore di fiducia</h2></div>
             <div class="space"></div>
             <button id="toMenuButton" aria-label="Vai al Menu" class="standard-button">GUARDA IL MENU</button>
         </section>
+
+        <!-- CONSIGLI SECTION -->
         <section id="consigliSection">
             <div class="left-rectangle"></div>
             <div class="top-rectangle"></div>
@@ -51,32 +55,50 @@
             </div>
         </section>
         
-        
-        
-        <section>
-            <h2>DOV'E' TONI'S?</h2>
-            <p>Ti abbiamo già convinto? Ottimo! Vieni a trovarci a Padova, in zona Portello!</p>
-            <button id="goToAboutUs" aria-label="AboutUs">DOVE SIAMO</button>
+        <!-- DOVE SIAMO SECTION -->
+        <section id="doveSiamoSection">
+            <div class="left-rectangle"></div>
+            <div class="top-rectangle"></div>
+            <h2 class="align-left">DOV'E' TONI'S?</h2>
+            <div class="side-by-side">
+                <div class="map-container">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11204.230924611375!2d11.892494!3d45.4081754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477edaf723594ce7%3A0x822810e7e09bc854!2sToni&#39;s%20Tramezzineria!5e0!3m2!1sit!2sit!4v1705222707812!5m2!1sit!2sit" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="location-info">
+                    <p>Ti abbiamo già convinto? Ottimo! Vieni a trovarci a Padova, in zona Portello!</p>
+                    <button id="goToAboutUs" aria-label="AboutUs" class="standard-button">DOVE SIAMO</button>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>LA NOSTRA SCELTA</h2>
-            <ul>
-                <li>HAMBURGER</li>
-                <li>PANINI</li>
-                <li>TRAMEZZINI</li>
-            </ul>
-            <!-- ANDRA' A CAMBIARE IN BASE ALLA CATEGORIA SELEZIONATA -->
-            <h3>PORTEO</h3>
-            <!-- ANDRA' A CAMBIARE IN BASE ALLA CATEGORIA SELEZIONATA -->
-            <img src="resources/images/vinileChiuso.png" alt ="Immagine rappresentativa della categoria di cibo selezionata">
+        <section id="sceltaSection">
+            <div class="left-rectangle"></div>
+            <div class="top-rectangle"></div>
+            <h2 class="align-right">LA NOSTRA SCELTA</h2>
+            <div class="side-by-side">
+            <div class="buttons-container">
+                <ul>
+                    <li><button class="category-button"><h4>HAMBURGER</h4></button></li>
+                    <li><button class="category-button"><h4>PANINI</h4></button></li>
+                    <li><button class="category-button"><h4>TRAMEZZINI</h4></button></li>
+                </ul>
+            </div>
+            <div class="image-and-heading">
+                <h3>PORTEO</h3>
+                <img src="resources/images/vinileChiuso.png" alt="Immagine rappresentativa della categoria di cibo selezionata">
+            </div>
+        </div>
         </section>
 
+        <!-- RECENSIONI SECTION -->
         <section>
             <h2>DICONO DI TONI'S</h2>
         </section>
     </main>
 
+    <!-- FOOTER -->
     <footer>
         <div>
             <img src="resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA" id="footerLogo">
