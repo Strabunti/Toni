@@ -14,7 +14,6 @@ h1 {
     top: 43%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
     color: #F2F0CF;
     background-color: #896E4E;
     padding: 0.5em;
@@ -23,10 +22,6 @@ h1 {
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-size: 3em;
-}
-
-@media only screen and (max-width: 600px) {
-   
 }
 
 .toni-menu-img {
@@ -55,7 +50,7 @@ nav {
 .nav-title {
     color: #EFE7C8;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: bold;
 }
 
@@ -82,6 +77,121 @@ nav a {
 nav a:hover {
     background-color: #F2F0CF;
     color: #012622;
+}
+
+#tramezzini {
+    background-color: #F2F0CF;
+    color: #012622;
+    padding: 20px;
+    margin: 10px;
+    margin-right: 0px;
+}
+
+#tramezzini h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#tramezzini p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em; 
+}
+
+#panini {
+    background-color: #896E4E;
+    color: #F2F0CF;
+    padding: 20px;
+    margin: 10px;
+    margin-right: 0px;
+}
+
+#panini h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#panini p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+}
+
+#burgers {
+    background-color: #F2F0CF;
+    color: #012622;
+    padding: 20px;
+    margin: 10px;
+    margin-right: 0px;
+}
+
+
+#burgers h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#burgers p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+}
+
+#tramezzini,
+#panini,
+#burgers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Aggiorna lo stile degli articoli per avere un layout affiancato */
+#tramezzini article,
+#panini article,
+#burgers article {
+    flex: 0 0 calc(33.33% - 20px); 
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+#tramezzini h3,
+#panini h3,
+#burgers h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em; /* Dimensione del carattere del nome del prodotto */
+    margin-top: 10px; /* Aggiunge uno spazio sopra il nome del prodotto */
+    margin-bottom: 5px; /* Aggiunge uno spazio sotto il nome del prodotto */
+}
+
+#tramezzini img,
+#panini img,
+#burgers img {
+    width: 80%;
+    height: auto; 
+}
+
+#tramezzini article:nth-child(odd),
+#panini article:nth-child(odd),
+#burgers article:nth-child(odd) {
+    margin-left: auto; /* Sposta verso sinistra quando è dispari */
+    margin-right: auto; /* Sposta verso destra quando è pari */
+}
+
+#tramezzini article:nth-child(even),    
+#panini article:nth-child(even),
+#burgers article:nth-child(even) {
+    margin-right: auto; /* Sposta verso destra quando è dispari */
+    margin-left: auto; /* Sposta verso sinistra quando è pari */
+}
+
+#tramezzini article:hover,
+#panini article:hover,
+#burgers article:hover {
+    transform: scale(1.05); /* Ingrandisci leggermente l'articolo */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Aggiungi un'ombra sottile */
 }
 
 .popup {
@@ -113,6 +223,21 @@ nav a:hover {
     cursor: pointer;
 }
 
+@media only screen and (max-width: 900px) {
+    /* 2 prodotti per riga su dispositivi medi */
+    #tramezzini article,
+    #panini article,
+    #burgers article {
+        flex: 0 0 calc(50% - 20px);
+    }
+
+    #burgers article:nth-child(odd) {
+        margin-left: auto; /* Sposta verso sinistra quando è dispari */
+        margin-right: auto; /* Sposta verso destra quando è pari */
+    }
+}
+
+
 @media only screen and (max-width: 600px) {
 
     h1 {
@@ -138,5 +263,10 @@ nav a:hover {
         padding: 8px 12px; /* Riduci il padding per rendere i bottoni più piccoli */
         border-radius: 10px; /* Riduci il bordo per mantenere l'aspetto arrotondato */
     }
-
+    
+    #tramezzini article,
+    #panini article,
+    #burgers article {
+        flex: 0 0 calc(100% - 20px);
+    }
 }
