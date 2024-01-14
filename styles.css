@@ -1,0 +1,173 @@
+
+/* Stile dell'intestazione */
+
+header {
+    background-color:#EFE7C8;
+    text-align: center;
+}
+
+/* Stile del titolo principale */
+.about {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    background-image: url('immagine1.jpg'); /* Sostituisci 'url_dell_immagine.jpg' con il percorso dell'immagine desiderata */
+    background-size: cover; /* Imposta la dimensione dell'immagine per coprire l'intera area */
+    background-position: center; /* Centra l'immagine all'interno dell'area */
+    background-repeat: no-repeat; /* Impedisce la ripetizione dell'immagine */
+    padding: 60px;
+
+}
+.testo-container {
+    background-color: #836849; /* Imposta il colore di sfondo desiderato */
+    max-height: 10px;
+    max-width: 350px;
+    margin: 0 auto;
+}
+.testoab{
+    font-family: Arial, sans-serif;
+    flex: 1;
+    padding: 20px;
+    font-size: 36px;
+    color: #F2F0CF;
+    background-color: #836849; /* Imposta il colore di sfondo desiderato */
+    border-radius: 8px;
+}
+
+.location {
+    font-family: Arial, sans-serif;
+    background-color:#EFE7C8;
+    border-top: 15px solid #5D1E09;
+    border-left: 15px solid #5D1E09;
+    border-bottom: 7.5px solid #5D1E09;
+    display: flex;
+}
+.testo{
+    font-family: Arial, sans-serif;
+    flex:1;
+    padding:20px;
+}
+.iframe iframe {
+    width: 100%;
+    height: 400px;
+}
+
+.iframe{
+    flex: 1;
+    padding: 20px;
+    margin-left: auto; /* Allinea l'iframe al bordo destro */
+    margin-right: 0;
+}
+.whois {
+    display: flex;
+    font-family: Arial, sans-serif;
+    background-color: #836849;
+    border-top: 7.5px solid #5D1E09;
+    border-left: 15px solid #5D1E09;
+    border-bottom: 7.5px solid #5D1E09;
+}
+
+/* Stile per il testo a sinistra */
+.testow {
+    flex: 1;
+    padding: 20px;
+    color: #fff; /* Aggiunto colore del testo bianco per contrasto */
+}
+
+/* Stile per l'immagine a destra */
+.selfie {
+    padding: 20px;
+}
+
+/* Stile per l'immagine */
+.selfie img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; 
+}
+
+/* Stile del carosello di immagini */
+.carosello {
+    background-color:#EFE7C8;
+    position: relative;
+    margin: 0 auto; /* Centra il carosello rispetto alla larghezza della pagina */
+    max-width: 600px;
+}
+
+/* Stile delle diapositive */
+.diapositiva {
+    display: none;
+    background-color:#EFE7C8;
+}
+
+/* Stile delle immagini delle diapositive */
+.diapositiva img {
+    width: 100%;
+    height: auto;
+}
+
+/* Stile dei pulsanti per cambiare diapositiva */
+.prec, .succ {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+/* Stile del pulsante precedente */
+.prec {
+    left: 0;
+}
+
+/* Stile del pulsante successivo */
+.succ {
+    right: 0;
+}
+
+/* Stile dei punti per selezionare la diapositiva */
+.punti {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Stile dei punti */
+.punto {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #cccccc;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Stile del punto attivo */
+.punto.attivo {
+    background-color: #333333;
+}
+
+/* Stile del piè di pagina */
+footer {
+    background-color:#EFE7C8;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Stile del paragrafo del piè di pagina */
+footer p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #333333;
+}
+
+/* Media query per adattare il layout a schermi piccoli */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,115 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="styles.css">
+    <title>ABOUT TONI'S</title>
+</head>
+<body>
+    <header> <h1>HEADER FIL</h1></header>
+    <main>
+        <section class="about">
+            <div class="testo-container">
+            <h1 class="testoab">ABOUT TONI'S</h1>
+        </div>
+        </section>
+        
+        <section class="location">
+            <div class="testo"> 
+            <h2>DOVE TROVARCI</h2>
+            <p>La tramezzineria di Toni, situata nel cuore della zona universitaria di Padova,
+                ha visto la luce cinque anni fa grazie alla passione imprenditoriale di Tommy, il suo unico e instancabile lavoratore.
+                Fondato con dedizione e amore per l'arte culinaria, questo piccolo 
+                angolo gastronomico si è rapidamente affermato come un punto 
+                di riferimento per gli amanti del buon cibo al Portello. </p>
+            </div>
+
+            <div class="iframe"> 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2801.0577325813347!2d11.889924441340689!3d45.408175371193536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477edaf723594ce7%3A0x822810e7e09bc854!2sToni&#39;s%20Tramezzineria!5e0!3m2!1sit!2sit!4v1705151129100!5m2!1sit!2sit"  allowfullscreen=""  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+
+        <section class="whois">
+            <div class="selfie">
+                <img src="resources/images/tommy.jpg" alt="Immagine tommy" width="300" height="400" >
+                </div>   
+                <div class="testow">
+                <h2>CHI È TOMMY</h2>     
+             <p> Tommy, con la sua abilità culinaria e il suo spirito 
+                imprenditoriale, ha trasformato la tramezzineria in un 
+                luogo accogliente e autentico, dove l'attenzione per 
+                gli ingredienti di qualità e la cura nella preparazione sono 
+                sempre al primo posto. 
+                
+                La dedizione di Tommy si riflette in ogni panino servito, 
+                creando un'atmosfera che va ben oltre il semplice 
+                soddisfare la fame, offrendo un'esperienza 
+                gastronomica memorabile.</p>
+                </div>
+            </div>
+        </section>
+        <div class="carosello" >
+          <div class="diapositiva">
+              <img src="resources/images/immagine1.jpg" alt="Immagine negozio tommy">
+          </div>
+  
+          <div class="diapositiva">
+              <img src="resources/images/immagine2.jpg" alt="Immagine 2 negozio tommy ">
+          </div>
+  
+          <div class="diapositiva">
+              <img src="resources/images/immagine3.jpg" alt="Immagine 3 negozio tommy">
+          </div>
+  
+          <a class="prec" onclick="cambiaDiapositiva(-1)">&#10094;</a>
+          <a class="succ" onclick="cambiaDiapositiva(1)">&#10095;</a>
+      </div>
+  
+      <div class="punti">
+          <span class="punto" onclick="selezionaDiapositiva(1)"></span>
+          <span class="punto" onclick="selezionaDiapositiva(2)"></span>
+          <span class="punto" onclick="selezionaDiapositiva(3)"></span>
+      </div>
+  
+      <script>
+          var indiceDiapositiva = 1;
+          mostraDiapositiva(indiceDiapositiva);
+  
+          function cambiaDiapositiva(n) {
+              mostraDiapositiva(indiceDiapositiva += n);
+          }
+  
+          function selezionaDiapositiva(n) {
+              mostraDiapositiva(indiceDiapositiva = n);
+          }
+  
+          function mostraDiapositiva(n) {
+              var i;
+              var diapositive = document.getElementsByClassName("diapositiva");
+              var punti = document.getElementsByClassName("punto");
+              if (n > diapositive.length) {
+                  indiceDiapositiva = 1;
+              }
+              if (n < 1) {
+                  indiceDiapositiva = diapositive.length;
+              }
+              for (i = 0; i < diapositive.length; i++) {
+                  diapositive[i].style.display = "none";
+              }
+              for (i = 0; i < punti.length; i++) {
+                  punti[i].className = punti[i].className.replace(" attivo", "");
+              }
+              diapositive[indiceDiapositiva-1].style.display = "block";
+              punti[indiceDiapositiva-1].className += " attivo";
+          }
+      </script>
+  
+        </section>
+    </main>
+    <footer>
+        <p>footer di fil</p>
+        <p>© 2024 Porcamadonna - voglio i piedi della millosorella!!</p>
+    </footer>
+</body>
+</html>
