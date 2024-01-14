@@ -4,6 +4,7 @@ CREATE TABLE `users` (
     username VARCHAR(255) NOT NULL,
     pass VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
+    profile_pic MEDIUMBLOB,
     PRIMARY KEY (`username`),
     UNIQUE (username, email)
 );

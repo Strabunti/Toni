@@ -32,21 +32,26 @@
         // Fetch and display comments
         foreach ($bestComments as $comment) {
             echo '<div id=\''. $comment['comment_id'] .'\' class="comment-card" onclick="showPopup(' . json_encode($comment['comment_id']) . ')">';
-            echo '<form method="post" action="delete_comment.php">';
-            if (AuthFunctions::is_admin()) echo '<input type="hidden" name="comment_id" value="' . $comment['comment_id'] . '">';
-            echo '<div class="comment-header">';
-            echo '<div class="comment-user-container">';
-            echo '<p id="comment-user" class="comment-user">' . htmlspecialchars($comment['username']) . '</p> ';
-            echo '<p id="comment-date" class="comment-date">' . $comment['review_date'] . '</p>';
-            echo '</div>';
-            if (AuthFunctions::is_admin()) echo '<button type="submit" class="comment-delete" onclick="return confirm(\'Are you sure you want to delete this comment?\')">
-                <img src="resources/images/trash-bin.png" alt="Trash can to remove comment" class="button-image"></button>';
-            echo '</div>';
-            if (AuthFunctions::is_admin()) echo '</form>';
-            echo '<p id="comment-title" class="comment-title">' . htmlspecialchars($comment['title']) . '</p>';
-            echo '<p id="rating" class="comment-rating"><strong>Rating:</strong> ' . displayStars($comment['rating']) . '</p>';
-            echo '<p id="text" class="comment-text">' . htmlspecialchars($comment['short_comment']) . '</p>';
-            echo '<div class="fade-out-overlay"></div>';
+                echo '<div class="comment-header">';
+                    echo '<div class="comment-user-container">';
+                        echo "<div class='comment-profile-pic'><img class='profile-pic' src='" . user_manager::displayProfilePic($comment['username']) . "' alt='Profile picture of the user' class='comment-user-image'></div>";
+                        echo '<div class="comment-profile">';
+                            echo '<p id="comment-user" class="comment-user">' . htmlspecialchars($comment['username']) . '</p> ';
+                            echo '<p id="review-date" class="comment-date">' . $comment['review_date'] . '</p>';
+                        echo '</div>';
+                    echo '</div>';
+                    if(AuthFunctions::is_admin()){
+                        echo '<form method="post" action="delete_comment.php">';
+                            echo '<input type="hidden" name="comment_id" value="' . $comment['comment_id'] . '">';
+                            echo '<button type="submit" class="comment-delete" onclick="return confirm(\'Are you sure you want to delete this comment?\')">
+                                <img src="resources/images/trash-bin.png" alt="Trash can to remove comment" class="button-image"></button>';
+                        echo '</form>';
+                    }
+                echo '</div>';
+                echo '<p id="comment-title" class="comment-title">' . htmlspecialchars($comment['title']) . '</p>';
+                echo '<p class="comment-rating">' . displayStars($comment['rating']) . '</p>';
+                echo '<p class="comment-text"> ' . htmlspecialchars($comment['short_comment']) . '</p>';
+                echo '<div class="fade-out-overlay"></div>';
             echo '</div>';
         }
     } else {

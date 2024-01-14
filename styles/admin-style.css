@@ -20,11 +20,19 @@ body {
     font-size: 22px;
     margin-top: 10px;
     margin-bottom: 3px;
+    color: #F2F0CF;
 }
 
 .comment-date {
     font-size: 12px;
     margin-top: 3px;
+    color: #012622;
+}
+
+.comment-rating {
+    font-size: 15px;
+    margin-top: 3px;
+    color: #E09200;
 }
 
 .fade-out-overlay {
@@ -40,6 +48,7 @@ body {
 .comment-text {
     font-size: 15px;
     margin-bottom: 10px;
+    color: #012622;
 }
 
 .comment-header{
@@ -47,21 +56,32 @@ body {
     justify-content: space-between;
 }
 
+.comment-header > form{
+    align-items: center;
+}
+
 .comment-title {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
     margin-top: 2px;
+    color: #012622;
+}
+
+.comment-user-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .comment-delete{
     background-color: #917352;
     border: none;
     padding: none;
-    margin-top: 5px;
+    margin-top: 20px;
     margin-right: 20px;
-    width: 50px; /* Set the desired width */
-    height: 40px; /* Set the desired height */
+    width: 35px; /* Set the desired width */
+    height: 25px; /* Set the desired height */
 }
 
 .button-image {
@@ -88,6 +108,21 @@ body {
     border-color: #5D1E09;
     border-style: solid;
     border-width: 1px;
+}
+
+.comment-profile-pic {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.profile-pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 
 /* Responsive design for smaller screens */
@@ -144,4 +179,18 @@ body {
     margin-right: 20px;
     width: 40px; /* Set the desired width */
     height: 30px; /* Set the desired height */
+}
+
+.popup-comment-header-left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-comment-header-left > img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
 }
