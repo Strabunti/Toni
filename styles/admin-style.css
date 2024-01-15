@@ -3,7 +3,13 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    background-color: #917352;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    width: 100%;
 }
 
 #title {
@@ -11,16 +17,78 @@ body {
     font-weight: bold;
 }
 
+a{
+    text-decoration: none;
+    color: #012622;
+    font-weight: bold;
+}
+
+a:hover{
+    color: #5D1E09;
+}
+
 #all-comments-link {
     margin-top: 10px;
     display: block;
 }
+
+.logo{
+    width: 100%;
+    margin-bottom: 30px;
+    max-width: 250px;
+}
+
+.dashboard{
+    width: 30%;
+    background-color: #F2F0CF;
+    margin-right: 20px;
+    padding: 5px;
+    padding-top: 30px;
+    padding-right: 40px;
+    padding-left: 15px;
+    border-right-color: #5D1E09;
+    border-right-style: solid;
+    border-right-width: 3px;
+    box-sizing: border-box;
+    position: sticky; /* Make the dashboard sticky */
+    top: 0; /* Stick to the top */
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    max-width: 300px;
+}
+
+.dashboard-item{
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.main-content{
+    width: 150%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu{
+    margin-top: 30px;
+}
+
+.dashboard-item-image{
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+}
+
+.dashboard-item-link{
+    display: flex;
+    align-items: center;
+}
+
 .comment-user {
     font-weight: bold;
     font-size: 22px;
     margin-top: 10px;
     margin-bottom: 3px;
-    color: #F2F0CF;
+    color: #012622;
 }
 
 .comment-date {
@@ -41,7 +109,7 @@ body {
     left: 0;
     width: 100%;
     height: 50px; /* Set the height of the fade-out effect */
-    background: linear-gradient(rgba(145, 115, 82, 0), rgba(145, 115, 82, 0.8), rgba(145, 115, 82, 1));
+    background: linear-gradient(rgba(239, 231, 200, 0), rgba(239, 231, 200, 0.8), rgba(239, 231, 200, 1));
     pointer-events: none; /* Ensure the overlay does not interfere with interactions */
 }
 
@@ -75,7 +143,7 @@ body {
 }
 
 .comment-delete{
-    background-color: #917352;
+    background-color: #F2F0CF;
     border: none;
     padding: none;
     margin-top: 20px;
@@ -92,9 +160,9 @@ body {
 
 .comment-card {
     border: 1px solid #ccc;
-    background-color: #917352;
+    background-color: #F2F0CF;
     position: relative;
-    border-radius: 8px;
+    border-radius: 18px;
     padding: 10px;
     margin: 10px 0;
     margin-left: 10px;
@@ -109,6 +177,28 @@ body {
     border-style: solid;
     border-width: 1px;
 }
+
+.new-comment-form {
+    width: 100%;
+    height: 100%;
+    background-color: #F2F0CF;
+    color: #012622;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+.new-comment-button {
+    width: 100%;
+    height: 100%;
+    background-color: #F2F0CF;
+    color: #012622;
+    border: none;
+    border-radius: 18px;
+    font-size: 40pt;
+    cursor: pointer;
+}
+
 
 .comment-profile-pic {
     border-radius: 50%;
@@ -125,16 +215,48 @@ body {
     margin-bottom: 10px;
 }
 
+.form-new-dish {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 60%;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
 /* Responsive design for smaller screens */
 @media screen and (max-width: 768px) {
     .comment-card {
         width: calc(50% - 20px); /* 2 cards in a row with margin in between */
     }
+    .dashboard{
+        height: 100vh;
+    }
+
+    .form-new-dish {
+        width: 50%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 550px) {
     .comment-card {
         width: 100%; /* 1 card per row for smaller screens */
+    }
+    .dashboard-item-link > p{
+        display: none;
+    }
+    .dashboard-item-image{
+        margin-top: 10px;
+    }
+    .dashboard{
+        height: 100vh;
+    }
+    .form-new-dish {
+        width: 60%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
 
@@ -146,7 +268,7 @@ body {
     width: 60%;
     margin: 20%;
     padding: 2%;
-    background-color: rgb(145, 115, 82);
+    background-color: #F2F0CF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     justify-content: center;
     align-items: center;
@@ -172,7 +294,7 @@ body {
 }
 
 .close-button {
-    background-color: #917352;
+    background-color: #F2F0CF;
     border: none;
     padding: none;
     margin-top: 5px;
@@ -185,6 +307,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .popup-comment-header-left > img{
@@ -194,3 +317,12 @@ body {
     object-fit: cover;
     margin-right: 20px;
 }
+
+.dish-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    color: #012622;
+}
+

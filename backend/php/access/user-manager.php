@@ -45,6 +45,9 @@ class user_manager
     public static function change_username($olduser, $username)
     {
         $all_user = DataBase::runQuery("SELECT username FROM users;");
+        if (strtoupper($olduser) === strtoupper($username)){
+            return true;
+        }
         foreach ($all_user as $key => $value) {
             if (strtoupper($username) === strtoupper($value['username'])){
                 return false;
@@ -52,6 +55,25 @@ class user_manager
         }
         DataBase::runQuery("UPDATE users SET username = ? WHERE username = ?;", $username, $olduser);
         return true;
+    }
+    public static function change_mail($username, $mail)
+    {
+        DataBase::runQuery("UPDATE users SET email = ? WHERE username = ?;", $mail, $username);
+    }
+    public static function change_password($username, $password)
+    {
+        DataBase::runQuery("UPDATE users SET password = ? WHERE username = ?;", $password, $username);
+    }
+    public static function change_profile_pic($username, $profile_pic)
+    {
+        DataBase::runQuery("UPDATE users SET profile_pic = ? WHERE username = ?;", $profile_pic, $username);
+    }
+    public static function change_user($olduser, $username, $mail, $password, $profile_pic)
+    {
+        user_manager::change_mail($olduser, $mail);
+        user_manager::change_password($olduser, $password);
+        user_manager::change_profile_pic($olduser, $profile_pic);
+        return user_manager::change_username($olduser, $username);
     }
     public static function displayProfilePic($username) {
         $sql = "SELECT profile_pic FROM users WHERE username = ?";

@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link id="style" rel="stylesheet" href="styles/admin-style.css">
     <title>Admin Page - Comments</title>
-    <script src="backend/js/comment-popup.js"></script>
+    <script src="backend/js/popup.js"></script>
 </head>
 <body>
 
-    <div id="title">Comments</div>
+    <div id="title">Recensioni</div>
 
     <?php
     // Include your authentication file
@@ -22,7 +22,7 @@
     // Continue with the admin page content
 
     // Include your database connection file or establish a connection here
-    include 'backend/php/access/comments.php';
+    include 'backend/php/access/comment-manager.php';
 
     // Query to retrieve comments with the highest rates
     $bestComments = getBestComments(-1);

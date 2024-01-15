@@ -9,6 +9,7 @@ CREATE TABLE `users` (
     UNIQUE (username, email)
 );
 
+
 DROP TABLE IF EXISTS `admin`;
 CREATE TABLE `admin` (
   `username` varchar(255) NOT NULL,
@@ -20,11 +21,27 @@ DROP TABLE IF EXISTS `comments`;
 CREATE TABLE `comments` (
     comment_id INT PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(255) NOT NULL,
-    title VARCHAR(100) NOT NULL,
-    comment_text TEXT NOT NULL,
+    title VARCHAR(200) NOT NULL,
+    comment TEXT NOT NULL,
     rating INT NOT NULL,
     review_date DATE NOT NULL,
-    FOREIGN KEY (username) REFERENCES users(username)
+    FOREIGN KEY (username) REFERENCES users(username) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+DROP TABLE IF EXISTS `dish`;
+CREATE TABLE `dish` (
+    id_dish INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    description VARCHAR(255) NOT NULL,
+    ingredients VARCHAR(255) NOT NULL,
+    image MEDIUMBLOB,
+    price DECIMAL NOT NULL,
+    type VARCHAR(255) NOT NULL,
+    bestseller BOOLEAN NOT NULL,
+    best_month BOOLEAN NOT NULL,
+    PRIMARY KEY (`id_dish`),
+    UNIQUE (name)
 );
 
 
@@ -40,7 +57,7 @@ INSERT INTO `users` (`username`, `pass`, `email`) VALUES
 INSERT INTO `admin` (`username`) VALUES ('admin');
 
 INSERT INTO `comments` 
-(`comment_id`, `username`, 'title', `comment_text`, `rating`, `review_date`) 
+(`comment_id`, `username`, `title`, `comment`, `rating`, `review_date`) 
 VALUES 
 (NULL, 'andrea', 'Le Creazioni Uniche di Toni: Panini e Tramezzini da Applausi!', '\r\nIl panino di Tommy è semplicemente una delizia per il palato! La combinazione perfetta di ingredienti freschi e saporiti rende questo panino un\'autentica esperienza culinaria. La morbidezza del pane appena sfornato si fonde armoniosamente con il gusto succulento della carne, mentre gli ingredienti aggiunti, come formaggio fuso, verdure croccanti e condimenti speciali, aggiungono strati di sapore che si sposano alla perfezione. Ogni morso è un viaggio gustativo attraverso l\'eccellenza culinaria, portando una gioia indescrivibile. Grazie a Tommy per averci regalato un capolavoro gastronomico che resterà impresso nei nostri ricordi culinari come il miglior panino del mondo!', '5', '2024-01-12'), 
     (NULL, 'filippo', 'Toni, Maestro del Panino: Scopri i Sapori Eccezionali!' , 'Il panino di Tommy è davvero fuori dal comune! La sua combinazione unica di ingredienti ha il potere di trasformare ogni morso in un\'esperienza straordinaria. Il pane appena sfornato è soffice e fragrante, avvolge la carne succulenta in un abbraccio perfetto. Il formaggio fuso aggiunge una cremosità irresistibile, mentre le verdure fresche conferiscono quel tocco di croccantezza e vitalità. Ma ciò che rende veramente straordinario il panino di Tommy è la magica armonia di sapori che danza sulla lingua con ogni assaggio. È un viaggio culinario che rimarrà impresso nella memoria gustativa come il paradiso dei panini. Tommy ha davvero creato un capolavoro gastronomico che non ha rivali, conquistando il cuore e il palato di chiunque abbia la fortuna di assaporarlo!', '5', '2024-01-11'), 

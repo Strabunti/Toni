@@ -33,6 +33,36 @@ function showPopup(idContent) {
     popupContainer.style.display = 'inline-block';
 }
 
+function showDishPopup(idContent) {
+    var popupContainer = document.getElementById('popup-container');
+    var string = 'dish-' + idContent;
+    var popupContent = document.getElementById(string);
+
+    var name = popupContent.querySelector('.comment-user').innerText;
+    var price = popupContent.querySelector('.dish-price').innerText;
+    var description = popupContent.querySelector('.comment-title').innerText;
+    var ingredients = popupContent.querySelector('.comment-text').innerText;
+    var image = popupContent.querySelector('.profile-pic').src;
+
+    // Set content dynamically
+    popupContainer.innerHTML = `
+        
+        <div class="comment-header">
+            <div class="popup-comment-header-left">
+                <img src="${image}" alt="Profile picture" class="popup-comment-profile-pic">
+                <p id="popup-comment-user" class="comment-user popup-comment-user">${name}</p>
+            </div>
+            <button class="close-button" onclick="closePopup()"><img src="resources/images/close-button.png" alt="Close pop up button" class="button-image"></button>
+        </div>
+        <p id="popup-title" class="comment-title popup-comment-title"><strong>Price:</strong> ${price}</p>
+        <p id="popup-date" class="comment-date popup-comment-date"><strong>Description:</strong> ${description}</p>
+        <p id="popup-rating" class="comment-rating popup-comment-rating"><strong>Ingredients:</strong> ${ingredients}</p>
+    `;
+
+    // Show the popup
+    popupContainer.style.display = 'inline-block';
+}
+
 function closePopup() {
     var popupContainer = document.getElementById('popup-container');
 

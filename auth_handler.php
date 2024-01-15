@@ -14,9 +14,9 @@ if (!empty($_POST)) {
         $_SESSION['error-login'] = null;
         if (AuthFunctions::is_admin()){
             error_log("Login successful as admin");
-            header("Location: admin-page.php");
+            header("Location: admin-dashboard.php");
         }else
-            header("Location: comments.php");
+            header("Location: user-dashboard.php");
     }else{
         error_log("Login failed");
         $_SESSION['error-login'] = $result;

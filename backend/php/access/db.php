@@ -59,6 +59,11 @@ class DataBase
             // Get results
             $result = $stmt->get_result();
 
+            if (!$result) {
+                // Handle the SQL error
+                return true;
+            }
+
             // Fetch the results
             while ($row = $result->fetch_assoc()) {
                 $data[] = $row;

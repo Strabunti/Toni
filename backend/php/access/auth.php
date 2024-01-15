@@ -15,6 +15,13 @@ class AuthFunctions
         return isset($_SESSION['is_admin']) && $_SESSION['is_admin'];
     }
 
+    public static function is_user($commentId)
+    {
+        // Check if the user is an admin
+        $user_info = user_manager::get_by_username($_SESSION['username']);
+        return $user_info[0]['id'] == $commentId;
+    }
+
     public static function connectToDB($hostname = "localhost", $username = "toni", $password = "admin", $database = "toni")
     {
         DataBase::connect($hostname, $username, $password, $database);
