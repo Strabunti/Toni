@@ -100,16 +100,19 @@
                     <button class="mobile-category-button"><h4>TRAMEZZINI</h4></button>
                 </div>
                 <div class="image-and-heading">
-                    <h3>PORTEO</h3>
-                    <img src="resources/images/vinileChiuso.png" alt="Immagine rappresentativa della categoria di cibo selezionata">
+                    <div><img src="resources/images/porteo.png" alt="Immagine rappresentativa della categoria di cibo selezionata"></div>
+                    <div><h3>PORTEO</h3></div>
                 </div>
 
             </div>
         </section>
 
         <!-- RECENSIONI SECTION -->
-        <section>
-            <h2>DICONO DI TONI'S</h2>
+        <section id="recensioniSection">
+            <div class="left-rectangle"></div>
+            <div class="top-rectangle"></div>
+
+            <h2 class="align-left">DICONO DI TONI'S</h2>
         </section>
     </main>
 
@@ -161,15 +164,20 @@
           });
         });
 
-        function toggleClickedState(button) {
-        const buttons = document.querySelectorAll('.category-button');
-        buttons.forEach(btn => {
-            if (btn !== button) {
-                btn.classList.remove('clicked');
-            }
-        });
 
-        button.classList.toggle('clicked');
+        function toggleClickedState(button) {
+        if (!button.classList.contains('clicked')) {
+            const buttons = document.querySelectorAll('.category-button');
+            buttons.forEach(btn => {
+                if (btn !== button) {
+                    btn.classList.remove('clicked');
+                    btn.style.pointerEvents = 'auto';
+                }
+            });
+
+            button.classList.toggle('clicked');
+            button.style.pointerEvents = 'none';
+        }
     }
     </script>
     

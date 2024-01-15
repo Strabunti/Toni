@@ -67,6 +67,7 @@ header {
     #menu-icon {
       display: block;
       margin-right: 50px;
+      cursor: pointer;
     }
   
     #menu-icon span {
@@ -192,6 +193,20 @@ h3 {
     height: 15px;
 }
 
+h2.align-right {
+    text-align: right;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    color: #012622;
+}
+
+h2.align-left {
+    text-align: left;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+
 @media screen and (max-width: 768px) {
     h1 {
         font-size: 3em;
@@ -223,6 +238,20 @@ h3 {
         left: 0;
         width: 100%;
         height: 7.5px;
+    }
+
+    h2.align-right {
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        color: #012622;
+    }
+
+    h2.align-left {
+        text-align: center;
+        margin-top: 15px;
+        margin-left: 15px;
+        margin-bottom: 30px;
     }
 }
 /*#endregion*/
@@ -265,7 +294,7 @@ h3 {
     height: 30em;
 }
 
-.rectangle {
+#mainSection .rectangle {
     background-color: #896E4E;
     color: #F2F0CF;
     padding: 10px;
@@ -277,7 +306,7 @@ h3 {
         height: auto;
     }
 
-    .rectangle {
+    #mainSection .rectangle {
         width: 100%;
     }
 }
@@ -289,13 +318,6 @@ h3 {
     background-color: #EFE7C8;
     padding: 20px;
     position: relative;
-}
-
-#consigliSection h2.align-right {
-    text-align: right;
-    margin-top: 15px;
-    margin-bottom: 30px;
-    color: #012622;
 }
 
 #consigliSection .side-by-side {
@@ -336,7 +358,7 @@ h3 {
     font-size: initial;
 }
 
-.consiglio-item-description {
+#consigliSection .consiglio-item-description {
     color: #012622;
     margin-right: 20%;
     margin-left: 20%;
@@ -382,13 +404,6 @@ h3 {
     color: #EFE7C8;
 }
 
-#doveSiamoSection h2.align-left {
-    text-align: left;
-    margin-top: 15px;
-    margin-left: 15px;
-    margin-bottom: 30px;
-}
-
 #doveSiamoSection .side-by-side {
     display: flex;
     justify-content: center;
@@ -396,13 +411,13 @@ h3 {
     margin-bottom: 20px;
 }
 
-.map {
+#doveSiamoSection .map {
     margin-right: 20px;
     width: 100%;
     border: none;
 }
 
-.location-info {
+#doveSiamoSection .location-info {
     text-align: center;
     align-items: center;
     margin-left: 20px;
@@ -438,17 +453,11 @@ h3 {
     position: relative;
 }
 
-#sceltaSection h2.align-right {
-    text-align: right;
-    margin-top: 15px;
-    margin-bottom: 30px;
-    color: #012622;
-}
-
 #sceltaSection .side-by-side {
     display: flex;
     text-align: center;
     justify-content: space-between;
+    align-items: center;
 }
 
 #sceltaSection ul {
@@ -457,7 +466,7 @@ h3 {
 }
 
 #sceltaSection .buttons-container {
-    width: 600.2px;
+    width: 100%;
     align-items: flex-start;
     display: flex;
     overflow: hidden;
@@ -501,45 +510,58 @@ h3 {
     right: 35%;
 }
 
-.image-and-heading {
-    width: 600.2px;
-    align-items: center;
-    text-align: center;
-    display: flex;
-}
-
-.image-and-heading img {
-    display: block;
+#sceltaSection .image-and-heading img {
     width: 100%;
 }
 
-.image-and-heading h3 {
-    display: block;
-    position: absolute;
-    right: 259px;
-    bottom: 38px;
-    color: #E09200;
-    font-size: xx-large;
+#sceltaSection .image-and-heading {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    background-image: url(resources/images/vinileChiusoNew.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40%;
+    height: fit-content;
+    max-width: 515px;
 }
 
-.buttons-container {
+#sceltaSection .image-and-heading h3 {
+    display: block;
+    right: 0px;
+    color: #E09200;
+    font-size: large;
+}
+
+#sceltaSection .buttons-container {
     width: 600.2px;
     align-items: flex-start;
     display: flex;
 }
 
-
-.mobile-buttons {
+#sceltaSection .mobile-buttons {
     display: none;
 }
 
-@media screen and (max-width: 1300px) {
-    .mobile-buttons {
+@media screen and (max-width: 1020px) {
+    #sceltaSection h2.align-right {
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        color: #012622;
+    }
+
+    #sceltaSection h2 {
+        font-size: 2em;
+    }
+
+    #sceltaSection .mobile-buttons {
         display: flex;
         align-self: center;
     }
 
-    .mobile-category-button {
+    #sceltaSection .mobile-category-button {
         display: flex;
         background-color: #896E4E;
         color: #EFE7C8;
@@ -553,7 +575,7 @@ h3 {
         font-weight: bold;
     }
 
-    .mobile-category-button:hover {
+    #sceltaSection .mobile-category-button:hover {
         background-color: #D1C68A;
     }
 
@@ -567,24 +589,39 @@ h3 {
         text-align: center;
     }
 
-    .image-and-heading {
+    #sceltaSection .image-and-heading {
         align-self: center;
         align-items: center;
         flex-direction: column;
         display: flex;
-    }
-
-    .image-and-heading img {
         width: 40%;
+        background-image: url(resources/images/vinileChiusoNew.jpg);
+        background-size: cover;
+        min-width: 300px;
     }
 
-    .image-and-heading h3 {
+    #sceltaSection .image-and-heading h3 {
         display: block;
-        position: relative;
         right: 0px;
-        bottom: -208px;
         color: #E09200;
-        font-size: medium;
+        font-size: large;
     }
 }
 /*#endregion */
+
+/*#region RECENSIONI-SECTION*/
+#recensioniSection {
+    background-color: #896E4E;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    color: #EFE7C8;
+}
+
+#recensioniSection h2.align-left {
+    text-align: left;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+/*#endregion*/
