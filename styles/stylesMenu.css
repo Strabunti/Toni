@@ -1,4 +1,8 @@
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -73,6 +77,8 @@ nav a {
     background-color: #896E4E;
     transition: background-color 0.3s ease;
 }
+
+
 
 nav a:hover {
     background-color: #F2F0CF;
@@ -202,6 +208,7 @@ nav a:hover {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
 }
 
 .popup-content {
@@ -222,6 +229,30 @@ nav a:hover {
     font-size: 20px;
     cursor: pointer;
 }
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    background-color: #012622;
+    color: #F2F0CF;
+    border: 1px solid #012622;
+    border-radius: 50%; /* Imposta il bordo del pulsante per renderlo rotondo */
+    padding: 10px;
+    width: 18px; /* Imposta la larghezza del pulsante */
+    height: 18px; /* Imposta l'altezza del pulsante */
+    font-size: 0.8em; 
+    text-align: center;
+    z-index: 2;
+    cursor: pointer;
+    display: none;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #F2F0CF;
+    color: #012622;
+}
+
 
 @media only screen and (max-width: 900px) {
     /* 2 prodotti per riga su dispositivi medi */
@@ -268,5 +299,11 @@ nav a:hover {
     #panini article,
     #burgers article {
         flex: 0 0 calc(100% - 20px);
+    }
+
+    #scrollToTopBtn {
+        width: 10px; 
+        height: 10px; 
+        font-size: 0.6em;
     }
 }
