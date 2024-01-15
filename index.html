@@ -89,9 +89,9 @@
             <div class="side-by-side">
                 <div class="buttons-container">
                     <ul>
-                        <li><button class="category-button"><h4>HAMBURGER</h4></button></li>
-                        <li><button class="category-button"><h4>PANINI</h4></button></li>
-                        <li><button class="category-button"><h4>TRAMEZZINI</h4></button></li>
+                        <li><button class="category-button clicked" onclick="toggleClickedState(this)"><h4>HAMBURGER</h4></button></li>
+                        <li><button class="category-button" onclick="toggleClickedState(this)"><h4>PANINI</h4></button></li>
+                        <li><button class="category-button" onclick="toggleClickedState(this)"><h4>TRAMEZZINI</h4></button></li>
                     </ul>
                 </div>
                 <div class="mobile-buttons">
@@ -160,7 +160,18 @@
             toggle.classList.toggle('open');
           });
         });
-      </script>
+
+        function toggleClickedState(button) {
+        const buttons = document.querySelectorAll('.category-button');
+        buttons.forEach(btn => {
+            if (btn !== button) {
+                btn.classList.remove('clicked');
+            }
+        });
+
+        button.classList.toggle('clicked');
+    }
+    </script>
     
 </body>
 
