@@ -18,15 +18,21 @@ header {
     list-style: none;
 }
 
-.main-nav li {
-    margin-right: 20px;
-}
-
 .main-nav a {
     color: #F2F0CF;
     font-weight: normal;
     font-size: 16px;
     text-decoration: none;
+    color: #EFE7C8;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #896E4E;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav a:hover {
+    background-color: #F2F0CF;
+    color: #012622;
 }
 
 #headerLogo {
@@ -376,7 +382,7 @@ h2.align-left {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background: url(resources/images/porteo.png) no-repeat;
+    background: url(../resources/images/porteo.png) no-repeat;
     background-size: contain;
     z-index: 2;
 }
@@ -395,7 +401,7 @@ h2.align-left {
 #mainSection {
     display: flex;
     text-align: center;
-    background: no-repeat center url("resources/images/homeBackground.png");
+    background: no-repeat center url("../resources/images/homeBackground.png");
     background-size: cover;
     flex-direction: column;
     justify-content: center;
@@ -583,7 +589,7 @@ h2.align-left {
 }
 
 #sceltaSection .category-button {
-    background-image: url(resources/images/chitarra.png);
+    background-image: url(../resources/images/chitarra.png);
     background-color: transparent;
     background-size: contain;
     background-position: center;
@@ -629,7 +635,7 @@ h2.align-left {
     text-align: center;
     flex-direction: column;
     display: flex;
-    background-image: url(resources/images/vinileChiusoNew.jpg);
+    background-image: url(../resources/images/vinileChiusoNew.jpg);
     background-position: center;
     background-repeat: no-repeat;
     width: 40%;
@@ -706,7 +712,7 @@ h2.align-left {
         flex-direction: column;
         display: flex;
         width: 40%;
-        background-image: url(resources/images/vinileChiusoNew.jpg);
+        background-image: url(../resources/images/vinileChiusoNew.jpg);
         background-size: cover;
         min-width: 300px;
     }
