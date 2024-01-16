@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/styles/stylesMenu.css" />
+        <script src="/scripts/scriptMenu.js"></script>
+		<title>Menu</title>
+    </head>
+    <body>
+        <header>
+            <h1 role="heading" aria-level="1" aria-label="Menu">MENU</h1>
+            <img src="/resources/images/ToniMenu.jpg" alt="Immagine di prodotti in vetrina di toni" class="toni-menu-img"/>         
+        </header>
+        
+        <nav>
+            <div class="nav-title">PRODOTTI</div>
+            <ul>
+                <li><a href="#tramezzini">Tramezzini</a></li>
+                <li><a href="#panini">Panini</a></li>
+                <li><a href="#burgers">Burgers</a></li>
+            </ul>
+        </nav>
+
+        <div id="scrollToTopBtn" onclick="scrollToTop()">&#8593;</div>
+
+        <div id="popup" class="popup">
+            <div id="popup-content" class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <h2 id="popup-title"></h2>
+                <p id="popup-description"></p>
+                <p id="popup-ingredients"></p>
+            </div>
+        </div>
+
+        <section id="tramezzini">
+
+            <h2 role="heading" aria-level="2">TRAMEZZINI</h2>
+            <p>Esplora la nostra deliziosa selezione di tramezzini, autentiche creazioni italiane che trasformano il semplice pane in opere d'arte gastronomiche. 
+                Dalle classiche combinazioni ai twist creativi, scopri le ricette che soddisferanno ogni palato.</p>
+            
+            <article onclick="openPopup('Nome Tramezzino 1', 'Descrizione del Tramezzino 1', 'Ingredienti del Tramezzino 1')">
+                <h3 role="heading" aria-level="3">Nome Tramezzino 1</h3>
+                <img src="/resources/images/vinilePORTEO.png" alt="Tramezzino 1" />
+            </article>
+            
+            <article onclick="openPopup('Nome Tramezzino 2', 'Descrizione del Tramezzino 2', 'Ingredienti del Tramezzino 2')">
+                <h3 role="heading" aria-level="3">Nome Tramezzino 2</h3>
+                <img src="/resources/images/vinilePORTEO.png" alt="Tramezzino 2" />
+            </article>
+          
+            <article onclick="openPopup('Nome Tramezzino 3', 'Descrizione del Tramezzino 3', 'Ingredienti del Tramezzino 3')">
+                <h3 role="heading" aria-level="3">Nome Tramezzino 3</h3>
+                <img src="/resources/images/vinilePORTEO.png" alt="Tramezzino 3" />
+            </article>
+
+        </section>
+    
+        <section id="panini">
+
+            <h2 role="heading" aria-level="2">PANINI</h2>
+            <p>Esplora la nostra deliziosa selezione di panini, autentiche creazioni italiane che trasformano il semplice pane in opere d'arte gastronomiche. 
+                Dalle classiche combinazioni ai twist creativi, scopri le ricette che soddisferanno ogni palato.</p>
+
+            <article onclick="openPopup('Nome Panino 1', 'Descrizione del Panino 1', 'Ingredienti del Panino 1')">
+                <h3 role="heading" aria-level="3">Nome Panino 1</h3>
+                <img src="/resources/images/vinilePORTEO.png" alt="Panino 1" />
+            </article>
+            
+            <article onclick="openPopup('Nome Panino 2', 'Descrizione del Panino 2', 'Ingredienti del Panino 2')">
+                <h3 role="heading" aria-level="3">Nome Panino 2</h3>
+                <img src="/resources/images/vinilePORTEO.png" alt="Panino 2" />
+            </article>
+        </section>
+    
+        <section id="burgers">
+
+            <h2 role="heading" aria-level="2">BURGERS</h2>
+            <p>Esplora la nostra deliziosa selezione di burgers, autentiche creazioni italiane che trasformano il semplice pane in opere d'arte gastronomiche. 
+                Dalle classiche combinazioni ai twist creativi, scopri le ricette che soddisferanno ogni palato.</p>
+        
+            <article onclick="openPopup('Nome Burger 1', 'Descrizione del Burger 1', 'Ingredienti del Burger 1')">
+                <h3 role="heading" aria-level="3">Nome Burger 1</h3>
+                <img src="/resources/images/vinilePORTEO.png" alt="Burger 1" />
+            </article>
+        
+            <article onclick="openPopup('Nome Burger 2', 'Descrizione del Burger 2', 'Ingredienti del Burger 2')">
+                <h3 role="heading" aria-level="3">Nome Burger 2</h3>
+                <img src="/resources/images/vinilePORTEO.png" alt="Burger 2" />
+            </article>
+        
+            <article onclick="openPopup('Nome Burger 3', 'Descrizione del Burger 3', 'Ingredienti del Burger 3')">
+                <h3 role="heading" aria-level="3">Nome Burger 3</h3>
+                <img src="/resources/images/vinilePORTEO.png" alt="Burger 3" />
+            </article>
+        </section>
+        
+
+        
+
+     </body>
+</html>
