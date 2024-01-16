@@ -32,11 +32,11 @@ class user_manager
     }
     public static function get_mail($username)
     {
-        return DataBase::runQuery('SELECT mail FROM users WHERE username = ?', $username);
+        return DataBase::runQuery('SELECT email FROM users WHERE username = ?', $username);
     }
-    public static function add($mail = null, $username = null, $password = null)
+    public static function add($username = null, $password = null, $mail = null)
     {
-        DataBase::runQuery("INSERT INTO users (username, mail, password) VALUES (?,?,?);", $mail, $username, $password);
+        DataBase::runQuery("INSERT INTO users (username, password, email) VALUES (?,?,?);", $username, $password, $mail);
     }
     public static function delete($username = null)
     {
@@ -72,7 +72,8 @@ class user_manager
     {
         user_manager::change_mail($olduser, $mail);
         user_manager::change_password($olduser, $password);
-        user_manager::change_profile_pic($olduser, $profile_pic);
+        if ($profile_pic != null)
+            user_manager::change_profile_pic($olduser, $profile_pic);
         return user_manager::change_username($olduser, $username);
     }
     public static function displayProfilePic($username) {

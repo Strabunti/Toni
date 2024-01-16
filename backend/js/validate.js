@@ -7,6 +7,15 @@ function validateLogin() {
     return true;
 }
 
+function validateSingin() {
+    if (!validateUsername()){
+        return false;
+    } else if (!validatePassword()){
+        return false;
+    }
+    return true;
+}
+
 function validateUsername() {
     var usernameInput = document.getElementById("username");
     if(usernameInput.value == null){

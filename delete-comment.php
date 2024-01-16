@@ -39,7 +39,7 @@ if (isset($_POST['comment_id']) && filter_var($_POST['comment_id'], FILTER_VALID
     echo "Invalid comment ID.";
 }
 
-if (AuthFunctions::is_admin()) header("Location: admin-page.php"); // Change 'admin_page.php' to your actual admin page
+if (AuthFunctions::is_admin()) header("Location: admin-dashboard.php"); // Change 'admin_page.php' to your actual admin page
 else header("Location: user-dashboard.php");
 exit();
 ?>

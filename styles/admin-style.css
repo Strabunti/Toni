@@ -38,6 +38,10 @@ a:hover{
     max-width: 250px;
 }
 
+.right-side-div{
+    display: flex;
+}
+
 .dashboard{
     width: 30%;
     background-color: #F2F0CF;

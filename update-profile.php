@@ -18,6 +18,7 @@ $email = $_POST['email'];
 // Upload profile picture
 $profile_pic = null;
 if (isset($_FILES['profile_pic']) && $_FILES['profile_pic']['error'] == 0) {
+    error_log("profile pic setted" . print_r($_FILES['profile_pic'], true));
     $profile_pic = file_get_contents($_FILES['profile_pic']['tmp_name']);
 }
 
@@ -34,6 +35,6 @@ if ($changed) {
     exit();
 } else {
     // Display an error message if the update fails
-    header("Location: user-page.php");
+    header("Location: user-info.php");
 }
 ?>
