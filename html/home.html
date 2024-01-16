@@ -7,16 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TONI'S TRAMEZZINERIA</title>
     <link rel="stylesheet" type="text/css" href="../styles/stylesHome.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/stylesBody.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/stylesHeader.css"/>
+    <link rel="stylesheet" type="text/css" href="../styles/stylesFooter.css"/>
+    <script src="../scripts/scriptHome.js"></script>
+    <script src="../scripts/scriptHeader.js"></script>
 </head>
 
 <body>
     <!-- HEADER -->
     <header>
-        <div id="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox"/>
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+
+            <nav class="menu__box">
+                <ul>
+                    <li><a class="menu__item" href="#menu" aria-label="Vai al Menu" role="link">Menu</a></li>
+                    <li><a class="menu__item" href="#aboutUs" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
         
         <nav class="main-nav">
             <ul>
@@ -25,9 +39,9 @@
             </ul>
         </nav>
 
-        <div class="toggle"></div>
         <img id="headerLogo" src="../resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA">
         <button id="loginButton" aria-label="Login" class="standard-button">LOGIN</button>
+
     </header>
 
     <main>
@@ -139,17 +153,17 @@
     <footer>
         <div class="top-part">
             <div class="logo-address-container">
-                <img src="resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA" id="footerLogo">
+                <img src="../resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA" id="footerLogo">
                 <address class="address">
                     TONI'S TRAMEZZINERIA <br/>
                     Via del Portello, 24, 35129, Padova (PD) <br>
                 </address>
                 <div class="social-media-links">
                     <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="resources/images/facebookLogo.png" alt="Facebook">
+                        <img src="../resources/images/facebookLogo.png" alt="Facebook">
                     </a>
                     <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="resources/images/instagramLogo.png" alt="Instagram">
+                        <img src="../resources/images/instagramLogo.png" alt="Instagram">
                     </a>
                 </div>
             </div>
@@ -167,72 +181,6 @@
             <p>&copy; 2024 Strabunti. Tutti i diritti riservati.</p>
         </div>
     </footer>
-
-    <!-- JAVASCRIPT -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          const menuIcon = document.getElementById('menu-icon');
-          const nav = document.querySelector('.main-nav');
-          const toggle = document.querySelector('.toggle');
-    
-          menuIcon.addEventListener('click', function () {
-            menuIcon.classList.toggle('open');
-            nav.classList.toggle('open');
-          });
-    
-          toggle.addEventListener('click', function () {
-            toggle.classList.toggle('open');
-          });
-        });
-
-
-        function toggleClickedState(button) {
-        if (!button.classList.contains('clicked')) {
-            const buttons = document.querySelectorAll('.category-button');
-            buttons.forEach(btn => {
-                if (btn !== button) {
-                    btn.classList.remove('clicked');
-                    btn.style.pointerEvents = 'auto';
-                }
-            });
-
-            button.classList.toggle('clicked');
-            button.style.pointerEvents = 'none';
-        }
-    }
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Get all elements with the specified classes
-    var rightImages = document.querySelectorAll('.right-image');
-    var buttons = document.querySelectorAll('.menu-item-button');
-
-    // Loop through each element
-    rightImages.forEach(function(rightImage, index) {
-        // Get the corresponding button
-        var button = buttons[index];
-
-        // Add event listener for mouseover
-        button.addEventListener('mouseover', function() {
-            // Update the style of the right image with a smooth transition
-            rightImage.style.transition = 'right 0.5s ease-in-out'; // Adjust the transition duration and easing as needed
-            rightImage.style.right = '0';
-        });
-
-        // Add event listener for mouseout to reset styles when mouse leaves the button
-        button.addEventListener('mouseout', function() {
-            // Reset the style of the right image with a smooth transition
-            rightImage.style.transition = 'right 0.5s ease-in-out'; // Adjust the transition duration and easing as needed
-            rightImage.style.right = '60px'; // Reset to the original position
-        });
-
-        // Remove the transition after it's completed to avoid interfering with subsequent movements
-        rightImage.addEventListener('transitionend', function() {
-            rightImage.style.transition = '';
-        });
-    });
-});
-    </script>
-    
 </body>
 
 </html>

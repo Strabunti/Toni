@@ -1,5 +1,5 @@
 /*#region HEADER*/
-header {
+/* header {
     display: flex;
     padding: 10px 20px;
     align-items: center;
@@ -99,11 +99,11 @@ header {
         margin: 0 auto;
         width: 30%;
     }
-  }
+  } */
 /*#endregion*/
 
 /*#region FOOTER*/
-footer {
+/* footer {
     display: column;
     background-color: #012622;
     color: #F2F0CF;
@@ -203,14 +203,11 @@ footer {
     .mappa-del-sito {
         text-align: center;
     }
-}
-
-
-
+} */
 /*#endregion*/
 
 /*#region BODY*/
-body {
+/* body {
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
@@ -312,11 +309,11 @@ h2.align-left {
         margin-left: 15px;
         margin-bottom: 30px;
     }
-}
+} */
 /*#endregion*/
 
 /*#region STANDARD-BUTTON*/
-.standard-button {
+/* .standard-button {
     display: flex;
     background-color: #F2F0CF;
     color: #012622;
@@ -337,11 +334,11 @@ h2.align-left {
         padding: 0.8em 2.5em;
         font-size: 14px;
     }
-}
+} */
 /*#endregion*/
 
 /*#region MENU-ITEM*/
-.menu-item-container {
+/* .menu-item-container {
     position: relative;
     display: inline-block;
 }
@@ -394,7 +391,7 @@ h2.align-left {
     right: 50px;
     font-size: 16px;
     color: orange;
-}
+} */
 /*#endregion */
 
 /*#region MAIN-SECTION*/

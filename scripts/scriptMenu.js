@@ -1,5 +1,3 @@
-
-
 function openPopup(title, description, ingredients) {
     var popup = document.getElementById('popup');
     var popupTitle = document.getElementById('popup-title');
