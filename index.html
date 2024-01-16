@@ -47,18 +47,37 @@
             <div class="side-by-side">
                 <div class="consiglio-item">
                     <h3>IL BESTSELLER</h3>
-                    <button class="image-button-panino">
-                        <h4>PORTEO</h4>
-                    </button>
-                    <div class="consiglio-item-description">                   <p>Col suo gusto inconfondibile dato dalla miglior versione della salsa TONI’S in commercio, il Pulled Pork è senz’ombra di dubbio ciò su cui puntare per la tua prima degustazione del mondo di TONI’S!</p></div>
+                    <div class="menu-item-container">
+                        <div class="menu-item-images">
+                            <img class="left-image" src="resources/images/vinileChiusoNew.jpg">
+                            <img class="right-image" src="resources/images/vinileSemiAperto.png">
+                        </div>
+                        <div>
+                            <button class="menu-item-button">
+                                <h4>PORTEO</h4>
+                            </button>
+                    </div>
                 </div>
+                    
+                <div class="consiglio-item-description">                   <p>Col suo gusto inconfondibile dato dalla miglior versione della salsa TONI’S in commercio, il Pulled Pork è senz’ombra di dubbio ciò su cui puntare per la tua prima degustazione del mondo di TONI’S!</p></div>
+                </div>
+
                 <div class="consiglio-item">
                     <h3>PANINO DEL MESE</h3>
-                    <button class="image-button-panino">
-                        <h4>PORTEO</h4>
-                    </button>
-                    <div class="consiglio-item-description">                    <p>Se il freddo inverno ti mette alle strette, un solo morso del Piccantino sarà sufficiente per riuscire a scaldarti un po’!</p></div>
+                    <div class="menu-item-container">
+                        <div class="menu-item-images">
+                            <img class="left-image" src="resources/images/vinileChiusoNew.jpg">
+                            <img class="right-image" src="resources/images/vinileSemiAperto.png">
+                        </div>
+                        <div>
+                            <button class="menu-item-button">
+                                <h4>PORTEO</h4>
+                            </button>
+                        </div>
                     </div>
+                    
+                    <div class="consiglio-item-description">                   <p>Se il freddo inverno ti mette alle strette, un solo morso del Piccantino sarà sufficiente per riuscire a scaldarti un po’!</p></div>
+                </div>
             </div>
         </section>
         
@@ -181,6 +200,37 @@
             button.style.pointerEvents = 'none';
         }
     }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all elements with the specified classes
+    var rightImages = document.querySelectorAll('.right-image');
+    var buttons = document.querySelectorAll('.menu-item-button');
+
+    // Loop through each element
+    rightImages.forEach(function(rightImage, index) {
+        // Get the corresponding button
+        var button = buttons[index];
+
+        // Add event listener for mouseover
+        button.addEventListener('mouseover', function() {
+            // Update the style of the right image with a smooth transition
+            rightImage.style.transition = 'right 0.5s ease-in-out'; // Adjust the transition duration and easing as needed
+            rightImage.style.right = '0';
+        });
+
+        // Add event listener for mouseout to reset styles when mouse leaves the button
+        button.addEventListener('mouseout', function() {
+            // Reset the style of the right image with a smooth transition
+            rightImage.style.transition = 'right 0.5s ease-in-out'; // Adjust the transition duration and easing as needed
+            rightImage.style.right = '60px'; // Reset to the original position
+        });
+
+        // Remove the transition after it's completed to avoid interfering with subsequent movements
+        rightImage.addEventListener('transitionend', function() {
+            rightImage.style.transition = '';
+        });
+    });
+});
     </script>
     
 </body>

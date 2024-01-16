@@ -334,6 +334,63 @@ h2.align-left {
 }
 /*#endregion*/
 
+/*#region MENU-ITEM*/
+.menu-item-container {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-item-images {
+    display:flex;
+    position: relative;
+    left: 25px;
+}
+
+.menu-item-images .left-image {
+    width: 200px; 
+    height: 200px; 
+    display: inline-block;
+    margin: 0;
+    z-index: 1;
+}
+
+.menu-item-images .right-image {
+    width: 100px; 
+    height: auto; 
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    right: 60px;
+}
+
+.menu-item-button {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background: url(resources/images/porteo.png) no-repeat;
+    background-size: contain;
+    z-index: 2;
+}
+
+.menu-item-button h4 {
+    margin: 0;
+    position: relative;
+    color: white;
+    right: 50px;
+    font-size: 16px;
+    color: orange;
+}
+/*#endregion */
+
 /*#region MAIN-SECTION*/
 #mainSection {
     display: flex;
@@ -578,13 +635,14 @@ h2.align-left {
     width: 40%;
     height: fit-content;
     max-width: 515px;
+    margin-right: 15px,
 }
 
 #sceltaSection .image-and-heading h3 {
     display: block;
     right: 0px;
     color: #E09200;
-    font-size: large;
+    font-size: xx-large;
 }
 
 #sceltaSection .buttons-container {
