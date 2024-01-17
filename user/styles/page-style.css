@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #917352;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+}
+
+#title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: #012622;
+    font-weight: bold;
+}
+
+a:hover{
+    color: #5D1E09;
+}
+
+#all-comments-link {
+    margin-top: 10px;
+    display: block;
+}
