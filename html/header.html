@@ -1,43 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<!-- HEADER -->
+<header aria-labelledby="headerLabel">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TONI'S TRAMEZZINERIA</title>
-    <link rel="stylesheet" type="text/css" href="../styles/stylesHeader.css"/>
-    <link rel="stylesheet" type="text/css" href="../styles/stylesBody.css"/>
-    <script src="../scripts/scriptHeader.js"></script>
-</head>
-
-<body>
-    <!-- HEADER -->
-    <header>
-
-        <div class="hamburger-menu">
-            <input id="menu__toggle" type="checkbox"/>
-            <label class="menu__btn" for="menu__toggle">
-                <span></span>
-            </label>
-
-            <nav class="menu__box">
-                <ul>
-                    <li><a class="menu__item" href="#menu" aria-label="Vai al Menu" role="link">Menu</a></li>
-                    <li><a class="menu__item" href="#aboutUs" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
-                </ul>
-            </nav>
-        </div>
-        
-        <nav class="main-nav">
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" aria-label="Toggle menu"/>
+        <label class="menu__btn" for="menu__toggle" aria-hidden="true">
+            <span aria-hidden="true"></span>
+        </label>
+    
+        <nav class="menu__box" role="navigation">
             <ul>
-                <li><a href="#menu" aria-label="Vai al Menu" role="link">Menu</a></li>
-                <li><a href="#aboutUs" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
+                <li role="menuitem"><a class="menu__item" href="../html/menu.html" aria-label="Vai al Menu" role="link">Menu</a></li>
+                <li role="menuitem"><a class="menu__item" href="../html/aboutus.html" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
             </ul>
         </nav>
+    </div>
+    
+    
+    <nav class="main-nav" role="navigation">
+        <ul>
+            <li role="menuitem"><a class="menu__item" href="../html/menu.html" aria-label="Vai al Menu" role="link">Menu</a></li>
+            <li role="menuitem"><a class="menu__item" href="../html/aboutus.html" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
+        </ul>
+    </nav>
 
+    <a href="../html/home.html" id="logoLink">
         <img id="headerLogo" src="../resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA">
-        <button id="loginButton" aria-label="Login" class="standard-button">LOGIN</button>
+    </a>
+    <button id="loginButton" aria-label="Login" class="standard-button" role="button">LOGIN</button>
 
-    </header>
-</body>
+</header>

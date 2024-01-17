@@ -4,10 +4,7 @@ header {
     padding: 10px 20px;
     align-items: center;
     background-color: #896E4E;
-}
-
-.main-nav {
-    display: flex;
+    justify-content: space-between;
 }
 
 .main-nav ul {
@@ -34,9 +31,9 @@ header {
 }
 
 #headerLogo {
-    width: 10%;
+    width: 50%;
     margin: 0 auto;
-    padding-right:5%;
+    padding-left: 15%;
 }
 
 .hamburger-menu {
@@ -53,10 +50,10 @@ header {
     }
 
     #headerLogo {
-        margin: 0 auto;
-        width: 25%;
-        padding-left: 10%;
-    }
+      width: 50%;
+      margin: 0 auto;
+      padding-left: 35%;
+  }
 
     .hamburger-menu {
         display: block;
