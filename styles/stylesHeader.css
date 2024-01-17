@@ -31,9 +31,8 @@ header {
 }
 
 #headerLogo {
-    width: 50%;
-    margin: 0 auto;
-    padding-left: 15%;
+  width: 50%;
+  padding-left: 30px;
 }
 
 .hamburger-menu {
@@ -51,8 +50,7 @@ header {
 
     #headerLogo {
       width: 50%;
-      margin: 0 auto;
-      padding-left: 35%;
+      padding-left: 38%;
   }
 
     .hamburger-menu {

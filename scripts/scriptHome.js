@@ -34,19 +34,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('toMenuButton').addEventListener('click', function() {
-        var targetUrl = "../html/menu.html";
-        
-        window.location.href = targetUrl;
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('goToAboutUs').addEventListener('click', function() {
-        var targetUrl = "../html/aboutus.html";
-        
-        window.location.href = targetUrl;
-    });
-});

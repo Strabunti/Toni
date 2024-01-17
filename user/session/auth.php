@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__DIR__) . "../backend/user-manager.php";
+require_once dirname(__DIR__) . "/backend/user-manager.php";
 
 class AuthFunctions
 {

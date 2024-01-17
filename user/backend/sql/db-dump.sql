@@ -44,7 +44,7 @@ CREATE TABLE `comments` (
 
 /* Inserting data for testing purposes */
 
-INSERT INTO `users` (`username`, `pass`, `email`) VALUES 
+INSERT INTO `users` (`username`, `password`, `email`) VALUES 
 ('admin', 'admin', 'admin@admin.com'),
 ('oliver', 'oliver', 'oliferflorinstiglet@stiglettonia.st'), 
 ('andrea', 'andrea', 'andreanegrin@negrilandia.ni'), 

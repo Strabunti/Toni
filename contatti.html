@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Contattaci - TONI'S TRAMEZZINERIA</title>
+    <link rel="stylesheet" type="text/css" href="styles/stylesContatti.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/stylesBody.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/stylesHeader.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/stylesFooter.css"/>
+</head>
+<body>
+
+<!-- HEADER -->
+<header aria-labelledby="headerLabel">
+
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" aria-label="Toggle menu"/>
+        <label class="menu__btn" for="menu__toggle" aria-hidden="true">
+            <span aria-hidden="true"></span>
+        </label>
+    
+        <nav class="menu__box" role="navigation">
+            <ul>
+                <li role="menuitem"><a class="menu__item" href="menu.html" aria-label="Vai al Menu" role="link">Menu</a></li>
+                <li role="menuitem"><a class="menu__item" href="aboutus.html" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
+                <li role="menuitem"><a class="menu__item" href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    
+    <nav class="main-nav" role="navigation">
+        <ul>
+            <li role="menuitem"><a class="menu__item" href="menu.html" aria-label="Vai al Menu" role="link">Menu</a></li>
+            <li role="menuitem"><a class="menu__item" href="aboutus.html" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
+            <li role="menuitem"><a class="menu__item" href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
+        </ul>
+    </nav>
+
+    <a href="home.php" id="logoLink">
+        <img id="headerLogo" src="resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA">
+    </a>
+    <a href="login.php" id="loginButton" aria-label="Login" class="standard-button" role="button">LOGIN</a>
+
+</header>
+
+<main>
+    <!-- MAIN SECTION -->
+    <section id="mainSection">
+        <div class="rectangle" id="titleRectangle" aria-labelledby="mainSectionTitle"><h1>CONTATTACI</h1></div>
+    </section>
+
+    <section id="formSection">
+        <div class="left-rectangle"></div>
+        <div class="top-rectangle"></div>
+
+        <div class="info">
+            <h3>TONI'S Tramezzineria</h3>
+            <address>Via del Portello, 24, 35129, Padova (PD)</address>
+            <p> Lunerdì - Venerdì <br> 10.30-14.30</p>
+        </div>
+
+        <hr>
+
+        <form action="#" method="post" id="contact-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required aria-required="true" />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required aria-required="true" />
+
+            <label for="message">Messaggio:</label>
+            <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+
+            <button type="submit">INVIA</button>
+        </form>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="top-part">
+        <div class="logo-address-container">
+            <img src="resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA" id="footerLogo">
+            <address class="address">
+                TONI'S TRAMEZZINERIA <br/>
+                Via del Portello, 24, 35129, Padova (PD) <br>
+            </address>
+            <div class="social-media-links">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="resources/images/facebookLogo.png" alt="Logo di Facebook">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="resources/images/instagramLogo.png" alt="Logo di Instagram">
+                </a>
+            </div>
+        </div>
+        <div class="mappa-del-sito">
+            <h3>Mappa del Sito</h3>
+            <ul>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contatti.html">Contattaci</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="footerCopyright">
+        <p>&copy; 2024 Strabunti. Tutti i diritti riservati.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+#formSection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EFE7C8;
+    padding: 20px;
+}
+
+#formSection form {
+    margin: 30px;
+    display: grid;
+    grid-gap: 10px;
+    align-items: center;
+    width: 70%;
+}
+
+label {
+    text-align: center;
+    color: #012622;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    align-self: center;
+}
+
+textarea {
+    resize:vertical;
+}
+
+button {
+    background-color: #896E4E;
+    color: #EFE7C8;
+    padding: 1em 3.5em;
+    border: none;
+    border-radius: 32px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+button:hover {
+    background-color: #D1C68A;
+}
+
+.info {
+    margin: 20px;
+    margin-bottom: 0;
+    text-align: center;
+    color: #012622;
+}
+
+hr {
+    width: 70%;
+}
+
+/*#region MAIN-SECTION*/
+#mainSection {
+    display: flex;
+    text-align: center;
+    background: no-repeat center url("../resources/images/aboutusBackground.png");
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 20em;
+}
+
+#mainSection .rectangle {
+    background-color: #896E4E;
+    color: #F2F0CF;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#mainSection .rectangle h1 {
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #mainSection {
+        height: 10em;
+    }
+}
+/*#endregion*/

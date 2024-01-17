@@ -34,6 +34,7 @@
             <ul>
                 <li role="menuitem"><a class="menu__item" href="menu.html" aria-label="Vai al Menu" role="link">Menu</a></li>
                 <li role="menuitem"><a class="menu__item" href="aboutus.html" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
+                <li role="menuitem"><a class="menu__item" href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
             </ul>
         </nav>
     </div>
@@ -43,6 +44,7 @@
         <ul>
             <li role="menuitem"><a class="menu__item" href="menu.html" aria-label="Vai al Menu" role="link">Menu</a></li>
             <li role="menuitem"><a class="menu__item" href="aboutus.html" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
+            <li role="menuitem"><a class="menu__item" href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
         </ul>
     </nav>
 
@@ -62,7 +64,7 @@
             <div class="rectangle" id="subtitleRectangle" aria-labelledby="mainSectionSubtitle">
                 <h3>Il tuo paninaro e tramezzinatore di fiducia</h3>
             </div>
-            <button id="toMenuButton" aria-label="Vai al Menu" class="standard-button">GUARDA IL MENU</button>
+            <a href="menu.html" id="toMenuButton" aria-label="Vai al Menu" class="standard-button">GUARDA IL MENU</a>
         </section>
 
         <!-- CONSIGLI SECTION -->
@@ -120,7 +122,7 @@
                 </div>
                 <div class="location-info">
                     <p>Ti abbiamo già convinto? Ottimo! Vieni a trovarci a Padova, in zona Portello!</p>
-                    <button id="goToAboutUs" aria-label="AboutUs" class="standard-button" role="button">DOVE SIAMO</button>
+                    <a href="aboutus.html" id="goToAboutUs" aria-label="AboutUs" class="standard-button" role="button">DOVE SIAMO</a>
                 </div>
             </div>
         </section>
@@ -151,7 +153,7 @@
                 <div class="image-button">
                     <img class="background-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background">
                     <div>
-                        <button aria-label="Vai al Menu" role="button">
+                        <button href="menu.html" aria-label="Vai al Menu" role="button">
                             <h4>PORTEO</h4>
                         </button>
                     </div>
@@ -207,7 +209,7 @@
                 <li><a href="home.php">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
-                <!-- Aggiungi altri link del sito secondo la tua struttura -->
+                <li><a href="contatti.html">Contattaci</a></li>
             </ul>
         </div>
     </div>
