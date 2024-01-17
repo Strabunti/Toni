@@ -1,0 +1,57 @@
+.logo{
+    width: 100%;
+    margin-bottom: 30px;
+    max-width: 250px;
+}
+
+.dashboard{
+    width: 30%;
+    background-color: #F2F0CF;
+    margin-right: 20px;
+    padding: 5px;
+    padding-top: 30px;
+    padding-right: 40px;
+    padding-left: 15px;
+    border-right-color: #5D1E09;
+    border-right-style: solid;
+    border-right-width: 3px;
+    box-sizing: border-box;
+    position: sticky; /* Make the dashboard sticky */
+    top: 0; /* Stick to the top */
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    max-width: 300px;
+}
+
+.dashboard-item{
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.dashboard-item-image{
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+}
+
+.dashboard-item-link{
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .dashboard{
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .dashboard-item-link > p{
+        display: none;
+    }
+    .dashboard-item-image{
+        margin-top: 10px;
+    }
+    .dashboard{
+        height: 100vh;
+    }
+}

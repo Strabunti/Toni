@@ -1,0 +1,135 @@
+.card-buttons{
+    display: flex;
+}
+
+.card-name {
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 3px;
+    color: #012622;
+}
+
+.card-date {
+    font-size: 12px;
+    margin-top: 3px;
+    color: #012622;
+}
+
+.card-rating {
+    font-size: 15px;
+    margin-top: 3px;
+    color: #E09200;
+}
+
+.card-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    color: #012622;
+}
+
+.fade-out-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Set the height of the fade-out effect */
+    background: linear-gradient(rgba(239, 231, 200, 0), rgba(239, 231, 200, 0.8), rgba(239, 231, 200, 1));
+    pointer-events: none; /* Ensure the overlay does not interfere with interactions */
+}
+
+.card-text {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #012622;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-header > form{
+    align-items: center;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    color: #012622;
+}
+
+.card-main-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-button{
+    background-color: #F2F0CF;
+    border: none;
+    padding: none;
+    margin-top: 20px;
+    margin-right: 20px;
+    height: 25px; /* Set the desired height */
+}
+
+.button-image {
+    width: 100%; /* Make the image fill the width of the container */
+    height: 100%; /* Make the image fill the height of the container */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}
+
+.card {
+    border: 1px solid #ccc;
+    background-color: #F2F0CF;
+    position: relative;
+    border-radius: 18px;
+    padding: 10px;
+    margin: 10px 0;
+    margin-left: 10px;
+    width: calc(33.33% - 20px); /* 3 cards in a row with margin in between */
+    height: 240px;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    overflow: hidden;
+    word-wrap: break-word;
+    border-color: #5D1E09;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.card-profile-pic {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.profile-pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+
+/* Responsive design for smaller screens */
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* 2 cards in a row with margin in between */
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .card {
+        width: 100%; /* 1 card per row for smaller screens */
+    }
+}
