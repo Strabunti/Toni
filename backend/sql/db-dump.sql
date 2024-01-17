@@ -1,37 +1,6 @@
-
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE `users` (
-    username VARCHAR(255) NOT NULL,
-    pass VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    profile_pic MEDIUMBLOB,
-    PRIMARY KEY (`username`),
-    UNIQUE (username, email)
-);
-
-
-DROP TABLE IF EXISTS `admin`;
-CREATE TABLE `admin` (
-  `username` varchar(255) NOT NULL,
-  PRIMARY KEY (`username`),
-  FOREIGN KEY (`username`) REFERENCES `users` (`username`) ON DELETE CASCADE ON UPDATE CASCADE
-);
-
-DROP TABLE IF EXISTS `comments`;
-CREATE TABLE `comments` (
-    comment_id INT PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(255) NOT NULL,
-    title VARCHAR(200) NOT NULL,
-    comment TEXT NOT NULL,
-    rating INT NOT NULL,
-    review_date DATE NOT NULL,
-    FOREIGN KEY (username) REFERENCES users(username) ON DELETE CASCADE ON UPDATE CASCADE
-);
-
-
 DROP TABLE IF EXISTS `dish`;
 CREATE TABLE `dish` (
-    id_dish INT PRIMARY KEY AUTO_INCREMENT,
+    id_dish INT AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
     description VARCHAR(255) NOT NULL,
     ingredients VARCHAR(255) NOT NULL,
@@ -44,6 +13,34 @@ CREATE TABLE `dish` (
     UNIQUE (name)
 );
 
+DROP TABLE IF EXISTS `admin`;
+DROP TABLE IF EXISTS `comments`;
+DROP TABLE IF EXISTS `users`;
+
+CREATE TABLE `users` (
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    profile_pic MEDIUMBLOB,
+    PRIMARY KEY (`username`),
+    UNIQUE (username, email)
+);
+
+CREATE TABLE `admin` (
+  `username` varchar(255) NOT NULL,
+  PRIMARY KEY (`username`),
+  FOREIGN KEY (`username`) REFERENCES `users` (`username`) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE `comments` (
+    comment_id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(255) NOT NULL,
+    title VARCHAR(200) NOT NULL,
+    comment TEXT NOT NULL,
+    rating INT NOT NULL,
+    review_date DATE NOT NULL,
+    FOREIGN KEY (username) REFERENCES users(username) ON DELETE CASCADE ON UPDATE CASCADE
+);
 
 /* Inserting data for testing purposes */
 
