@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
@@ -8,12 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="TONI'S TRAMEZZINERIA! I migliori panini, hamburger e tramezzini di Padova">
     <meta name="keywords" content="tramezzini, panini, hamburger, fast-food, gourmet, cucina, Padova, Portello">
-    <link rel="stylesheet" type="text/css" href="../styles/stylesHome.css" />
-    <link rel="stylesheet" type="text/css" href="../styles/stylesBody.css"/>
-    <link rel="stylesheet" type="text/css" href="../styles/stylesHeader.css"/>
-    <link rel="stylesheet" type="text/css" href="../styles/stylesFooter.css"/>
-    <script src="../scripts/scriptHome.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/stylesHome.css" />
+    <link rel="stylesheet" type="text/css" href="styles/stylesBody.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/stylesHeader.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/stylesFooter.css"/>
+    <link id="style" rel="stylesheet" href="styles/dashboard-style.css">
+    <link id="style" rel="stylesheet" href="styles/card-style.css">
+    <link id="style" rel="stylesheet" href="styles/popup-style.css">
+    <script src="scripts/scriptHome.js"></script>
+    <script src="user/cards/popup/popup.js"></script>
 </head>
+
+<?php session_start(); ?>
 
 <body>
 <!-- HEADER -->
@@ -27,8 +32,8 @@
     
         <nav class="menu__box" role="navigation">
             <ul>
-                <li role="menuitem"><a class="menu__item" href="../html/menu.html" aria-label="Vai al Menu" role="link">Menu</a></li>
-                <li role="menuitem"><a class="menu__item" href="../html/aboutus.html" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
+                <li role="menuitem"><a class="menu__item" href="menu.html" aria-label="Vai al Menu" role="link">Menu</a></li>
+                <li role="menuitem"><a class="menu__item" href="aboutus.html" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
             </ul>
         </nav>
     </div>
@@ -36,15 +41,15 @@
     
     <nav class="main-nav" role="navigation">
         <ul>
-            <li role="menuitem"><a class="menu__item" href="../html/menu.html" aria-label="Vai al Menu" role="link">Menu</a></li>
-            <li role="menuitem"><a class="menu__item" href="../html/aboutus.html" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
+            <li role="menuitem"><a class="menu__item" href="menu.html" aria-label="Vai al Menu" role="link">Menu</a></li>
+            <li role="menuitem"><a class="menu__item" href="aboutus.html" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
         </ul>
     </nav>
 
-    <a href="../html/home.html" id="logoLink">
-        <img id="headerLogo" src="../resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA">
+    <a href="home.php" id="logoLink">
+        <img id="headerLogo" src="resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA">
     </a>
-    <button id="loginButton" aria-label="Login" class="standard-button" role="button">LOGIN</button>
+    <a href="login.php" id="loginButton" aria-label="Login" class="standard-button" role="button">LOGIN</a>
 
 </header>
 
@@ -72,8 +77,8 @@
                     <h3>IL BESTSELLER</h3>
                     <div class="menu-item-container">
                         <div class="menu-item-images">
-                            <img class="left-image" src="../resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
-                            <img class="right-image" src="../resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
+                            <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
+                            <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
                         </div>
                         <div>
                             <button class="menu-item-button" aria-label="Vai al Menu" role="button">
@@ -89,8 +94,8 @@
                     <h3>PANINO DEL MESE</h3>
                     <div class="menu-item-container">
                         <div class="menu-item-images">
-                            <img class="left-image" src="../resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
-                            <img class="right-image" src="../resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
+                            <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
+                            <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
                         </div>
                         <div>
                             <button class="menu-item-button" aria-label="Vai al Menu" role="button">
@@ -144,7 +149,7 @@
                 </div>
 
                 <div class="image-button">
-                    <img class="background-image" src="../resources/images/vinileChiusoNew.jpg" alt="Immagine di Background">
+                    <img class="background-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background">
                     <div>
                         <button aria-label="Vai al Menu" role="button">
                             <h4>PORTEO</h4>
@@ -161,6 +166,20 @@
             <div class="top-rectangle"></div>
 
             <h2 class="align-left" aria-labelledby="recensioniSectionTitle">DICONO DI TONI'S</h2>
+            <div class="recensioni">
+                <?php
+                    require_once 'user/session/auth.php';
+                    require_once 'user/backend/comment-manager.php';
+                    $bestComments = getBestComments(3);
+
+                    if ($bestComments) {
+                        foreach ($bestComments as $comment) 
+                            include 'user/cards/comment-card.php';
+                    } else 
+                        echo "No comments found";
+                ?>
+            </div>
+            
         </section>
     </main>
 
@@ -168,26 +187,26 @@
 <footer>
     <div class="top-part">
         <div class="logo-address-container">
-            <img src="../resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA" id="footerLogo">
+            <img src="resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA" id="footerLogo">
             <address class="address">
                 TONI'S TRAMEZZINERIA <br/>
                 Via del Portello, 24, 35129, Padova (PD) <br>
             </address>
             <div class="social-media-links">
                 <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                    <img src="../resources/images/facebookLogo.png" alt="Logo di Facebook">
+                    <img src="resources/images/facebookLogo.png" alt="Logo di Facebook">
                 </a>
                 <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                    <img src="../resources/images/instagramLogo.png" alt="Logo di Instagram">
+                    <img src="resources/images/instagramLogo.png" alt="Logo di Instagram">
                 </a>
             </div>
         </div>
         <div class="mappa-del-sito">
             <h3>Mappa del Sito</h3>
             <ul>
-                <li><a href="../html/home.html">Home</a></li>
-                <li><a href="../html/menu.html">Menu</a></li>
-                <li><a href="../html/aboutus.html">About Us</a></li>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
                 <!-- Aggiungi altri link del sito secondo la tua struttura -->
             </ul>
         </div>
@@ -197,7 +216,7 @@
     </div>
 </footer>
 
-    <script src="../scripts/scriptHome.js"></script>
+    <script src="scripts/scriptHome.js"></script>
 </body>
 
 </html>

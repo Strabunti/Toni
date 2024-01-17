@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="style" rel="stylesheet" href="../styles/page-style.css">
-    <link id="style" rel="stylesheet" href="../styles/sidebar-style.css">
-    <link id="style" rel="stylesheet" href="../styles/popup-style.css">
-    <link id="style" rel="stylesheet" href="../styles/card-style.css">
+    <link id="style" rel="stylesheet" href="styles/page-style.css">
+    <link id="style" rel="stylesheet" href="styles/sidebar-style.css">
+    <link id="style" rel="stylesheet" href="styles/popup-style.css">
+    <link id="style" rel="stylesheet" href="styles/card-style.css">
     <title>Admin Page - Comments</title>
-    <script src="../cards/popup/popup.js"></script>
+    <script src="user/cards/popup/popup.js"></script>
 </head>
 <body>
 
     <div id="title">Recensioni</div>
 
-    <?php include '../session/auth.php'; ?>
+    <?php include 'user/session/auth.php'; ?>
 
     <?php
     // Include your authentication file
@@ -24,7 +24,7 @@
     // Continue with the admin page content
 
     // Include your database connection file or establish a connection here
-    include '../backend/comment-manager.php';
+    include 'user/backend/comment-manager.php';
 
     // Query to retrieve comments with the highest rates
     $bestComments = getBestComments(-1);
@@ -33,7 +33,7 @@
     if ($bestComments) {
         // Fetch and display comments
         foreach ($bestComments as $comment) {
-            include '../cards/comment-card.php';
+            include 'user/cards/comment-card.php';
         }
     } else {
         // Display an error message if the query fails
@@ -49,8 +49,8 @@
     
     ?>
 
-    <?php include '../cards/popup/popup.php'; ?>
-    <script src="../cards/card.js"></script>
+    <?php include 'user/cards/popup/popup.php'; ?>
+    <script src="user/cards/card.js"></script>
 
 
 </body>

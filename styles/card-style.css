@@ -117,6 +117,7 @@
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
+    max-width: 100px;
 }
 
 

@@ -11,7 +11,7 @@ class DataBase
         exit();
     }
 
-    public static function connect($hostname = "localhost", $username = "toni", $password = "toni", $database = "toni")
+    public static function connect($hostname = "localhost", $username = "toni", $password = "admin", $database = "toni")
     {
         try {
             if (!isset(self::$connection)) {

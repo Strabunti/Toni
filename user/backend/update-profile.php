@@ -5,7 +5,7 @@ session_start();
 // Check if the user is logged in
 if (!isset($_SESSION['username'])) {
     // Redirect to a login page or display an access denied message
-    header("Location: ../login.php"); // Change 'login.php' to your actual login page
+    header("Location: ../../login.php"); // Change 'login.php' to your actual login page
     exit();
 }
 
@@ -30,7 +30,7 @@ $changed = user_manager::change_user($_SESSION['username'], $username, $email, $
 
 if ($changed) {
     // User profile updated successfully, you may redirect or display a success message
-    header("Location: ../view/login.html");
+    header("Location: ../../login.php");
     exit();
 } else {
     // Display an error message if the update fails

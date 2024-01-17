@@ -22,9 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error_message = "Username already taken. Please choose a different username.";
     } else {
         $inserted = user_manager::add($username, $password, $email);
-        header("Location: ../view/login.html");
+        header("Location: ../../login.php");
         exit();
     }
 }
-header("Location: ../forms/register-form.php");
+header("Location: ../../register-form.php");
 ?>

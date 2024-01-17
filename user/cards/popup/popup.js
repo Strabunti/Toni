@@ -4,7 +4,13 @@
 
 function showPopup(idContent) {
     var popupContainer = document.getElementById('popup-container');
+    if(popupContainer === null){
+        return;
+    }
     var popupContent = document.getElementById(idContent);
+    if(popupContent === null){
+        return;
+    }
 
     var username = popupContent.querySelector('#comment-user').innerText;
     var rating = popupContent.querySelector('#comment-rating').innerText;
@@ -21,7 +27,7 @@ function showPopup(idContent) {
                 <img src="${image}" alt="Profile picture" class="popup-pic">
                 <p id="popup-user" class="card-name popup-name">${username}</p>
             </div>
-            <button class="close-button" onclick="closePopup()"><img src="../resources/images/close-button.png" alt="Close pop up button" class="button-image"></button>
+            <button class="close-button" onclick="closePopup()"><img src="resources/images/close-button.png" alt="Close pop up button" class="button-image"></button>
         </div>
         <p id="popup-title" class="card-title popup-title"><strong>Title:</strong> ${title}</p>
         <p id="popup-date" class="card-date popup-date"><strong>Date:</strong> ${date}</p>
@@ -35,8 +41,14 @@ function showPopup(idContent) {
 
 function showDishPopup(idContent) {
     var popupContainer = document.getElementById('popup-container');
+    if(popupContainer === null){
+        return;
+    }
     var string = 'dish-' + idContent;
     var popupContent = document.getElementById(string);
+    if(popupContent === null){
+        return;
+    }
 
     var name = popupContent.querySelector('#dish-name').innerText;
     var price = popupContent.querySelector('#dish-price').innerText;
@@ -52,7 +64,7 @@ function showDishPopup(idContent) {
                 <img src="${image}" alt="Dish picture" class="popup-pic">
                 <p id="popup-user" class="card-name popup-name">${name}</p>
             </div>
-            <button class="close-button" onclick="closePopup()"><img src="../resources/images/close-button.png" alt="Close pop up button" class="button-image"></button>
+            <button class="close-button" onclick="closePopup()"><img src="resources/images/close-button.png" alt="Close pop up button" class="button-image"></button>
         </div>
         <p id="popup-dish-price" class="card-title popup-title"><strong>Price:</strong> ${price}</p>
         <p id="popup-dish-description" class="card-date popup-date"><strong>Description:</strong> ${description}</p>

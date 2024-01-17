@@ -8,13 +8,13 @@ if (!empty($_POST)) {
     if ($result === true) {
         $_SESSION['error-login'] = null;
         if (AuthFunctions::is_admin()){
-            header("Location: ../dashboards/admin-dashboard.php");
+            header("Location: ../../admin-dashboard.php");
         }else
-            header("Location: ../dashboards/user-dashboard.php");
+            header("Location: ../../user-dashboard.php");
     }else{
         error_log("Login failed");
         $_SESSION['error-login'] = $result;
-        header("Location: ../view/login.html");
+        header("Location: ../../login.php");
     }
 }
 ?>

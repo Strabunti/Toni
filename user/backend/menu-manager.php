@@ -20,13 +20,13 @@ function displayDishImage($idDish) {
     $result = DataBase::runQuery($sql, $idDish);
     if($result){
         if($result[0]['image'] == null){
-            return "../resources/images/default-dish-pic.png";
+            return "resources/images/default-dish-pic.png";
         }else{
             $encodedImage = base64_encode($result[0]['image']);
             return "data:image/jpeg;base64," . $encodedImage;
         }
     }else{
-        return "../resources/images/burgher.png";
+        return "resources/images/burgher.png";
     }
 }
 

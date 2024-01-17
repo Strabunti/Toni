@@ -5,7 +5,7 @@ session_start();
 
 if (!isset($_SESSION['username']) && !AuthFunctions::is_admin()) {
     // Redirect to a login page or display an access denied message
-    header("Location: ../view/login.html"); // Change 'login.php' to your actual login page
+    header("Location: ../../login.php"); // Change 'login.php' to your actual login page
     exit();
 }
 
@@ -22,15 +22,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($deleted) {
         // Dish deleted successfully, you may redirect or display a success message
-        header("Location: ../view/menu-all.php");
+        header("Location: ../../menu-all.php");
         exit();
     } else {
         // Display an error message if the deletion fails
-        header("Location: ../dashboards/admin-dashboard.php");
+        header("Location: ../../admin-dashboard.php");
     }
 
 } else {
     // Handle the case when the request method is not POST
-    header("Location: ../dashboards/admin-dashboard.php");
+    header("Location: ../../admin-dashboard.php");
 }
 ?>

@@ -5,7 +5,7 @@ session_start();
 
 if (!isset($_SESSION['username'])) {
     // Redirect to a login page or display an access denied message
-    header("Location: ../view/login.html"); // Change 'login.php' to your actual login page
+    header("Location: ../../login.php"); // Change 'login.php' to your actual login page
     exit();
 }
 
@@ -22,15 +22,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($inserted) {
         // Comment inserted successfully, you may redirect or display a success message
-        header("Location: ../dashboards/user-dashboard.php");
+        header("Location: ../../user-dashboard.php");
         exit();
     } else {
         // Display an error message if the insertion fails
-        header("Location: ../dashboards/user-dashboard.php");
+        header("Location: ../../user-dashboard.php");
     }
 } else {
     // Handle the case when the request method is not POST
-    header("Location: ../dashboards/user-dashboard.php");
+    header("Location: ../../user-dashboard.php");
 }
 
 ?>

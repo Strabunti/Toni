@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="style" rel="stylesheet" href="../styles/page-style.css">
-    <link id="style" rel="stylesheet" href="../styles/sidebar-style.css">
-    <link id="style" rel="stylesheet" href="../styles/form-style.css">
+    <link id="style" rel="stylesheet" href="styles/page-style.css">
+    <link id="style" rel="stylesheet" href="styles/sidebar-style.css">
+    <link id="style" rel="stylesheet" href="styles/form-style.css">
     <title>Add New Dish</title>
 </head>
 <body>
     <?php
-        include '../session/auth.php';
+        include 'user/session/auth.php';
         session_start();
         if(!isset($_SESSION['username']) || !AuthFunctions::is_admin()){
-            header("Location: ../view/login.html");
+            header("Location: login.php");
             exit();
         }
     ?>
     <div class="content">
-        <?php include '../sidebars/admin-sidebar.php'; ?>
+        <?php include 'user/sidebars/admin-sidebar.php'; ?>
         <div class="form-new-dish">
             <h2>AGGIUNGI UN NUOVO PIATTO</h2>
-            <form action="../backend/add-dish.php" method="post" enctype="multipart/form-data">
+            <form action="user/backend/add-dish.php" method="post" enctype="multipart/form-data">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required maxlength="100"><br>
 

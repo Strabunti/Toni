@@ -46,3 +46,7 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+.profile-pic{
+    max-width: 100px;
+}

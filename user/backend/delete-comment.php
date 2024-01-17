@@ -7,7 +7,7 @@ session_start();
 if (!isset($_SESSION['username'])) {
     // Redirect to a login page or display an access denied message
     error_log("Access denied. Please log in as an admin.");
-    header("Location: ../view/login.html"); // Change 'login.php' to your actual login page
+    header("Location: ../../login.php"); // Change 'login.php' to your actual login page
     exit();
 }
 
@@ -38,7 +38,7 @@ if (isset($_POST['comment_id']) && filter_var($_POST['comment_id'], FILTER_VALID
     echo "Invalid comment ID.";
 }
 
-if (AuthFunctions::is_admin()) header("Location: ../dashboards/admin-dashboard.php"); // Change 'admin_page.php' to your actual admin page
-else header("Location: ../dashboards/user-dashboard.php");
+if (AuthFunctions::is_admin()) header("Location: ../../admin-dashboard.php"); // Change 'admin_page.php' to your actual admin page
+else header("Location: ../../user-dashboard.php");
 exit();
 ?>

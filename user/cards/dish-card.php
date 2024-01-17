@@ -13,16 +13,16 @@
             </div>
         </div>
         <div class="card-buttons">
-            <form method="post" action="../forms/update-dish-form.php">
+            <form method="post" action="update-dish-form.php">
                 <input type="hidden" name="id_dish" value="<?php echo $dish['id_dish']; ?>">
                 <button type="submit" class="card-button">
-                    <img src="../resources/images/edit.png" alt="edit the dish" class="button-image">
+                    <img src="resources/images/edit.png" alt="edit the dish" class="button-image">
                 </button>
             </form>
             <form method="post" action="../backend/delete-dish.php">
                 <input type="hidden" name="id_dish" value="<?php echo $dish['id_dish']; ?>">
                 <button type="submit" class="card-button" onclick="return confirm('Are you sure you want to delete this dish?')">
-                    <img src="../resources/images/trash-bin.png" alt="Trash can to remove dish" class="button-image">
+                    <img src="resources/images/trash-bin.png" alt="Trash can to remove dish" class="button-image">
                 </button>
             </form>
         </div>

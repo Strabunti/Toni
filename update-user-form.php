@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="style" rel="stylesheet" href="../styles/page-style.css">
-    <link id="style" rel="stylesheet" href="../styles/sidebar-style.css">
-    <link id="style" rel="stylesheet" href="../styles/form-style.css">
+    <link id="style" rel="stylesheet" href="styles/page-style.css">
+    <link id="style" rel="stylesheet" href="styles/sidebar-style.css">
+    <link id="style" rel="stylesheet" href="styles/form-style.css">
     <title>User Profile</title>
 </head>
 <body>
 
     <div class="content">
-        <?php include '../sidebars/user-sidebar.php'; ?>
+        <?php include 'user/sidebars/user-sidebar.php'; ?>
         <?php
         session_start();
 
         // Check if the user is logged in
         if (!isset($_SESSION['username'])) {
             // Redirect to a login page or display an access denied message
-            header("Location: ../view/login.php"); // Change 'login.php' to your actual login page
+            header("Location: login.php"); // Change 'login.php' to your actual login page
             exit();
         }
 
         // Include your database connection file or establish a connection here
-        include '../backend/user-manager.php';
+        include 'user/backend/user-manager.php';
 
         // Retrieve user information from the database
         $username = $_SESSION['username'];
         $user = user_manager::get_by_username($username);
         ?>
 
-        <form action="../backend/update-profile.php" method="post" enctype="multipart/form-data">
+        <form action="user/backend/update-profile.php" method="post" enctype="multipart/form-data">
             <h2>User Profile</h2>
 
             <label for="username">Username:</label>

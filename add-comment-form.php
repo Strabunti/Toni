@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="style" rel="stylesheet" href="../styles/page-style.css">
-    <link id="style" rel="stylesheet" href="../styles/sidebar-style.css">
-    <link id="style" rel="stylesheet" href="../styles/form-style.css">
+    <link id="style" rel="stylesheet" href="styles/page-style.css">
+    <link id="style" rel="stylesheet" href="styles/sidebar-style.css">
+    <link id="style" rel="stylesheet" href="styles/form-style.css">
     <title>Add New Comment</title>
 </head>
 <body>
@@ -17,14 +17,14 @@
     // Check if the user is logged in
     if (!isset($_SESSION['username'])) {
         // Redirect to a login page or display an access denied message
-        header("Location: ../view/login.php"); // Change 'login.php' to your actual login page
+        header("Location: login.php"); // Change 'login.php' to your actual login page
         exit();
     }
     ?>
         
-    <?php include '../sidebars/user-sidebar.php'; ?>
+    <?php include 'user/sidebars/user-sidebar.php'; ?>
 
-    <form action="../backend/add-comment.php" method="post">
+    <form action="user/backend/add-comment.php" method="post">
         <h2>Add New Comment</h2>
 
         <label for="title">Title:</label>

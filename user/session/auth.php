@@ -1,5 +1,5 @@
 <?php
-require_once("../backend/user-manager.php");
+require_once dirname(__DIR__) . "../backend/user-manager.php";
 
 class AuthFunctions
 {
@@ -22,7 +22,7 @@ class AuthFunctions
         return $user_info[0]['id'] == $commentId;
     }
 
-    public static function connectToDB($hostname = "localhost", $username = "toni", $password = "toni", $database = "toni")
+    public static function connectToDB($hostname = "localhost", $username = "toni", $password = "admin", $database = "toni")
     {
         DataBase::connect($hostname, $username, $password, $database);
     }
