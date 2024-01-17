@@ -1,5 +1,5 @@
 <?php
-require_once('db.php');
+require_once('db-manager.php');
 function getBestComments($numberOfCOmments = 4){
     if($numberOfCOmments < 0){
         $query = "SELECT users.username, email, rating, title, review_date, comment_id, comment AS short_comment FROM comments, users WHERE users.username = comments.username ORDER BY rating DESC";

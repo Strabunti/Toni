@@ -11,10 +11,10 @@
             </div>
         </div>
         <?php if (AuthFunctions::is_admin() || $comment['username'] == $_SESSION['username']) : ?>
-            <form method="post" action="delete-comment.php">
+            <form method="post" action="../backend/delete-comment.php">
                 <input type="hidden" name="comment_id" value="<?php echo $comment['comment_id']; ?>">
                 <button type="submit" class="comment-delete" onclick="return confirm('Are you sure you want to delete this comment?')">
-                    <img src="resources/images/trash-bin.png" alt="Trash can to remove comment" class="button-image">
+                    <img src="../resources/images/trash-bin.png" alt="Trash can to remove comment" class="button-image">
                 </button>
             </form>
         <?php endif; ?>

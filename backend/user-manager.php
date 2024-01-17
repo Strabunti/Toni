@@ -1,5 +1,5 @@
 <?php
-require_once('db.php');
+require_once('db-manager.php');
 class user_manager
 {
 
@@ -79,16 +79,15 @@ class user_manager
     public static function displayProfilePic($username) {
         $sql = "SELECT profile_pic FROM users WHERE username = ?";
         $result = DataBase::runQuery($sql, $username);
-        error_log(print_r($result, true));
         if($result){
             if($result[0]['profile_pic'] == null){
-                return "resources/images/default-profile-pic.png";
+                return "../resources/images/default-profile-pic.png";
             }else{
                 $encodedImage = base64_encode($result[0]['profile_pic']);
                 return "data:image/jpeg;base64," . $encodedImage;
             }
         }else{
-            return "resources/images/default-profile-pic.png";
+            return "../resources/images/default-profile-pic.png";
         }
     }
     

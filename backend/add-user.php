@@ -2,7 +2,7 @@
 session_start();
 
 // Include your database connection file or establish a connection here
-include 'backend/php/access/user-manager.php';
+include 'user-manager.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve form data
@@ -22,9 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error_message = "Username already taken. Please choose a different username.";
     } else {
         $inserted = user_manager::add($username, $password, $email);
-        header("Location: login.html");
+        header("Location: ../login.html");
         exit();
     }
 }
-header("Location: register-form.php");
+header("Location: ../forms/register-form.php");
 ?>

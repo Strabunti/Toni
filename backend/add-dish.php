@@ -1,11 +1,11 @@
 <?php
 // Include your database connection file or establish a connection here
-include 'backend\php\access\comment-manager.php';
+include 'comment-manager.php';
 session_start();
 
 if (!isset($_SESSION['username']) && !AuthFunctions::is_admin()) {
     // Redirect to a login page or display an access denied message
-    header("Location: login.html"); // Change 'login.php' to your actual login page
+    header("Location: ../login.html"); // Change 'login.php' to your actual login page
     exit();
 }
 
@@ -45,15 +45,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($inserted) {
         // Dish inserted successfully, you may redirect or display a success message
-        header("Location: admin-dashboard.php");
+        header("Location: ../dashboards/admin-dashboard.php");
         exit();
     } else {
         // Display an error message if the insertion fails
-        header("Location: add-dish-form.php");
+        header("Location: ../forms/add-dish-form.php");
     }
 
 }else{
     // Handle the case when the request method is not POST
-    header("Location: add-dish-form.php");
+    header("Location: ../forms/add-dish-form.php");
 }
 ?>

@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="style" rel="stylesheet" href="styles/admin-style.css">
+    <link id="style" rel="stylesheet" href="../styles/admin-style.css">
     <title>Admin Page - Comments</title>
-    <script src="backend/js/popup.js"></script>
+    <script src="../cards/popup/popup.js"></script>
 </head>
 <body>
 
     <div id="title">Recensioni</div>
 
+    <?php include '../session/auth.php'; ?>
+
     <?php
     // Include your authentication file
-    include 'backend/php/access/auth.php';
     session_start();
-    error_log("Admin page");
-    error_log(print_r($_SESSION, true));
 
     // Check if the user is an admin
     // Continue with the admin page content
 
     // Include your database connection file or establish a connection here
-    include 'backend/php/access/comment-manager.php';
+    include '../backend/comment-manager.php';
 
     // Query to retrieve comments with the highest rates
     $bestComments = getBestComments(-1);
@@ -31,7 +30,7 @@
     if ($bestComments) {
         // Fetch and display comments
         foreach ($bestComments as $comment) {
-            include 'cards/comment-card.php';
+            include '../cards/comment-card.php';
         }
     } else {
         // Display an error message if the query fails
@@ -47,12 +46,7 @@
     
     ?>
 
-    <div id="popup-container" class="popup-container">
-        <div class="popup-content" id="popup-content">
-            <!-- Content will be dynamically filled using JavaScript -->
-        </div>
-        <span class="close-btn" onclick="closePopup()">&times;</span>
-    </div>
+    <?php include '../cards/popup/popup.php'; ?>
 
 </body>
 </html>

@@ -21,7 +21,7 @@ function showPopup(idContent) {
                 <img src="${image}" alt="Profile picture" class="popup-comment-profile-pic">
                 <p id="popup-comment-user" class="comment-user popup-comment-user">${username}</p>
             </div>
-            <button class="close-button" onclick="closePopup()"><img src="resources/images/close-button.png" alt="Close pop up button" class="button-image"></button>
+            <button class="close-button" onclick="closePopup()"><img src="../resources/images/close-button.png" alt="Close pop up button" class="button-image"></button>
         </div>
         <p id="popup-title" class="comment-title popup-comment-title"><strong>Title:</strong> ${title}</p>
         <p id="popup-date" class="comment-date popup-comment-date"><strong>Date:</strong> ${date}</p>
@@ -52,7 +52,7 @@ function showDishPopup(idContent) {
                 <img src="${image}" alt="Profile picture" class="popup-comment-profile-pic">
                 <p id="popup-comment-user" class="comment-user popup-comment-user">${name}</p>
             </div>
-            <button class="close-button" onclick="closePopup()"><img src="resources/images/close-button.png" alt="Close pop up button" class="button-image"></button>
+            <button class="close-button" onclick="closePopup()"><img src="../resources/images/close-button.png" alt="Close pop up button" class="button-image"></button>
         </div>
         <p id="popup-title" class="comment-title popup-comment-title"><strong>Price:</strong> ${price}</p>
         <p id="popup-date" class="comment-date popup-comment-date"><strong>Description:</strong> ${description}</p>

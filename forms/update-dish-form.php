@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="style" rel="stylesheet" href="styles/admin-style.css">
-    <link id="style" rel="stylesheet" href="styles/form-style.css">
+    <link id="style" rel="stylesheet" href="../styles/admin-style.css">
+    <link id="style" rel="stylesheet" href="../styles/form-style.css">
     <title>Add New Dish</title>
 </head>
 <body>
     <div class="content">
-        <?php include 'sidebars/admin-sidebar.php'; ?>
+        <?php include '../sidebars/admin-sidebar.php'; ?>
         
         <?php
         session_start();
@@ -17,12 +17,12 @@
         // Check if the user is logged in
         if (!isset($_SESSION['username']) && !AuthFunctions::is_admin()) {
             // Redirect to a login page or display an access denied message
-            header("Location: login.php"); // Change 'login.php' to your actual login page
+            header("Location: ../login.php"); // Change 'login.php' to your actual login page
             exit();
         }
 
         // Include your database connection file or establish a connection here
-        include 'backend/php/access/dish-manager.php';
+        include '../backend/dish-manager.php';
 
         $dish = dish_manager::get_by_id($_POST['id_dish']);
         $dishId = $dish[0]['id_dish'];
@@ -38,7 +38,7 @@
         <!-- Form to edit the dish -->
         <div class="form-edit-dish">
             <h2>MODIFY DISH</h2>
-            <form action="update-dish.php" method="post" enctype="multipart/form-data">
+            <form action="../backend/update-dish.php" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="dish_id" value="<?php echo $dishId; ?>">
 
                 <label for="name">Name:</label>

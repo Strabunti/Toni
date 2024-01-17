@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="style" rel="stylesheet" href="styles/admin-style.css">
-    <link id="style" rel="stylesheet" href="styles/form-style.css">
+    <link id="style" rel="stylesheet" href="../styles/admin-style.css">
+    <link id="style" rel="stylesheet" href="../styles/form-style.css">
     <title>Add New Comment</title>
 </head>
 <body>
 <div class="content">
         
-    <?php include 'sidebars/user-sidebar.php'; ?>
+    <?php include '../sidebars/user-sidebar.php'; ?>
 
-    <form action="insert-comment.php" method="post">
+    <form action="../backend/add-comment.php" method="post">
         <h2>Add New Comment</h2>
 
         <label for="title">Title:</label>

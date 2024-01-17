@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="style" rel="stylesheet" href="styles/admin-style.css">
-    <link id="style" rel="stylesheet" href="styles/form-style.css">
+    <link id="style" rel="stylesheet" href="../styles/admin-style.css">
+    <link id="style" rel="stylesheet" href="../styles/form-style.css">
     <title>Add New Dish</title>
 </head>
 <body>
     <div class="content">
-        <?php include 'sidebars/admin-sidebar.php'; ?>
+        <?php include '../sidebars/admin-sidebar.php'; ?>
         <div class="form-new-dish">
             <h2>AGGIUNGI UN NUOVO PIATTO</h2>
-            <form action="insert-dish.php" method="post" enctype="multipart/form-data">
+            <form action="../backend/add-dish.php" method="post" enctype="multipart/form-data">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required maxlength="100"><br>
 

@@ -1,5 +1,5 @@
 <?php
-require_once('user-manager.php');
+require_once("..\backend\user-manager.php");
 
 class AuthFunctions
 {
@@ -32,18 +32,12 @@ class AuthFunctions
         // Check if the user is an admin
         $admin_info = user_manager::get_admin($username);
         //log the admin info
-        error_log("checking admin info" . print_r($admin_info, true));
         if ($admin_info) {
-            // Admin login logic
-            // (You may want to compare passwords and handle admin-specific tasks)
-            // ...
 
             // Example: Set admin-specific session variable
             $_SESSION['is_admin'] = true;
-            error_log("Is admin setted to true");
         }else {
             $_SESSION['is_admin'] = false;
-            error_log("Is admin setted to false");
         }
 
         // Regular user login logic
@@ -51,7 +45,6 @@ class AuthFunctions
         if ($user_info && $password == $user_info[0]['password']) {
             // Valid login, set session variables
             $_SESSION['username'] = $user_info[0]['username'];
-            error_log(print_r($_SESSION, true));
             error_log("Login successful by auth.php");
             return true;
         }

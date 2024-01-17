@@ -11,16 +11,16 @@
             </div>
         </div>
         <div class="right-side-div">
-            <form method="post" action="update-dish-form.php">
+            <form method="post" action="../forms/update-dish-form.php">
                 <input type="hidden" name="id_dish" value="<?php echo $dish['id_dish']; ?>">
                 <button type="submit" class="comment-delete">
-                    <img src="resources/images/edit.png" alt="edit the dish" class="button-image">
+                    <img src="../resources/images/edit.png" alt="edit the dish" class="button-image">
                 </button>
             </form>
-            <form method="post" action="delete-dish.php">
+            <form method="post" action="../backend/delete-dish.php">
                 <input type="hidden" name="id_dish" value="<?php echo $dish['id_dish']; ?>">
                 <button type="submit" class="comment-delete" onclick="return confirm('Are you sure you want to delete this dish?')">
-                    <img src="resources/images/trash-bin.png" alt="Trash can to remove dish" class="button-image">
+                    <img src="../resources/images/trash-bin.png" alt="Trash can to remove dish" class="button-image">
                 </button>
             </form>
         </div>

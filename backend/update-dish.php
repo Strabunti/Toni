@@ -1,13 +1,13 @@
 <?php
 // Include your authentication file
-include 'backend\php\access\auth.php';
-include 'backend\php\access\dish-manager.php';
+include '..\session\auth.php';
+include 'dish-manager.php';
 session_start();
 
 // Check if the user is logged in
 if (!isset($_SESSION['username']) && !AuthFunctions::is_admin()) {
     // Redirect to a login page or display an access denied message
-    header("Location: login.php"); // Change 'login.php' to your actual login page
+    header("Location: ..\login.php"); // Change 'login.php' to your actual login page
     exit();
 }
 
@@ -33,10 +33,10 @@ $changed = dish_manager::change_dish($id, $name, $description, $ingredients, $im
 
 if ($changed) {
     // User profile updated successfully, you may redirect or display a success message
-    header("Location: admin-dashboard.php");
+    header("Location: ../dashboards/admin-dashboard.php");
     exit();
 } else {
     // Display an error message if the update fails
-    header("Location: admin-dashboard.php");
+    header("Location: ../dashboards/admin-dashboard.php");
 }
 ?>

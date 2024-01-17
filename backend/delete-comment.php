@@ -1,19 +1,18 @@
 <?php
 // Include your authentication file
-include 'backend/php/access/auth.php';
+include '../session/auth.php';
 session_start();
 
 // Check if the user is logged in
 if (!isset($_SESSION['username'])) {
     // Redirect to a login page or display an access denied message
-    error_log("session not setted" . print_r($_SESSION, true));
     error_log("Access denied. Please log in as an admin.");
-    header("Location: login.html"); // Change 'login.php' to your actual login page
+    header("Location: ../login.html"); // Change 'login.php' to your actual login page
     exit();
 }
 
 // Include your database connection file or establish a connection here
-include 'backend/php/access/comment-manager.php';
+include 'comment-manager.php';
 
 // Check if the comment_id is set and is a valid integer
 if (isset($_POST['comment_id']) && filter_var($_POST['comment_id'], FILTER_VALIDATE_INT)) {
@@ -39,7 +38,7 @@ if (isset($_POST['comment_id']) && filter_var($_POST['comment_id'], FILTER_VALID
     echo "Invalid comment ID.";
 }
 
-if (AuthFunctions::is_admin()) header("Location: admin-dashboard.php"); // Change 'admin_page.php' to your actual admin page
-else header("Location: user-dashboard.php");
+if (AuthFunctions::is_admin()) header("Location: ../dashboards/admin-dashboard.php"); // Change 'admin_page.php' to your actual admin page
+else header("Location: ../dashboards/user-dashboard.php");
 exit();
 ?>
