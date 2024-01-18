@@ -51,8 +51,10 @@
     text-align: center;
 }
 
-#consigliSection .consiglio-item h3 {
+#consigliSection .consiglio-item h4 {
     color: #012622;
+    margin: 5px;
+    font-size: 1.5em;
 }
 
 #consigliSection .consiglio-item-description {
@@ -78,6 +80,10 @@
     .consiglio-item-description {
         margin-right: 5%;
         margin-left: 5%; 
+    }
+
+    #consigliSection .consiglio-item h4 {
+        font-size: 1.2em;
     }
 }
 /*#endregion */
@@ -111,6 +117,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: 16px;
+}
+
+#doveSiamoSection .location-info p {
+    font-size: x-large;
 }
 
 @media screen and (max-width: 768px) {
@@ -235,23 +246,23 @@
     z-index: 2;
 }
 
-.image-button button h4 {
+.image-button button h5 {
     margin: 0;
     position: relative;
-    color: white;
     font-size: 32px;
     color: orange;
+    background-color: rgba(0,0,0,0.5);
 }
 
 @media screen and (max-width: 1100px) {
-    #sceltaSection h2.align-right {
+    #sceltaSection h3.align-right {
         text-align: center;
         margin-top: 15px;
         margin-bottom: 30px;
         color: #012622;
     }
 
-    #sceltaSection h2 {
+    #sceltaSection h3 {
         font-size: 2em;
     }
 
@@ -263,7 +274,7 @@
     #sceltaSection .mobile-category-button {
         display: flex;
         background-color: #896E4E;
-        color: #EFE7C8;
+        color: #F9F9F0;
         padding: 0.1em 1em;
         margin: 5px;
         font-size: 14px;
@@ -293,12 +304,12 @@
         height: 200px;
     }
 
-    .image-button button h4 {
+    .image-button button h5 {
         margin: 0;
         position: relative;
-        color: white;
         font-size: 16px;
         color: orange;
+        background-color: black;
     }
 }
 /*#endregion */

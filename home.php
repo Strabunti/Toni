@@ -22,13 +22,13 @@
 
 <body>
 <!-- HEADER -->
-<header aria-labelledby="headerLabel">
+<header>
 
     <div class="hamburger-menu">
         <input id="menu__toggle" type="checkbox" aria-label="Toggle menu"/>
-        <label class="menu__btn" for="menu__toggle" aria-hidden="true">
+        <div class="menu__btn" for="menu__toggle" aria-hidden="true">
             <span aria-hidden="true"></span>
-        </label>
+        </div>
     
         <nav class="menu__box" role="navigation">
             <ul>
@@ -51,32 +51,32 @@
     <a href="home.php" id="logoLink">
         <img id="headerLogo" src="resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA">
     </a>
-    <a href="login.php" id="loginButton" aria-label="Login" class="standard-button" role="button">LOGIN</a>
+    <a href="login.php" id="loginButton" aria-labelledby="loginButton" class="standard-button" role="button">LOGIN</a>
 
 </header>
 
     <main>
         <!-- MAIN SECTION -->
-        <section id="mainSection" role="region" aria-labelledby="mainSectionHeading">
-            <div class="rectangle" id="titleRectangle" aria-labelledby="mainSectionTitle">
+        <section id="mainSection" role="region">
+            <div class="rectangle" id="titleRectangle" aria-labelledby="mainSectionHeading">
                 <h1 id="mainSectionHeading">TONI'S<br>Tramezzineria</h1>
             </div>
             <div class="rectangle" id="subtitleRectangle" aria-labelledby="mainSectionSubtitle">
-                <h3>Il tuo paninaro e tramezzinatore di fiducia</h3>
+                <h2 id="mainSectionSubtitle">Il tuo paninaro e tramezzinatore di fiducia</h2>
             </div>
             <a href="menu.html" id="toMenuButton" aria-label="Vai al Menu" class="standard-button">GUARDA IL MENU</a>
         </section>
 
         <!-- CONSIGLI SECTION -->
-        <section id="consigliSection">
+        <section id="consigliSection" aria-labelledby="consigliSectionTitle">
             <div class="left-rectangle"></div>
             <div class="top-rectangle"></div>
             
-            <h2 class="align-right" aria-labelledby="consigliSectionTitle">TOMMY CONSIGLIA</h2>
+            <h3 class="align-right" id="consigliSectionTitle">TOMMY CONSIGLIA</h3>
 
             <div class="side-by-side">
                 <div class="consiglio-item">
-                    <h3>IL BESTSELLER</h3>
+                    <h4>IL BESTSELLER</h4>
                     <div class="menu-item-container">
                         <div class="menu-item-images">
                             <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
@@ -84,16 +84,17 @@
                         </div>
                         <div>
                             <button class="menu-item-button" aria-label="Vai al Menu" role="button">
-                                <h4>PORTEO</h4>
+                                <p>PORTEO</p>
                             </button>
+                        </div>
                     </div>
-                </div>
                     
-                <div class="consiglio-item-description">                   <p>Col suo gusto inconfondibile dato dalla miglior versione della salsa TONI’S in commercio, il Pulled Pork è senz’ombra di dubbio ciò su cui puntare per la tua prima degustazione del mondo di TONI’S!</p></div>
+                    <div class="consiglio-item-description">                   <p>Col suo gusto inconfondibile dato dalla miglior versione della salsa TONI’S in commercio, il Pulled Pork è senz’ombra di dubbio ciò su cui puntare per la tua prima degustazione del mondo di TONI’S!</p>
+                    </div>
                 </div>
 
                 <div class="consiglio-item">
-                    <h3>PANINO DEL MESE</h3>
+                    <h4>PANINO DEL MESE</h4>
                     <div class="menu-item-container">
                         <div class="menu-item-images">
                             <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
@@ -101,7 +102,7 @@
                         </div>
                         <div>
                             <button class="menu-item-button" aria-label="Vai al Menu" role="button">
-                                <h4>PORTEO</h4>
+                                <p>PORTEO</p>
                             </button>
                         </div>
                     </div>
@@ -112,28 +113,28 @@
         </section>
         
         <!-- DOVE SIAMO SECTION -->
-        <section id="doveSiamoSection">
+        <section id="doveSiamoSection" aria-labelledby="doveSiamoSectionTitle">
             <div class="left-rectangle"></div>
             <div class="top-rectangle"></div>
-            <h2 class="align-left" aria-labelledby="doveSiamoSectionTitle">DOV'E' TONI'S?</h2>
+            <h3 class="align-left" id="doveSiamoSectionTitle">DOV'E' TONI'S?</h3>
             <div class="side-by-side">
                 <div class="map-container">
                     <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11204.230924611375!2d11.892494!3d45.4081754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477edaf723594ce7%3A0x822810e7e09bc854!2sToni&#39;s%20Tramezzineria!5e0!3m2!1sit!2sit!4v1705222707812!5m2!1sit!2sit" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" alt="Mappa Embedded di Google Maps"></iframe>
                 </div>
                 <div class="location-info">
-                    <p>Ti abbiamo già convinto? Ottimo! Vieni a trovarci a Padova, in zona Portello!</p>
+                    <p>Ti abbiamo già convinto? Ottimo! <br> Vieni a trovarci a Padova, in zona Portello!</p>
                     <a href="aboutus.html" id="goToAboutUs" aria-label="AboutUs" class="standard-button" role="button">DOVE SIAMO</a>
                 </div>
             </div>
         </section>
 
         <!-- LA NOSTRA SCELTA SECTION -->
-        <section id="sceltaSection">
+        <section id="sceltaSection" aria-labelledby="sceltaSectionTitle">
 
             <div class="left-rectangle"></div>
             <div class="top-rectangle"></div>
 
-            <h2 class="align-right" aria-labelledby="sceltaSectionTitle">LA NOSTRA SCELTA</h2>
+            <h3 class="align-right" id="sceltaSectionTitle">LA NOSTRA SCELTA</h3>
 
             <div class="side-by-side">
                 <div class="buttons-container">
@@ -154,7 +155,7 @@
                     <img class="background-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background">
                     <div>
                         <button href="menu.html" aria-label="Vai al Menu" role="button">
-                            <h4>PORTEO</h4>
+                            <h5>PORTEO</h5>
                         </button>
                     </div>
 
@@ -163,11 +164,11 @@
         </section>
 
         <!-- RECENSIONI SECTION -->
-        <section id="recensioniSection">
+        <section id="recensioniSection" aria-labelledby="recensioniSectionTitle">
             <div class="left-rectangle"></div>
             <div class="top-rectangle"></div>
 
-            <h2 class="align-left" aria-labelledby="recensioniSectionTitle">DICONO DI TONI'S</h2>
+            <h3 class="align-left" id="recensioniSectionTitle">DICONO DI TONI'S</h3>
             <div class="recensioni">
                 <?php
                     require_once 'user/session/auth.php';
@@ -204,7 +205,7 @@
             </div>
         </div>
         <div class="mappa-del-sito">
-            <h3>Mappa del Sito</h3>
+            <p>Mappa del Sito</p>
             <ul>
                 <li><a href="home.php">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>

@@ -33,7 +33,7 @@ textarea {
 
 button {
     background-color: #896E4E;
-    color: #EFE7C8;
+    color: #F9F9F0;
     padding: 1em 3.5em;
     border: none;
     border-radius: 32px;
@@ -55,6 +55,25 @@ button:hover {
 
 hr {
     width: 70%;
+}
+
+#formSection .map-container {
+    display: flex;
+    margin: 0;
+}
+
+#formSection .map {
+    width: 30em;
+    height: 300px;
+    border: none;
+}
+
+@media screen and (max-width: 768px) {
+    #formSection .map {
+        height: 30vw;
+        width: 300px;
+        border: none;
+    }
 }
 
 /*#region MAIN-SECTION*/

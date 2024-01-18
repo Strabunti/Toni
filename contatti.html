@@ -11,13 +11,13 @@
 <body>
 
 <!-- HEADER -->
-<header aria-labelledby="headerLabel">
+<header>
 
     <div class="hamburger-menu">
         <input id="menu__toggle" type="checkbox" aria-label="Toggle menu"/>
-        <label class="menu__btn" for="menu__toggle" aria-hidden="true">
+        <div class="menu__btn" for="menu__toggle" aria-hidden="true">
             <span aria-hidden="true"></span>
-        </label>
+        </div>
     
         <nav class="menu__box" role="navigation">
             <ul>
@@ -40,14 +40,14 @@
     <a href="home.php" id="logoLink">
         <img id="headerLogo" src="resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA">
     </a>
-    <a href="login.php" id="loginButton" aria-label="Login" class="standard-button" role="button">LOGIN</a>
+    <a href="login.php" id="loginButton" aria-labelledby="loginButton" class="standard-button" role="button">LOGIN</a>
 
 </header>
 
 <main>
     <!-- MAIN SECTION -->
     <section id="mainSection">
-        <div class="rectangle" id="titleRectangle" aria-labelledby="mainSectionTitle"><h1>CONTATTACI</h1></div>
+        <div class="rectangle" id="titleRectangle" aria-labelledby="mainSectionHeading"><h1 id="mainSectionHeading">CONTATTACI</h1></div>
     </section>
 
     <section id="formSection">
@@ -57,7 +57,11 @@
         <div class="info">
             <h3>TONI'S Tramezzineria</h3>
             <address>Via del Portello, 24, 35129, Padova (PD)</address>
-            <p> Lunerdì - Venerdì <br> 10.30-14.30</p>
+            <p> Lunerdì - Venerdì <br> 10.30 - 14.30</p>
+        </div>
+
+        <div class="map-container">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11204.230924611375!2d11.892494!3d45.4081754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477edaf723594ce7%3A0x822810e7e09bc854!2sToni&#39;s%20Tramezzineria!5e0!3m2!1sit!2sit!4v1705222707812!5m2!1sit!2sit" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
         <hr>
@@ -96,7 +100,7 @@
             </div>
         </div>
         <div class="mappa-del-sito">
-            <h3>Mappa del Sito</h3>
+            <p>Mappa del Sito</p>
             <ul>
                 <li><a href="home.php">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>

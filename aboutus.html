@@ -14,13 +14,13 @@
 
 <body>
 <!-- HEADER -->
-<header aria-labelledby="headerLabel">
+<header>
 
     <div class="hamburger-menu">
         <input id="menu__toggle" type="checkbox" aria-label="Toggle menu"/>
-        <label class="menu__btn" for="menu__toggle" aria-hidden="true">
+        <div class="menu__btn" for="menu__toggle" aria-hidden="true">
             <span aria-hidden="true"></span>
-        </label>
+        </div>
     
         <nav class="menu__box" role="navigation">
             <ul>
@@ -43,21 +43,21 @@
     <a href="home.php" id="logoLink">
         <img id="headerLogo" src="resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA">
     </a>
-    <a href="login.php" id="loginButton" aria-label="Login" class="standard-button" role="button">LOGIN</a>
+    <a href="login.php" id="loginButton" aria-labelledby="loginButton" class="standard-button" role="button">LOGIN</a>
 
 </header>
 
     <main>
         <!-- MAIN SECTION -->
         <section id="mainSection">
-            <div class="rectangle" id="titleRectangle" aria-labelledby="mainSectionTitle"><h1>ABOUT TONI'S</h1></div>
+            <div class="rectangle" aria-labelledby="mainSectionTitle" id="mainSectionTitle"><h1>ABOUT TONI'S</h1></div>
         </section>
         
         <!-- DOVE TROVARCI SECTION -->
-        <section id="doveTrovarciSection">
+        <section id="doveTrovarciSection" aria-labelledby="doveTrovarciSectionTitle">
             <div class="left-rectangle"></div>
             <div class="top-rectangle"></div>
-            <h2 class="align-right" aria-labelledby="doveTrovarciSectionTitle">DOV'E' TONI'S?</h2>
+            <h3 class="align-right" id="doveTrovarciSectionTitle">DOV'E' TONI'S?</h3>
             <div class="side-by-side">
                 <div class="location-info">
                     <p>La tramezzineria di Toni, situata nel cuore della zona universitaria di Padova, ha visto la luce cinque anni fa grazie alla passione imprenditoriale di Tommy, il suo unico e instancabile lavoratore.</p>
@@ -70,13 +70,13 @@
         </section>
 
         <!-- TOMMY SECTION -->
-        <section id="tommySection">
+        <section id="tommySection" aria-labelledby="tommySectionTitle">
             <div class="left-rectangle"></div>
             <div class="top-rectangle"></div>
-            <h2 class="align-left" aria-labelledby="tommySectionTitle">CHI E' TOMMY</h2>
+            <h3 class="align-left" id="tommySectionTitle">CHI E' TOMMY</h3>
             <div class="side-by-side">
                 <div class="tommy-image">
-                    <img src="../resources/images/tommy.jpg">
+                    <img src="resources/images/tommy.jpg" alt="Immagine di Tommy al lavoro!">
                 </div>
                 <div class="tommy-info">
                     <p>Tommy, con la sua abilità culinaria e il suo spirito 
@@ -96,31 +96,31 @@
             <div class="slideshow-container">
 
                 <div class="slides fade">
-                <img src="../resources/images/carousel/carousel_1.jpg">
+                <img src="resources/images/carousel/carousel_1.jpg" alt="Immagine per conoscere meglio Tommy e il suo lavoro">
                 </div>
             
                 <div class="slides fade">
-                <img src="../resources/images/carousel/carousel_2.jpg">
+                <img src="resources/images/carousel/carousel_2.jpg" alt="Immagine per conoscere meglio Tommy e il suo lavoro">
                 </div>
             
                 <div class="slides fade">
-                <img src="../resources/images/carousel/carousel_3.jpg">
+                <img src="resources/images/carousel/carousel_3.jpg" alt="Immagine per conoscere meglio Tommy e il suo lavoro">
                 </div>
 
                 <div class="slides fade">
-                    <img src="../resources/images/carousel/carousel_4.jpg">
+                    <img src="resources/images/carousel/carousel_4.jpg" alt="Immagine per conoscere meglio Tommy e il suo lavoro">
                     </div>
             
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <a class="prev" onclick="plusSlides(-1)" tabindex="0">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)" tabindex="0">&#10095;</a>
             </div>
             <br>
             
             <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(1)" tabindex="0"></span>
+                <span class="dot" onclick="currentSlide(2)" tabindex="0"></span>
+                <span class="dot" onclick="currentSlide(3)" tabindex="0"></span>
+                <span class="dot" onclick="currentSlide(4)" tabindex="0"></span>
             </div> 
         </section>
     </main>
@@ -144,7 +144,7 @@
             </div>
         </div>
         <div class="mappa-del-sito">
-            <h3>Mappa del Sito</h3>
+            <p>Mappa del Sito</p>
             <ul>
                 <li><a href="home.php">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
@@ -158,7 +158,7 @@
     </div>
 </footer>
     
-    <script src="../scripts/scriptAboutus.js"></script>
+    <script src="scripts/scriptAboutus.js"></script>
 </body>
 
 </html>
