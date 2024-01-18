@@ -401,6 +401,7 @@ h2.align-left {
 }
 /*#endregion */
 
+/* MENU */
 html {
     scroll-behavior: smooth;
 }
@@ -415,37 +416,32 @@ header {
     position: relative;
 }
 
-h1 {
-    position: absolute;
-    top: 43%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #F2F0CF;
-    background-color: #896E4E;
-    padding: 0.5em;
-    max-width: fit-content;
-    width: 100%;
+#mainSection {
+    display: flex;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: 3em;
+    background: no-repeat center url("../resources/images/ToniMenu.jpg");
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 30em;
 }
 
-.toni-menu-img {
-    width: 100%; /* Occupa l'intera larghezza dello schermo */
-    max-height: 250px; /* Imposta la massima altezza verticale desiderata */
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
+#mainSection .rectangle {
+    background-color: #896E4E;
+    color: #F2F0CF;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
-.toni-menu-img .centered-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+@media screen and (max-width: 768px) {
+    #mainSection {
+        height: auto;
+    }
 }
 
-nav {
+#prodottiSection {
     background-color: #896E4E;
     padding: 10px;
     display: flex;
@@ -453,167 +449,91 @@ nav {
     align-items: center;
 }
 
-.nav-title {
+#prodottiSection h2 {
     color: #EFE7C8;
     font-family: 'Poppins', sans-serif;
     font-size: 1.6em;
     font-weight: bold;
 }
 
-nav ul {
+
+#prodottiSection ul {
     list-style: none;
     display: flex;
     margin: 0; 
     flex-wrap: wrap; 
 }
 
-nav li {
-    margin: 0 10px; 
-}
-
-#tramezzini {
-    background-color: #F2F0CF;
-    color: #012622;
-    padding: 20px;
-    margin: 10px;
-    margin-right: 0px;
-}
-
-#tramezzini h2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-#tramezzini p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2em; 
-}
-
-#panini {
-    background-color: #896E4E;
+#prodottiSection button {
     color: #F2F0CF;
-    padding: 20px;
-    margin: 10px;
-    margin-right: 0px;
+    font-weight: normal;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #896E4E;
+    transition: background-color 0.3s ease;
 }
 
-#panini h2 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    font-size: 1.5em;
-}
 
-#panini p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2em;
-}
-
-#burgers {
+#prodottiSection button:hover {
     background-color: #F2F0CF;
     color: #012622;
-    padding: 20px;
-    margin: 10px;
-    margin-right: 0px;
 }
 
 
+#tramezzini,
+#panini,
+#burgers {
+    padding: 20px;
+    margin: 10px;
+    margin-right: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* Titolo della sezione */
+#tramezzini h2,
+#panini h2,
 #burgers h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 1.5em;
 }
 
+/* Testo della sezione */
+#tramezzini p,
+#panini p,
 #burgers p {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.2em; 
 }
 
-#tramezzini,
-#panini,
+/* Colori specifici per ciascuna sezione */
+#tramezzini {
+    background-color: #F2F0CF;
+    color: #012622;
+}
+
+#panini {
+    background-color: #896E4E;
+    color: #F2F0CF;
+}
+
 #burgers {
+    background-color: #F2F0CF;
+    color: #012622;
+}
+
+.prodotto-item {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-/* Aggiorna lo stile degli articoli per avere un layout affiancato */
-#tramezzini article,
-#panini article,
-#burgers article {
-    flex: 0 0 calc(33.33% - 20px); 
+    justify-content: center;
+    align-items: center;
     margin: 10px;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-}
-#tramezzini h3,
-#panini h3,
-#burgers h3 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    font-size: 1.2em; /* Dimensione del carattere del nome del prodotto */
-    margin-top: 10px; /* Aggiunge uno spazio sopra il nome del prodotto */
-    margin-bottom: 5px; /* Aggiunge uno spazio sotto il nome del prodotto */
-}
-
-#tramezzini img,
-#panini img,
-#burgers img {
-    width: 80%;
-    height: auto; 
-}
-
-#tramezzini article:nth-child(odd),
-#panini article:nth-child(odd),
-#burgers article:nth-child(odd) {
-    margin-left: auto; /* Sposta verso sinistra quando è dispari */
-    margin-right: auto; /* Sposta verso destra quando è pari */
-}
-
-#tramezzini article:nth-child(even),    
-#panini article:nth-child(even),
-#burgers article:nth-child(even) {
-    margin-right: auto; /* Sposta verso destra quando è dispari */
-    margin-left: auto; /* Sposta verso sinistra quando è pari */
-}
-
-#tramezzini article:hover,
-#panini article:hover,
-#burgers article:hover {
-    transform: scale(1.05); /* Ingrandisci leggermente l'articolo */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Aggiungi un'ombra sottile */
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1;
-}
-
-.popup-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
+    flex: 0 0 calc(33% - 20px);
+    margin-right: 10px;
+    margin-bottom: 30px;
 }
 
 #scrollToTopBtn {
@@ -634,25 +554,15 @@ nav li {
     display: none;
 }
 
-#scrollToTopBtn:hover {
-    background-color: #F2F0CF;
-    color: #012622;
-}
 
 
-@media only screen and (max-width: 900px) {
-    /* 2 prodotti per riga su dispositivi medi */
-    #tramezzini article,
-    #panini article,
-    #burgers article {
-        flex: 0 0 calc(50% - 20px);
+
+@media screen and (max-width: 1000px) {
+    .prodotto-item {
+      flex: 0 0 calc(50% - 20px); 
+      
     }
-
-    #burgers article:nth-child(odd) {
-        margin-left: auto; /* Sposta verso sinistra quando è dispari */
-        margin-right: auto; /* Sposta verso destra quando è pari */
-    }
-}
+  }
 
 
 @media only screen and (max-width: 600px) {
@@ -661,30 +571,30 @@ nav li {
         font-size: 2.4em;
     }
 
-    nav {
-        flex-direction: column; /* Colonna per l'allineamento verticale su schermi più piccoli */
-        text-align: center; /* Centra il testo e i bottoni su schermi più piccoli */
+    #prodottiSection {
+        flex-direction: column; 
+        text-align: center; 
     }
 
-    nav ul {
-        width: 100%; /* Larghezza al 100% su schermi più piccoli */
-        padding: 0; /* Rimuovi il padding per evitare spazi inutili */
+    #prodottiSection ul {
+        width: 100%; 
+        padding: 0; 
     }
 
-    nav li {
-        margin: 10px 0; /* Aggiunge spazio verticale tra i bottoni su schermi più piccoli */
-        width: 100%; /* Rendi i bottoni larghi al 100% del contenitore */
+
+
+    #prodottiSection button {
+        margin: 10px 0; 
+        width: 100%; 
+        display: inline;
     }
 
-    nav a {
-        padding: 8px 12px; /* Riduci il padding per rendere i bottoni più piccoli */
-        border-radius: 10px; /* Riduci il bordo per mantenere l'aspetto arrotondato */
-    }
+  
     
-    #tramezzini article,
-    #panini article,
-    #burgers article {
-        flex: 0 0 calc(100% - 20px);
+    .prodotto-item {
+        margin: 10px;
+        flex: 0 0 calc(100% - 100px);
+        margin-right: 10px; 
     }
 
     #scrollToTopBtn {
