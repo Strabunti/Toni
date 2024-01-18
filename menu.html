@@ -4,54 +4,55 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="styles/stylesMenu.css"/>
-        <script src="scripts/scriptMenu.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles/stylesBody.css"/>
+        <link rel="stylesheet" type="text/css" href="styles/stylesHeader.css"/>
+        <link rel="stylesheet" type="text/css" href="styles/stylesFooter.css"/>
 		<title>Menu</title>
     </head>
     <body>
-    <!-- HEADER -->
-    <header>
-        <div id="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#menu" aria-label="Vai al Menu" role="link">Menu</a></li>
-                <li><a href="#aboutUs" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
-            </ul>
-        </nav>
 
-        <div class="toggle"></div>
-        <img id="headerLogo" src="resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA">
-        <button id="loginButton" aria-label="Login" class="standard-button">LOGIN</button>
-    </header>
+<!-- HEADER -->
+<header>
+    <div class="topnav">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        &#9776;
+        </a>
+        <div id="myLinks">
+            <a href="menu.html" aria-label="Vai al Menu" role="link">Menu</a></li>
+            <a href="aboutus.html" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
+            <a href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
+        </div>
+    </div>
 
-        <section>
-            <h1 role="heading" aria-level="1" aria-label="Menu">MENU</h1>
-            <img src="resources/images/ToniMenu.jpg" alt="Immagine di prodotti in vetrina di toni" class="toni-menu-img"/>         
+<nav class="main-nav" role="navigation">
+    <ul>
+        <li role="menuitem"><a class="menu__item" href="menu.html" aria-label="Vai al Menu" role="link">Menu</a></li>
+        <li role="menuitem"><a class="menu__item" href="aboutus.html" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
+        <li role="menuitem"><a class="menu__item" href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
+    </ul>
+</nav>
+
+<a href="home.php" id="logoLink">
+    <img id="headerLogo" src="resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA">
+</a>
+<a href="login.php" id="loginButton" aria-labelledby="loginButton" class="standard-button" role="button">LOGIN</a>
+
+</header>
+
+        <section id="mainSection">
+            <div class="rectangle" id="titleRectangle"><h1>MENU</h1></div>  
         </section>
         
-        <nav>
-            <div class="nav-title">PRODOTTI</div>
-            <ul>
-                <li><a href="#tramezzini">Tramezzini</a></li>
-                <li><a href="#panini">Panini</a></li>
-                <li><a href="#burgers">Burgers</a></li>
+        <section id="prodottiSection">
+            <h2 role="heading" aria-level="2">PRODOTTI</h2>
+            <ul >
+                <button id="goToTramezzini" class="standard-button" onclick="scrollToSection('tramezzini')">Tramezzini</button>
+                <button id="goToPanini" class="standard-button" onclick="scrollToSection('panini')">Panini</button>
+                <button id="goToBurgers" class="standard-button"  onclick="scrollToSection('burgers')">Burgers</button>
             </ul>
-        </nav>
+        </section>
 
         <div id="scrollToTopBtn" onclick="scrollToTop()">&#8593;</div>
-
-        <div id="popup" class="popup">
-            <div id="popup-content" class="popup-content">
-                <span class="close" onclick="closePopup()">&times;</span>
-                <h2 id="popup-title"></h2>
-                <p id="popup-description"></p>
-                <p id="popup-ingredients"></p>
-            </div>
-        </div>
 
         <section id="tramezzini">
 
@@ -59,20 +60,47 @@
             <p>Esplora la nostra deliziosa selezione di tramezzini, autentiche creazioni italiane che trasformano il semplice pane in opere d'arte gastronomiche. 
                 Dalle classiche combinazioni ai twist creativi, scopri le ricette che soddisferanno ogni palato.</p>
             
-            <article onclick="openPopup('Nome Tramezzino 1', 'Descrizione del Tramezzino 1', 'Ingredienti del Tramezzino 1')">
-                <h3 role="heading" aria-level="3">Nome Tramezzino 1</h3>
-                <img src="resources/images/vinilePORTEO.png" alt="Tramezzino 1" />
-            </article>
+                <div class="prodotto-item">
+                    <div class="menu-item-container">
+                        <div class="menu-item-images">
+                            <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
+                            <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
+                        </div>
+                        <div>
+                            <button class="menu-item-button">
+                                <h4>PORTEO</h4>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             
-            <article onclick="openPopup('Nome Tramezzino 2', 'Descrizione del Tramezzino 2', 'Ingredienti del Tramezzino 2')">
-                <h3 role="heading" aria-level="3">Nome Tramezzino 2</h3>
-                <img src="resources/images/vinilePORTEO.png" alt="Tramezzino 2" />
-            </article>
-          
-            <article onclick="openPopup('Nome Tramezzino 3', 'Descrizione del Tramezzino 3', 'Ingredienti del Tramezzino 3')">
-                <h3 role="heading" aria-level="3">Nome Tramezzino 3</h3>
-                <img src="resources/images/vinilePORTEO.png" alt="Tramezzino 3" />
-            </article>
+                <div class="prodotto-item">
+                    <div class="menu-item-container">
+                        <div class="menu-item-images">
+                            <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
+                            <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
+                        </div>
+                        <div>
+                            <button class="menu-item-button">
+                                <h4>PORTEO</h4>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prodotto-item">
+                    <div class="menu-item-container">
+                        <div class="menu-item-images">
+                            <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
+                            <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
+                        </div>
+                        <div>
+                            <button class="menu-item-button">
+                                <h4>PORTEO</h4>
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
         </section>
     
@@ -81,42 +109,165 @@
             <h2 role="heading" aria-level="2">PANINI</h2>
             <p>Esplora la nostra deliziosa selezione di panini, autentiche creazioni italiane che trasformano il semplice pane in opere d'arte gastronomiche. 
                 Dalle classiche combinazioni ai twist creativi, scopri le ricette che soddisferanno ogni palato.</p>
-
-            <article onclick="openPopup('Nome Panino 1', 'Descrizione del Panino 1', 'Ingredienti del Panino 1')">
-                <h3 role="heading" aria-level="3">Nome Panino 1</h3>
-                <img src="resources/images/vinilePORTEO.png" alt="Panino 1" />
-            </article>
+        
+            <div class="prodotto-item">
+                <div class="menu-item-container">
+                    <div class="menu-item-images">
+                        <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
+                        <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
+                    </div>
+                    <div>
+                        <button class="menu-item-button">
+                            <h4>PORTEO</h4>
+                        </button>
+                    </div>
+                </div>
+            </div>
             
-            <article onclick="openPopup('Nome Panino 2', 'Descrizione del Panino 2', 'Ingredienti del Panino 2')">
-                <h3 role="heading" aria-level="3">Nome Panino 2</h3>
-                <img src="resources/images/vinilePORTEO.png" alt="Panino 2" />
-            </article>
+            <div class="prodotto-item">
+                <div class="menu-item-container">
+                    <div class="menu-item-images">
+                        <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
+                        <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
+                    </div>
+                    <div>
+                        <button class="menu-item-button">
+                            <h4>PORTEO</h4>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="prodotto-item">
+                <div class="menu-item-container">
+                    <div class="menu-item-images">
+                        <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
+                        <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
+                    </div>
+                    <div>
+                        <button class="menu-item-button">
+                            <h4>PORTEO</h4>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
         </section>
-    
+        
         <section id="burgers">
-
+        
             <h2 role="heading" aria-level="2">BURGERS</h2>
             <p>Esplora la nostra deliziosa selezione di burgers, autentiche creazioni italiane che trasformano il semplice pane in opere d'arte gastronomiche. 
                 Dalle classiche combinazioni ai twist creativi, scopri le ricette che soddisferanno ogni palato.</p>
         
-            <article onclick="openPopup('Nome Burger 1', 'Descrizione del Burger 1', 'Ingredienti del Burger 1')">
-                <h3 role="heading" aria-level="3">Nome Burger 1</h3>
-                <img src="resources/images/vinilePORTEO.png" alt="Burger 1" />
-            </article>
+            <div class="prodotto-item">
+                <div class="menu-item-container">
+                    <div class="menu-item-images">
+                        <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
+                        <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
+                    </div>
+                    <div>
+                        <button class="menu-item-button">
+                            <h4>PORTEO</h4>
+                        </button>
+                    </div>
+                </div>
+            </div>
         
-            <article onclick="openPopup('Nome Burger 2', 'Descrizione del Burger 2', 'Ingredienti del Burger 2')">
-                <h3 role="heading" aria-level="3">Nome Burger 2</h3>
-                <img src="resources/images/vinilePORTEO.png" alt="Burger 2" />
-            </article>
+            <div class="prodotto-item">
+                <div class="menu-item-container">
+                    <div class="menu-item-images">
+                        <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
+                        <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
+                    </div>
+                    <div>
+                        <button class="menu-item-button">
+                            <h4>PORTEO</h4>
+                        </button>
+                    </div>
+                </div>
+            </div>
         
-            <article onclick="openPopup('Nome Burger 3', 'Descrizione del Burger 3', 'Ingredienti del Burger 3')">
-                <h3 role="heading" aria-level="3">Nome Burger 3</h3>
-                <img src="resources/images/vinilePORTEO.png" alt="Burger 3" />
-            </article>
+            <div class="prodotto-item">
+                <div class="menu-item-container">
+                    <div class="menu-item-images">
+                        <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
+                        <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
+                    </div>
+                    <div>
+                        <button class="menu-item-button">
+                            <h4>MILLO BURG</h4>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prodotto-item">
+                <div class="menu-item-container">
+                    <div class="menu-item-images">
+                        <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
+                        <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
+                    </div>
+                    <div>
+                        <button class="menu-item-button">
+                            <h4>PORTEO</h4>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prodotto-item">
+                <div class="menu-item-container">
+                    <div class="menu-item-images">
+                        <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
+                        <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
+                    </div>
+                    <div>
+                        <button class="menu-item-button">
+                            <h4>PORTEO</h4>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
         </section>
         
+<!-- FOOTER -->
+<footer>
+    <div class="top-part">
+        <div class="logo-address-container">
+            <img src="resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA" id="footerLogo">
+            <address class="address">
+                TONI'S TRAMEZZINERIA <br/>
+                Via del Portello, 24, 35129, Padova (PD) <br>
+            </address>
+            <div class="social-media-links">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="resources/images/facebookLogo.png" alt="Logo di Facebook">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="resources/images/instagramLogo.png" alt="Logo di Instagram">
+                </a>
+            </div>
+        </div>
+        <div class="mappa-del-sito">
+            <p>Mappa del Sito</p>
+            <ul>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contatti.html">Contattaci</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="footerCopyright">
+        <p>&copy; 2024 Strabunti. Tutti i diritti riservati.</p>
+    </div>
+</footer>
 
-        
+<script src="scripts/scriptMenu.js"></script>
+<script src="scripts/scriptHome.js"></script>
+<script src="scripts/scriptHeader.js"></script>
 
      </body>
 </html>

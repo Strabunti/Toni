@@ -5,11 +5,11 @@ header {
     align-items: center;
     background-color: #896E4E;
     justify-content: space-between;
+    height: 60px;
 }
 
 .main-nav ul {
     display: flex;
-    margin: 0;
     padding: 0;
     list-style: none;
 }
@@ -30,16 +30,26 @@ header {
     color: #012622;
 }
 
-#headerLogo {
-  width: 50%;
-  padding-left: 30px;
-}
-
 .hamburger-menu {
     display: none;
 }
 
-@media screen and (max-width: 768px) {
+#logoLink {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  margin-right: 130px;
+}
+
+#headerLogo {
+  width: 200px;
+}
+
+.topnav {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
     header {
         height: 60px;
     }
@@ -48,98 +58,47 @@ header {
         display: none;
     }
 
-    #headerLogo {
-      width: 50%;
-      padding-left: 38%;
-  }
-
-    .hamburger-menu {
-        display: block;
+    #logoLink {
+      width: fit-content;
+      height: fit-content;
+      margin-right: -51px;
     }
-
-    #menu__toggle {
-        opacity: 0;
+    
+    #headerLogo {
+      width: 100px;
+    }
+    
+    .topnav {
+      position: relative;
+      display: flex;
       }
-      #menu__toggle:checked + .menu__btn > span {
-        transform: rotate(45deg);
-        background-color: #012622;
+      
+      .topnav #myLinks {
+      display: none;
+      align-items: center;
       }
-      #menu__toggle:checked + .menu__btn > span::before {
-        top: 0;
-        transform: rotate(0deg);
-        background-color: #012622;
-      }
-      #menu__toggle:checked + .menu__btn > span::after {
-        top: 0;
-        transform: rotate(90deg);
-        background-color: #012622;
-      }
-      #menu__toggle:checked ~ .menu__box {
-        left: 0 !important;
-        background-color: #EFE7C8;
-      }
-      .menu__btn {
-        position: relative;
-        top: -12px;
-        left: -1px;
-        cursor: pointer;
-        z-index: 1;
-      }
-      .menu__btn > span,
-      .menu__btn > span::before,
-      .menu__btn > span::after {
-        display: block;
-        position: relative;
-        width: 125%;
-        height: 3px;
-        background-color: #EFE7C8;
-        transition-duration: .25s;
-      }
-      .menu__btn > span::before {
-        content: '';
-        top: -8px;
-      }
-      .menu__btn > span::after {
-        content: '';
-        top: 6px;
-      }
-      .menu__box {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 300px;
-        height: 100%;
-        margin: 0;
-        padding: 80px 0;
-        list-style: none;
-        background-color: #EFE7C8;
-        box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
-        transition-duration: .25s;
-      }
-      .menu__item {
-        color: #012622;
+      
+      .topnav a {
+        color: #F9F9F0;
         font-weight: normal;
-        font-size: 16px;
+        font-size: 12px;
         text-decoration: none;
-        padding: 10px 20px;
-        background-color: #EFE7C8;
+        padding: 5px 10px;
+        background-color: #896E4E;
         border-radius: 20px;
         transition: background-color 0.3s ease;
+        width: max-content;
       }
-      .menu__item:hover {
-        background-color: #896E4E;
-        color: #EFE7C8;
+      
+      .topnav #myLinks a:hover {
+        background-color: #F2F0CF;
+        color: #012622;
       }
-
-      .menu__box ul {
-        padding-left: 0;
-        margin-left: 20px;
-      }
-
-      .menu__box li {
-        list-style: none;
-        margin-bottom: 30px;
+      
+      .topnav a.icon {
+      display: block;
+      font-size: 30px;
+      margin-left: -10px;
       }
 }
 /*#endregion*/

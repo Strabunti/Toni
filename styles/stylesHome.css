@@ -30,7 +30,7 @@
 /*#region CONSIGLI-SECTION */
 #consigliSection {
     text-align: center;
-    background-color: #EFE7C8;
+    background-color: #F2F0CF;
     padding: 20px;
     position: relative;
 }
@@ -90,7 +90,7 @@
     padding: 20px;
     position: relative;
     text-align: center;
-    color: #EFE7C8;
+    color: #F2F0CF;
 }
 
 #doveSiamoSection .side-by-side {
@@ -142,7 +142,7 @@
 
 /*#region SCELTA-SECTION */
 #sceltaSection {
-    background-color: #EFE7C8;
+    background-color: #F2F0CF;
     padding: 20px;
     position: relative;
 }
@@ -194,7 +194,7 @@
 
 #sceltaSection .category-button h4 {
     display: inline-block;
-    color: #EFE7C8;
+    color: #F2F0CF;
     background-color: #896E4E;
     position: relative;
     margin-bottom: 1.8em;
@@ -315,7 +315,7 @@
     background-color: #896E4E;
     padding: 20px;
     position: relative;
-    color: #EFE7C8;
+    color: #F2F0CF;
 }
 
 #recensioniSection h2.align-left {

@@ -14,7 +14,6 @@
     <link id="style" rel="stylesheet" href="styles/dashboard-style.css">
     <link id="style" rel="stylesheet" href="styles/card-style.css">
     <link id="style" rel="stylesheet" href="styles/popup-style.css">
-    <script src="scripts/scriptHome.js"></script>
     <script src="user/cards/popup/popup.js"></script>
 </head>
 
@@ -23,22 +22,16 @@
 <body>
 <!-- HEADER -->
 <header>
-
-    <div class="hamburger-menu">
-        <input id="menu__toggle" type="checkbox" aria-label="Toggle menu"/>
-        <div class="menu__btn" for="menu__toggle" aria-hidden="true">
-            <span aria-hidden="true"></span>
+        <div class="topnav">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            &#9776;
+            </a>
+            <div id="myLinks">
+                <a href="menu.html" aria-label="Vai al Menu" role="link">Menu</a></li>
+                <a href="aboutus.html" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
+                <a href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
+            </div>
         </div>
-    
-        <nav class="menu__box" role="navigation">
-            <ul>
-                <li role="menuitem"><a class="menu__item" href="menu.html" aria-label="Vai al Menu" role="link">Menu</a></li>
-                <li role="menuitem"><a class="menu__item" href="aboutus.html" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
-                <li role="menuitem"><a class="menu__item" href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
-            </ul>
-        </nav>
-    </div>
-    
     
     <nav class="main-nav" role="navigation">
         <ul>
@@ -220,6 +213,7 @@
 </footer>
 
     <script src="scripts/scriptHome.js"></script>
+    <script src="scripts/scriptHeader.js"></script>
 </body>
 
 </html>

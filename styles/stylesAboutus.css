@@ -16,6 +16,8 @@
     color: #F2F0CF;
     padding: 10px;
     margin-bottom: 10px;
+    align-items: center;
+    text-align: center;
 }
 
 #mainSection .rectangle h1 {
@@ -26,16 +28,12 @@
     #mainSection {
         height: auto;
     }
-
-    #mainSection .rectangle {
-        width: 100%;
-    }
 }
 /*#endregion*/
 
 /*#region DOVETROVARCI-SECTION */
 #doveTrovarciSection {
-    background-color: #EFE7C8;
+    background-color: #F2F0CF;
     padding: 20px;
     position: relative;
     text-align: left;
@@ -112,7 +110,7 @@
     background-color: #896E4E;
     padding: 20px;
     position: relative;
-    color: #EFE7C8
+    color: #F2F0CF
 }
 
 #tommySection .side-by-side {
@@ -163,7 +161,7 @@
 
 /*#region CAROSELLO-SECTION*/
 #caroselloSection {
-    background-color: #EFE7C8;
+    background-color: #F2F0CF;
     padding: 20px;
     position: relative;
 }
@@ -190,7 +188,7 @@
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: #EFE7C8;
+  color: #F2F0CF;
   background-color: rgba(0,0,0,0.8);
   font-weight: bold;
   font-size: 18px;
