@@ -28,7 +28,7 @@ if(isset($_SESSION['username'])){
     <div id="login-container">
         <a href="home.php" id="back-home">
             <div id="logo">
-                <img src="resources/images/logo.png" alt="Toni's Logo">
+                <img src="resources/images/logo.webp" alt="Toni's Logo">
             </div>
         </a>
         <div class="title"><h1>Login</h1></div>

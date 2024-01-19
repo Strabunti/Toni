@@ -42,7 +42,7 @@
     </nav>
 
     <a href="home.php" id="logoLink">
-        <img id="headerLogo" src="resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA">
+        <img id="headerLogo" src="resources/images/logo.webp" alt="Logo di TONI'S TRAMEZZINERIA">
     </a>
     <a href="login.php" id="loginButton" aria-labelledby="loginButton" class="standard-button" role="button">LOGIN</a>
 
@@ -72,8 +72,8 @@
                     <h4>IL BESTSELLER</h4>
                     <div class="menu-item-container">
                         <div class="menu-item-images">
-                            <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
-                            <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
+                            <img class="left-image" src="resources/images/vinileChiusoNew.webp" alt="Immagine di Background 1">
+                            <img class="right-image" src="resources/images/vinileSemiAperto.webp" alt="Immagine di Background 2">
                         </div>
                         <div>
                             <button class="menu-item-button" aria-label="Vai al Menu" role="button">
@@ -90,8 +90,8 @@
                     <h4>PANINO DEL MESE</h4>
                     <div class="menu-item-container">
                         <div class="menu-item-images">
-                            <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
-                            <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
+                            <img class="left-image" src="resources/images/vinileChiusoNew.webp" alt="Immagine di Background 1">
+                            <img class="right-image" src="resources/images/vinileSemiAperto.webp" alt="Immagine di Background 2">
                         </div>
                         <div>
                             <button class="menu-item-button" aria-label="Vai al Menu" role="button">
@@ -145,7 +145,7 @@
                 </div>
 
                 <div class="image-button">
-                    <img class="background-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background">
+                    <img class="background-image" src="resources/images/vinileChiusoNew.webp" alt="Immagine di Background">
                     <div>
                         <button href="menu.html" aria-label="Vai al Menu" role="button">
                             <h5>PORTEO</h5>
@@ -183,17 +183,17 @@
 <footer>
     <div class="top-part">
         <div class="logo-address-container">
-            <img src="resources/images/logo.png" alt="Logo di TONI'S TRAMEZZINERIA" id="footerLogo">
+            <img src="resources/images/logo.webp" alt="Logo di TONI'S TRAMEZZINERIA" id="footerLogo">
             <address class="address">
                 TONI'S TRAMEZZINERIA <br/>
                 Via del Portello, 24, 35129, Padova (PD) <br>
             </address>
             <div class="social-media-links">
                 <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                    <img src="resources/images/facebookLogo.png" alt="Logo di Facebook">
+                    <img src="resources/images/facebookLogo.webp" alt="Logo di Facebook">
                 </a>
                 <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                    <img src="resources/images/instagramLogo.png" alt="Logo di Instagram">
+                    <img src="resources/images/instagramLogo.webp" alt="Logo di Instagram">
                 </a>
             </div>
         </div>

@@ -25,13 +25,13 @@ class dish_manager{
         $result = DataBase::runQuery($query, $id);
         if($result){
             if($result[0]['image'] == null){
-                return "resources/images/default-dish-pic.png";
+                return "resources/images/default-dish-pic.webp";
             }else{
                 $encodedImage = base64_encode($result[0]['image']);
                 return "data:image/jpeg;base64," . $encodedImage;
             }
         }else{
-            return "resources/images/default-dish-pic.png";
+            return "resources/images/default-dish-pic.webp";
         }
         return $result;
     }

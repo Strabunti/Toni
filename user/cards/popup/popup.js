@@ -27,7 +27,7 @@ function showPopup(idContent) {
                 <img src="${image}" alt="Profile picture" class="popup-pic">
                 <p id="popup-user" class="card-name popup-name">${username}</p>
             </div>
-            <button class="close-button" onclick="closePopup()"><img src="resources/images/close-button.png" alt="Close pop up button" class="button-image"></button>
+            <button class="close-button" onclick="closePopup()"><img src="resources/images/close-button.webp" alt="Close pop up button" class="button-image"></button>
         </div>
         <p id="popup-title" class="card-title popup-title"><strong>Title:</strong> ${title}</p>
         <p id="popup-date" class="card-date popup-date"><strong>Date:</strong> ${date}</p>
@@ -64,7 +64,7 @@ function showDishPopup(idContent) {
                 <img src="${image}" alt="Dish picture" class="popup-pic">
                 <p id="popup-user" class="card-name popup-name">${name}</p>
             </div>
-            <button class="close-button" onclick="closePopup()"><img src="resources/images/close-button.png" alt="Close pop up button" class="button-image"></button>
+            <button class="close-button" onclick="closePopup()"><img src="resources/images/close-button.webp" alt="Close pop up button" class="button-image"></button>
         </div>
         <p id="popup-dish-price" class="card-title popup-title"><strong>Price:</strong> ${price}</p>
         <p id="popup-dish-description" class="card-date popup-date"><strong>Description:</strong> ${description}</p>
