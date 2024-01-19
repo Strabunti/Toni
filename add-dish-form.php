@@ -20,7 +20,7 @@
     <div class="content">
         <?php include 'user/sidebars/admin-sidebar.php'; ?>
         <div class="form-new-dish">
-            <h2>AGGIUNGI UN NUOVO PIATTO</h2>
+            <h2 class="form-title">AGGIUNGI UN NUOVO PIATTO</h2>
             <form action="user/backend/add-dish.php" method="post" enctype="multipart/form-data">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required maxlength="100"><br>

@@ -38,7 +38,7 @@
         ?>
         <!-- Form to edit the dish -->
         <div class="form-edit-dish">
-            <h2>MODIFY DISH</h2>
+            <h2 class="form-title">MODIFY DISH</h2>
             <form action="user/backend/update-dish.php" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="dish_id" value="<?php echo $dishId; ?>">
 

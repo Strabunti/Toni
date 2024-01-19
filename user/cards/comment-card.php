@@ -19,7 +19,7 @@
             </form>
         <?php endif; ?>
     </div>
-    <p id="comment-title" class="card-title" onclick="showPopup(<?php echo json_encode($comment['comment_id']); ?>)">
+    <p id="comment-title" class="card-title">
         <?php echo htmlspecialchars($comment['title']); ?>
     </p>
     <p id="comment-rating" class="card-rating"><?php echo displayStars($comment['rating']); ?></p>

@@ -31,7 +31,7 @@
         ?>
 
         <form action="user/backend/update-profile.php" method="post" enctype="multipart/form-data">
-            <h2>User Profile</h2>
+            <h2 class="form-title">User Profile</h2>
 
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($user[0]['username']); ?>" required>

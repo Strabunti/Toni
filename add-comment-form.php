@@ -25,7 +25,7 @@
     <?php include 'user/sidebars/user-sidebar.php'; ?>
 
     <form action="user/backend/add-comment.php" method="post">
-        <h2>Add New Comment</h2>
+        <h2 class="form-title">Add New Comment</h2>
 
         <label for="title">Title:</label>
         <input type="text" id="title" name="title" required maxlength="100">

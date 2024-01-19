@@ -38,15 +38,20 @@ button {
 }
 
 button {
-    background-color: #4caf50;
-    color: white;
+    background-color: #896E4E;
+    color: #FFF;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #4caf50;
+    color: #000F0E;
 }
 
 .profile-pic{
     max-width: 100px;
+}
+
+.form-title{
+    color: #012622;
 }
