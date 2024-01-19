@@ -30,4 +30,24 @@ function displayDishImage($idDish) {
     }
 }
 
+function getBestSellerDish(){
+    $query = "SELECT * FROM dish WHERE bestseller = 1";
+    $result = DataBase::runQuery($query);
+    if($result){
+        return $result[0];
+    }else{
+        return null;
+    }
+}
+
+function getBestMonthDish(){
+    $query = "SELECT * FROM dish WHERE best_month = 1";
+    $result = DataBase::runQuery($query);
+    if($result){
+        return $result[0];
+    }else{
+        return null;
+    }
+}
+
 ?>

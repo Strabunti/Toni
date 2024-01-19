@@ -3,6 +3,14 @@ require_once('db-manager.php');
 
 class dish_manager{
     public static function change_dish($id, $name, $description, $ingredients, $image, $price, $type, $bestseller, $best_month){
+        if ($bestseller) {
+            $updateBestsellerQuery = "UPDATE dish SET bestseller = 0 WHERE bestseller = 1";
+            DataBase::runQuery($updateBestsellerQuery);
+        }
+        if ($best_month) {
+            $updateBestMonthQuery = "UPDATE dish SET best_month = 0 WHERE best_month = 1";
+            DataBase::runQuery($updateBestMonthQuery);
+        }
         if ($image != null) {
             $query = "UPDATE dish SET name=?, description=?, ingredients=?, image=?, price=?, type=?, bestseller=?, best_month=? WHERE id_dish=?";
             $update = DataBase::runQuery($query, $name, $description, $ingredients, $image, $price, $type, $bestseller, $best_month, $id);

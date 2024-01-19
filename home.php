@@ -61,6 +61,15 @@
         </section>
 
         <!-- CONSIGLI SECTION -->
+        <?php
+            // Include your menu manager file
+            include 'user/backend/menu-manager.php';
+
+            // Fetch information for the bestseller and dish of the month
+            $bestSellerDish = getBestSellerDish();
+            $bestMonthDish = getBestMonthDish();
+        ?>
+
         <section id="consigliSection" aria-labelledby="consigliSectionTitle">
             <div class="left-rectangle"></div>
             <div class="top-rectangle"></div>
@@ -68,40 +77,52 @@
             <h3 class="align-right" id="consigliSectionTitle">TOMMY CONSIGLIA</h3>
 
             <div class="side-by-side">
-                <div class="consiglio-item">
-                    <h4>IL BESTSELLER</h4>
-                    <div class="menu-item-container">
-                        <div class="menu-item-images">
-                            <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
-                            <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
-                        </div>
-                        <div>
-                            <button class="menu-item-button" aria-label="Vai al Menu" role="button">
-                                <p>PORTEO</p>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="consiglio-item-description">                   <p>Col suo gusto inconfondibile dato dalla miglior versione della salsa TONI’S in commercio, il Pulled Pork è senz’ombra di dubbio ciò su cui puntare per la tua prima degustazione del mondo di TONI’S!</p>
-                    </div>
-                </div>
+                <?php if ($bestSellerDish) : ?>
+                    <div class="consiglio-item">
+                        <h4>IL BESTSELLER</h4>
+                        <div class="menu-item-container">
+                            <div class="menu-item-images">
+                                <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
+                                <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
+                            </div>
 
+                            <div>
+                                <button class="menu-item-button" aria-label="Vai al Menu" role="button">
+                                    <!-- Use $bestSellerDish properties for image source -->
+                                    <img class="menu-item-image" src="<?php echo displayDishImage($bestSellerDish['id_dish']); ?>" alt="Bestseller Dish Image">    
+                                    <p><?php echo $bestSellerDish['name']; ?></p>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="consiglio-item-description">
+                            <p><?php echo $bestSellerDish['description']; ?></p>
+                        </div>
+                    </div>
+                <?php endif; ?>
+                <?php if ($bestMonthDish) : ?>
                 <div class="consiglio-item">
                     <h4>PANINO DEL MESE</h4>
                     <div class="menu-item-container">
-                        <div class="menu-item-images">
-                            <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
-                            <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
+                            <div class="menu-item-images">
+                                <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
+                                <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
+                            </div>
+
+                            <div>
+                                <button class="menu-item-button" aria-label="Vai al Menu" role="button">
+                                    <!-- Use $bestSellerDish properties for image source -->
+                                    <img class="menu-item-image" src="<?php echo displayDishImage($bestMonthDish['id_dish']); ?>" alt="Bestseller Dish Image">    
+                                    <p><?php echo $bestMonthDish['name']; ?></p>
+                                </button>
+                            </div>
                         </div>
-                        <div>
-                            <button class="menu-item-button" aria-label="Vai al Menu" role="button">
-                                <p>PORTEO</p>
-                            </button>
-                        </div>
-                    </div>
                     
-                    <div class="consiglio-item-description">                   <p>Se il freddo inverno ti mette alle strette, un solo morso del Piccantino sarà sufficiente per riuscire a scaldarti un po’!</p></div>
+                    <div class="consiglio-item-description">
+                        <p><?php echo $bestMonthDish['description']; ?></p>
+                    </div>
                 </div>
+                <?php endif; ?>
             </div>
         </section>
         
