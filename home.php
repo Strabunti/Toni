@@ -26,18 +26,18 @@
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             &#9776;
             </a>
-            <div id="myLinks">
+            <div id="myLinks" role="navigation">
                 <a href="menu.html" aria-label="Vai al Menu" role="link">Menu</a></li>
-                <a href="aboutus.html" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
+                <a href="aboutus.html" aria-label="About Us" role="link">About Us</a></li>
                 <a href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
             </div>
         </div>
     
-    <nav class="main-nav" role="navigation">
-        <ul>
-            <li role="menuitem"><a class="menu__item" href="menu.html" aria-label="Vai al Menu" role="link">Menu</a></li>
-            <li role="menuitem"><a class="menu__item" href="aboutus.html" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
-            <li role="menuitem"><a class="menu__item" href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
+    <nav class="main-nav" role="grid">
+        <ul role="row">
+            <li role="navigation"><a class="menu__item" href="menu.html" aria-label="Menu" role="link">Menu</a></li>
+            <li role="navigation"><a class="menu__item" href="aboutus.html" aria-label="About Us" role="link">About Us</a></li>
+            <li role="navigation"><a class="menu__item" href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
         </ul>
     </nav>
 
@@ -50,14 +50,14 @@
 
     <main>
         <!-- MAIN SECTION -->
-        <section id="mainSection" role="region">
+        <section id="mainSection">
             <div class="rectangle" id="titleRectangle" aria-labelledby="mainSectionHeading">
                 <h1 id="mainSectionHeading">TONI'S<br>Tramezzineria</h1>
             </div>
             <div class="rectangle" id="subtitleRectangle" aria-labelledby="mainSectionSubtitle">
                 <h2 id="mainSectionSubtitle">Il tuo paninaro e tramezzinatore di fiducia</h2>
             </div>
-            <a href="menu.html" id="toMenuButton" aria-label="Vai al Menu" class="standard-button">GUARDA IL MENU</a>
+            <a href="menu.html" id="toMenuButton" aria-label="Vai al menu" class="standard-button">VAI AL MENU</a>
         </section>
 
         <!-- CONSIGLI SECTION -->
@@ -112,11 +112,11 @@
             <h3 class="align-left" id="doveSiamoSectionTitle">DOV'E' TONI'S?</h3>
             <div class="side-by-side">
                 <div class="map-container">
-                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11204.230924611375!2d11.892494!3d45.4081754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477edaf723594ce7%3A0x822810e7e09bc854!2sToni&#39;s%20Tramezzineria!5e0!3m2!1sit!2sit!4v1705222707812!5m2!1sit!2sit" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" alt="Mappa Embedded di Google Maps"></iframe>
+                    <iframe class="map" title="Mappa dove trovarci" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11204.230924611375!2d11.892494!3d45.4081754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477edaf723594ce7%3A0x822810e7e09bc854!2sToni&#39;s%20Tramezzineria!5e0!3m2!1sit!2sit!4v1705222707812!5m2!1sit!2sit" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" alt="Mappa Embedded di Google Maps"></iframe>
                 </div>
                 <div class="location-info">
                     <p>Ti abbiamo già convinto? Ottimo! <br> Vieni a trovarci a Padova, in zona Portello!</p>
-                    <a href="aboutus.html" id="goToAboutUs" aria-label="AboutUs" class="standard-button" role="button">DOVE SIAMO</a>
+                    <a href="aboutus.html" id="goToAboutUs" aria-label="Dove siamo" class="standard-button" role="button">DOVE SIAMO</a>
                 </div>
             </div>
         </section>

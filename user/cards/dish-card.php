@@ -6,9 +6,9 @@
                 <img id="dish-pic" class='profile-pic' src='<?php echo displayDishImage($dish['id_dish']); ?>' alt='Profile picture of the dish' class='comment-user-image'>
             </div>
             <div class="card-profile">
-                <a href="#" id="dish-name" class="card-name" onclick="showPopup(<?php echo json_encode($comment['comment_id']); ?>)">
+                <h1 id="dish-name" class="card-name">
                     <?php echo htmlspecialchars($dish['name']); ?>
-                </a>
+                </h1>
                 <p id="dish-price" class="card-price"> € <?php echo $dish['price']; ?></p>
             </div>
         </div>

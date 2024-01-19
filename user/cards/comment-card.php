@@ -6,7 +6,7 @@
                 <img id="profile-pic" class='profile-pic' src='<?php echo user_manager::displayProfilePic($comment['username']); ?>' alt='Profile picture of the user' class='comment-user-image'>
             </div>
             <div class="card-profile">
-                <p id="comment-user" class="card-name"><?php echo htmlspecialchars($comment['username']); ?></p>
+                <h1 id="comment-user" class="card-name"><?php echo htmlspecialchars($comment['username']); ?></h1>
                 <p id="comment-date" class="card-date"><?php echo $comment['review_date']; ?></p>
             </div>
         </div>
@@ -19,9 +19,9 @@
             </form>
         <?php endif; ?>
     </div>
-    <a href="#" id="comment-title" class="card-title" onclick="showPopup(<?php echo json_encode($comment['comment_id']); ?>)">
+    <p id="comment-title" class="card-title" onclick="showPopup(<?php echo json_encode($comment['comment_id']); ?>)">
         <?php echo htmlspecialchars($comment['title']); ?>
-    </a>
+    </p>
     <p id="comment-rating" class="card-rating"><?php echo displayStars($comment['rating']); ?></p>
     <p id="comment-text" class="card-text"><?php echo htmlspecialchars($comment['short_comment']); ?></p>
     <div class="fade-out-overlay"></div>

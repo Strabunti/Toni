@@ -27,7 +27,7 @@
         <div class="main-content">
             <div class="recensioni">
                 <div id="title">Recensioni</div>
-                <a id="all-comments-link" href="comments-all.php">All Comments</a>
+                <a id="all-comments-link" class="link-to-page" href="comments-all.php">All Comments</a>
                 <?php
                     // Include your database connection file or establish a connection here
                     include 'user/backend/comment-manager.php';
@@ -47,31 +47,30 @@
                     }
                 ?>
             </div>
-        <div class="menu">
-        <div id="title">Menu</div>
-            <a id="all-comments-link" href="menu-all.php">All Dishes</a>
+            <div class="menu">
+                <div id="title">Menu</div>
+                <a id="all-dish-link" class="link-to-page" href="menu-all.php">All Dishes</a>   
+                <?php
+                    // Include your database connection file or establish a connection here
+                    include 'user/backend/menu-manager.php';
 
-            <?php
-                // Include your database connection file or establish a connection here
-                include 'user/backend/menu-manager.php';
+                    // Query to retrieve comments with the highest rates
+                    $burgers = getDishes(3);
 
-                // Query to retrieve comments with the highest rates
-                $burgers = getBurger(3);
-
-                // Check if the query was successful
-                if ($burgers) {
-                    // Fetch and display comments
-                    foreach ($burgers as $dish) {
-                        include 'user/cards/dish-card.php';
+                    // Check if the query was successful
+                    if ($burgers) {
+                        // Fetch and display comments
+                        foreach ($burgers as $dish) {
+                            include 'user/cards/dish-card.php';
+                        }
+                    } else {
+                        // Display an error message if the query fails
+                        echo "Error: No dish found.";
                     }
-                } else {
-                    // Display an error message if the query fails
-                    echo "Error: No dish found.";
-                }
-            ?>
+                ?>
 
-            <?php include 'user/cards/popup/popup.php'; ?>
-        </div>
+                <?php include 'user/cards/popup/popup.php'; ?>
+            </div>
         </div>
     </div>
     <script src="user/cards/card.js"></script>

@@ -9,10 +9,12 @@
 </head>
 <body>
     <div id="login-container">
-        <h2>Register</h2>
-        <div id="logo">
-            <img src="resources/images/logo.png" alt="Toni's Logo">
-        </div>
+        <a href="home.php" id="back-home">
+            <div id="logo">
+                <img src="resources/images/logo.png" alt="Toni's Logo">
+            </div>
+        </a>
+        <div class="title"><h1>Register</h1></div>
         <form action = "user/backend/add-user.php" method = "post" onsubmit="return validateSignup()">
             <label for="username">Username:</label>
             <input type="text" name="username" id="username" placeholder="username" onblur="return validateUsername()" required>

@@ -31,14 +31,15 @@ if(isset($_SESSION['username'])){
                 <img src="resources/images/logo.png" alt="Toni's Logo">
             </div>
         </a>
+        <div class="title"><h1>Login</h1></div>
         <form action="user/session/auth_handler.php" method="post">
-            <label for="username">Login:</label>
+            <label for="username">Username:</label>
             <input type="text" name="username" id="username" placeholder="username" onblur="return validateUsername()" required>
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" placeholder="password" onblur="return validatePassword()" required>
             <button type="submit">Accedi</button>
         </form>
-        <p>Don't have an account? <a href="user/forms/register-form.php">Register here</a></p>
+        <p>Don't have an account? <a href="register-form.php">Register here</a></p>
         <hr>
     </div>
 </body>

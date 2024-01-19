@@ -1,11 +1,11 @@
 <?php 
 require_once('db-manager.php');
-function getBurger($numberOfBurgers = 4){
+function getDishes($numberOfBurgers = 4){
     if($numberOfBurgers < 0){
-        $query = "SELECT * FROM dish WHERE type = 'burger'";
+        $query = "SELECT * FROM dish";
         return DataBase::runQuery($query);
     }else{
-        $query = "SELECT * FROM dish WHERE type = 'burger' LIMIT ?";
+        $query = "SELECT * FROM dish LIMIT ?";
         return DataBase::runQuery($query, $numberOfBurgers);
     }
 }
