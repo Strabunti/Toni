@@ -80,13 +80,13 @@ hr {
 #mainSection {
     display: flex;
     text-align: center;
-    background: no-repeat center url("../resources/images/aboutusBackground.webp");
+    background: no-repeat center url("../resources/images/contattiBackground.webp");
     background-size: cover;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    height: 20em;
+    height: 30em;
 }
 
 #mainSection .rectangle {

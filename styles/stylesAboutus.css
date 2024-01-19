@@ -26,7 +26,7 @@
 
 @media screen and (max-width: 768px) {
     #mainSection {
-        height: auto;
+        height: 10em;
     }
 }
 /*#endregion*/
