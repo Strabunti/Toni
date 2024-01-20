@@ -50,4 +50,10 @@ function getBestMonthDish(){
     }
 }
 
+function getDishesByType($type){
+    $query = "SELECT * FROM dish WHERE type = ?";
+    return DataBase::runQuery($query, $type);
+}
+
+
 ?>

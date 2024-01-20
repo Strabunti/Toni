@@ -27,7 +27,7 @@
             &#9776;
             </a>
             <div id="myLinks" role="navigation">
-                <a href="menu.html" aria-label="Vai al Menu" role="link">Menu</a></li>
+                <a href="menu.php" aria-label="Vai al Menu" role="link">Menu</a></li>
                 <a href="aboutus.html" aria-label="About Us" role="link">About Us</a></li>
                 <a href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
             </div>
@@ -35,7 +35,7 @@
     
     <nav class="main-nav" role="grid">
         <ul role="row">
-            <li role="navigation"><a class="menu__item" href="menu.html" aria-label="Menu" role="link">Menu</a></li>
+            <li role="navigation"><a class="menu__item" href="menu.php" aria-label="Menu" role="link">Menu</a></li>
             <li role="navigation"><a class="menu__item" href="aboutus.html" aria-label="About Us" role="link">About Us</a></li>
             <li role="navigation"><a class="menu__item" href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
         </ul>
@@ -57,7 +57,7 @@
             <div class="rectangle" id="subtitleRectangle" aria-labelledby="mainSectionSubtitle">
                 <h2 id="mainSectionSubtitle">Il tuo paninaro e tramezzinatore di fiducia</h2>
             </div>
-            <a href="menu.html" id="toMenuButton" aria-label="Vai al menu" class="standard-button">VAI AL MENU</a>
+            <a href="menu.php" id="toMenuButton" aria-label="Vai al menu" class="standard-button">VAI AL MENU</a>
         </section>
 
         <!-- CONSIGLI SECTION -->
@@ -82,14 +82,14 @@
                         <h4>IL BESTSELLER</h4>
                         <div class="menu-item-container">
                             <div class="menu-item-images">
-                                <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
-                                <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
+                                <img class="left-image" src="resources/images/vinileChiusoNew.webp" alt="Immagine di Background 1">
+                                <img class="right-image" src="resources/images/vinileSemiAperto.webp" alt="Immagine di Background 2">
                             </div>
 
                             <div>
                                 <button class="menu-item-button" aria-label="Vai al Menu" role="button">
                                     <!-- Use $bestSellerDish properties for image source -->
-                                    <img class="menu-item-image" src="<?php echo displayDishImage($bestSellerDish['id_dish']); ?>" alt="Bestseller Dish Image">    
+                                    <img class="home-item-image" src="<?php echo displayDishImage($bestSellerDish['id_dish']); ?>" alt="Bestseller Dish Image">    
                                     <p><?php echo $bestSellerDish['name']; ?></p>
                                 </button>
                             </div>
@@ -105,14 +105,14 @@
                     <h4>PANINO DEL MESE</h4>
                     <div class="menu-item-container">
                             <div class="menu-item-images">
-                                <img class="left-image" src="resources/images/vinileChiusoNew.jpg" alt="Immagine di Background 1">
-                                <img class="right-image" src="resources/images/vinileSemiAperto.png" alt="Immagine di Background 2">
+                                <img class="left-image" src="resources/images/vinileChiusoNew.webp" alt="Immagine di Background 1">
+                                <img class="right-image" src="resources/images/vinileSemiAperto.webp" alt="Immagine di Background 2">
                             </div>
 
                             <div>
                                 <button class="menu-item-button" aria-label="Vai al Menu" role="button">
                                     <!-- Use $bestSellerDish properties for image source -->
-                                    <img class="menu-item-image" src="<?php echo displayDishImage($bestMonthDish['id_dish']); ?>" alt="Bestseller Dish Image">    
+                                    <img class="home-item-image" src="<?php echo displayDishImage($bestMonthDish['id_dish']); ?>" alt="Bestseller Dish Image">    
                                     <p><?php echo $bestMonthDish['name']; ?></p>
                                 </button>
                             </div>
@@ -168,7 +168,7 @@
                 <div class="image-button">
                     <img class="background-image" src="resources/images/vinileChiusoNew.webp" alt="Immagine di Background">
                     <div>
-                        <button href="menu.html" aria-label="Vai al Menu" role="button">
+                        <button href="menu.php" aria-label="Vai al Menu" role="button">
                             <h5>PORTEO</h5>
                         </button>
                     </div>
@@ -222,7 +222,7 @@
             <p>Mappa del Sito</p>
             <ul>
                 <li><a href="home.php">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
+                <li><a href="menu.php">Menu</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="contatti.html">Contattaci</a></li>
             </ul>

@@ -40,9 +40,15 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background: url(../resources/images/porteo.webp) no-repeat;
-    background-size: contain;
+    /* background: url(../resources/images/porteo.webp) no-repeat; */
+    /* background-size: contain; */
     z-index: 2;
+}
+
+.menu-item-image{
+    width: 200px;
+    margin-right: 80px;
+    background-color: transparent;
 }
 
 .menu-item-button h4 {

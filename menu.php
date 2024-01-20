@@ -9,35 +9,37 @@
         <link rel="stylesheet" type="text/css" href="styles/stylesFooter.css"/>
 		<title>Menu</title>
     </head>
-    <body>
 
-<!-- HEADER -->
-<header>
-    <div class="topnav">
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        &#9776;
-        </a>
-        <div id="myLinks">
-            <a href="menu.html" aria-label="Vai al Menu" role="link">Menu</a></li>
-            <a href="aboutus.html" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
-            <a href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
+<?php session_start(); ?>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="topnav">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            &#9776;
+            </a>
+            <div id="myLinks">
+                <a href="menu.php" aria-label="Vai al Menu" role="link">Menu</a></li>
+                <a href="aboutus.html" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
+                <a href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
+            </div>
         </div>
-    </div>
 
-<nav class="main-nav" role="navigation">
-    <ul>
-        <li role="menuitem"><a class="menu__item" href="menu.html" aria-label="Vai al Menu" role="link">Menu</a></li>
-        <li role="menuitem"><a class="menu__item" href="aboutus.html" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
-        <li role="menuitem"><a class="menu__item" href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
-    </ul>
-</nav>
+        <nav class="main-nav" role="navigation">
+            <ul>
+                <li role="menuitem"><a class="menu__item" href="menu.php" aria-label="Vai al Menu" role="link">Menu</a></li>
+                <li role="menuitem"><a class="menu__item" href="aboutus.html" aria-label="Scopri di più su TONI'S" role="link">About Us</a></li>
+                <li role="menuitem"><a class="menu__item" href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
+            </ul>
+        </nav>
 
-<a href="home.php" id="logoLink">
-    <img id="headerLogo" src="resources/images/logo.webp" alt="Logo di TONI'S TRAMEZZINERIA">
-</a>
-<a href="login.php" id="loginButton" aria-labelledby="loginButton" class="standard-button" role="button">LOGIN</a>
+        <a href="home.php" id="logoLink">
+            <img id="headerLogo" src="resources/images/logo.webp" alt="Logo di TONI'S TRAMEZZINERIA">
+        </a>
+        <a href="login.php" id="loginButton" aria-labelledby="loginButton" class="standard-button" role="button">LOGIN</a>
 
-</header>
+    </header>
 
         <section id="mainSection">
             <div class="rectangle" id="titleRectangle"><h1>MENU</h1></div>  
@@ -56,23 +58,37 @@
 
         <section id="tramezzini">
 
+        <?php
+            // Include your menu manager file
+            include 'user/backend/menu-manager.php';
+
+            // Fetch information for the bestseller and dish of the month
+            $tramezzini = getDishesByType("Tramezzini");
+        ?>
+
             <h2 role="heading" aria-level="2">TRAMEZZINI</h2>
             <p>Esplora la nostra deliziosa selezione di tramezzini, autentiche creazioni italiane che trasformano il semplice pane in opere d'arte gastronomiche. 
                 Dalle classiche combinazioni ai twist creativi, scopri le ricette che soddisferanno ogni palato.</p>
             
+            <?php foreach $tramezzini as $tramezzino {
+            ?>
                 <div class="prodotto-item">
                     <div class="menu-item-container">
                         <div class="menu-item-images">
                             <img class="left-image" src="resources/images/vinileChiusoNew.webp" alt="Immagine di Background 1">
                             <img class="right-image" src="resources/images/vinileSemiAperto.webp" alt="Immagine di Background 2">
                         </div>
+    
                         <div>
-                            <button class="menu-item-button">
-                                <h4>PORTEO</h4>
+                            <button class="menu-item-button" aria-label="Vai al Menu" role="button">
+                                <!-- Use $bestSellerDish properties for image source -->
+                                <img class="menu-item-image" src="<?php echo displayDishImage($tramezzino['id_dish']); ?>" alt="Dish Image">    
+                                <p><?php echo $tramezzino['name']; ?></p>
                             </button>
                         </div>
                     </div>
                 </div>
+            <?php } ?>
             
                 <div class="prodotto-item">
                     <div class="menu-item-container">
@@ -254,7 +270,7 @@
             <p>Mappa del Sito</p>
             <ul>
                 <li><a href="home.php">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
+                <li><a href="menu.php">Menu</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="contatti.html">Contattaci</a></li>
             </ul>
