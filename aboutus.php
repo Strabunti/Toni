@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
 
@@ -17,32 +16,7 @@
 
 <body>
 <!-- HEADER -->
-<header>
-    <div class="topnav">
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        &#9776;
-        </a>
-        <div id="myLinks" role="navigation">
-            <a href="menu.php" aria-label="Vai al Menu" role="link">Menu</a></li>
-            <a href="aboutus.html" aria-label="About Us" role="link">About Us</a></li>
-            <a href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
-        </div>
-    </div>
-
-<nav class="main-nav" role="grid">
-    <ul role="row">
-        <li role="navigation"><a class="menu__item" href="menu.php" aria-label="Menu" role="link">Menu</a></li>
-        <li role="navigation"><a class="menu__item" href="aboutus.html" aria-label="About Us" role="link">About Us</a></li>
-        <li role="navigation"><a class="menu__item" href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
-    </ul>
-</nav>
-
-<a href="home.php" id="logoLink">
-    <img id="headerLogo" src="resources/images/logo.webp" alt="Logo di TONI'S TRAMEZZINERIA">
-</a>
-<a href="login.php" id="loginButton" aria-labelledby="loginButton" class="standard-button" role="button">LOGIN</a>
-
-</header>
+<?php include 'templates/header.html' ?>
 
     <main>
         <!-- MAIN SECTION -->
@@ -123,37 +97,7 @@
     </main>
 
 <!-- FOOTER -->
-<footer>
-    <div class="top-part">
-        <div class="logo-address-container">
-            <img src="resources/images/logo.webp" alt="Logo di TONI'S TRAMEZZINERIA" id="footerLogo">
-            <address class="address">
-                TONI'S TRAMEZZINERIA <br/>
-                Via del Portello, 24, 35129, Padova (PD) <br>
-            </address>
-            <div class="social-media-links">
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                    <img src="resources/images/facebookLogo.webp" alt="Logo di Facebook">
-                </a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                    <img src="resources/images/instagramLogo.webp" alt="Logo di Instagram">
-                </a>
-            </div>
-        </div>
-        <div class="mappa-del-sito">
-            <p>Mappa del Sito</p>
-            <ul>
-                <li><a href="home.php">Home</a></li>
-                <li><a href="menu.php">Menu</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="contatti.html">Contattaci</a></li>
-            </ul>
-        </div>
-    </div>
-    <div id="footerCopyright">
-        <p>&copy; 2024 Strabunti. Tutti i diritti riservati.</p>
-    </div>
-</footer>
+<?php include 'templates/footer.html' ?>
     
     <script src="scripts/scriptAboutus.js"></script>
     <script src="scripts/scriptHeader.js"></script>

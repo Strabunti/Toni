@@ -33,4 +33,6 @@ a:hover{
 
 .link-to-page{
     color: #FFF;
+    margin-top: 10px;
+    display: block;
 }

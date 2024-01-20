@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+    name="description"
+    content="Toni è una tramezzineria situata a Padova, che può deliziarti con panini, tramezzini e burger. Scopri cosa dicono gli utenti su di lui e i suoi prodotti.">
+    <link rel="stylesheet" type="text/css" href="styles/stylesHeader.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/stylesFooter.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/stylesBody.css"/>
     <link id="style" rel="stylesheet" href="styles/page-style.css">
     <link id="style" rel="stylesheet" href="styles/sidebar-style.css">
     <link id="style" rel="stylesheet" href="styles/popup-style.css">
@@ -11,6 +17,10 @@
     <script src="user/cards/popup/popup.js"></script>
 </head>
 <body>
+
+    <!-- HEADER -->
+    <?php include 'templates/header.html' ?>
+
 
     <div id="title">Recensioni</div>
 
@@ -51,6 +61,9 @@
 
     <?php include 'user/cards/popup/popup.php'; ?>
     <script src="user/cards/card.js"></script>
+
+    <!-- FOOTER -->
+    <?php include 'templates/footer.html' ?>
 
 
 </body>

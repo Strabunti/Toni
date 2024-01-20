@@ -21,33 +21,7 @@
 
 <body>
 <!-- HEADER -->
-<header>
-        <div class="topnav">
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            &#9776;
-            </a>
-            <div id="myLinks" role="navigation">
-                <a href="menu.php" aria-label="Vai al Menu" role="link">Menu</a></li>
-                <a href="aboutus.html" aria-label="About Us" role="link">About Us</a></li>
-                <a href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
-            </div>
-        </div>
-    
-    <nav class="main-nav" role="grid">
-        <ul role="row">
-            <li role="navigation"><a class="menu__item" href="menu.php" aria-label="Menu" role="link">Menu</a></li>
-            <li role="navigation"><a class="menu__item" href="aboutus.html" aria-label="About Us" role="link">About Us</a></li>
-            <li role="navigation"><a class="menu__item" href="contatti.html" aria-label="Contattaci!" role="link">Contattaci</a></li>
-        </ul>
-    </nav>
-
-    <a href="home.php" id="logoLink">
-        <img id="headerLogo" src="resources/images/logo.webp" alt="Logo di TONI'S TRAMEZZINERIA">
-    </a>
-    <a href="login.php" id="loginButton" aria-labelledby="loginButton" class="standard-button" role="button">LOGIN</a>
-
-</header>
-
+<?php include 'templates/header.html' ?>
     <main>
         <!-- MAIN SECTION -->
         <section id="mainSection">
@@ -89,7 +63,7 @@
                             <div>
                                 <button class="menu-item-button" aria-label="Vai al Menu" role="button">
                                     <!-- Use $bestSellerDish properties for image source -->
-                                    <img class="home-item-image" src="<?php echo displayDishImage($bestSellerDish['id_dish']); ?>" alt="Bestseller Dish Image">    
+                                    <img class="menu-item-image" src="<?php echo displayDishImage($bestSellerDish['id_dish']); ?>" alt="Bestseller Dish Image">    
                                     <p><?php echo $bestSellerDish['name']; ?></p>
                                 </button>
                             </div>
@@ -112,7 +86,7 @@
                             <div>
                                 <button class="menu-item-button" aria-label="Vai al Menu" role="button">
                                     <!-- Use $bestSellerDish properties for image source -->
-                                    <img class="home-item-image" src="<?php echo displayDishImage($bestMonthDish['id_dish']); ?>" alt="Bestseller Dish Image">    
+                                    <img class="menu-item-image" src="<?php echo displayDishImage($bestMonthDish['id_dish']); ?>" alt="Bestseller Dish Image">    
                                     <p><?php echo $bestMonthDish['name']; ?></p>
                                 </button>
                             </div>
@@ -137,7 +111,7 @@
                 </div>
                 <div class="location-info">
                     <p>Ti abbiamo già convinto? Ottimo! <br> Vieni a trovarci a Padova, in zona Portello!</p>
-                    <a href="aboutus.html" id="goToAboutUs" aria-label="Dove siamo" class="standard-button" role="button">DOVE SIAMO</a>
+                    <a href="aboutus.php" id="goToAboutUs" aria-label="Dove siamo" class="standard-button" role="button">DOVE SIAMO</a>
                 </div>
             </div>
         </section>
@@ -201,37 +175,7 @@
     </main>
 
 <!-- FOOTER -->
-<footer>
-    <div class="top-part">
-        <div class="logo-address-container">
-            <img src="resources/images/logo.webp" alt="Logo di TONI'S TRAMEZZINERIA" id="footerLogo">
-            <address class="address">
-                TONI'S TRAMEZZINERIA <br/>
-                Via del Portello, 24, 35129, Padova (PD) <br>
-            </address>
-            <div class="social-media-links">
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                    <img src="resources/images/facebookLogo.webp" alt="Logo di Facebook">
-                </a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                    <img src="resources/images/instagramLogo.webp" alt="Logo di Instagram">
-                </a>
-            </div>
-        </div>
-        <div class="mappa-del-sito">
-            <p>Mappa del Sito</p>
-            <ul>
-                <li><a href="home.php">Home</a></li>
-                <li><a href="menu.php">Menu</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="contatti.html">Contattaci</a></li>
-            </ul>
-        </div>
-    </div>
-    <div id="footerCopyright">
-        <p>&copy; 2024 Strabunti. Tutti i diritti riservati.</p>
-    </div>
-</footer>
+<?php include 'templates/footer.html' ?>
 
     <script src="scripts/scriptHome.js"></script>
     <script src="scripts/scriptHeader.js"></script>

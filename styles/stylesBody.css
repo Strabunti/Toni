@@ -188,9 +188,10 @@ p {
     background-color: black;
 }
 
-.home-item-image{
+.menu-item-image{
     width: 170px;
     margin-right: 90px;
     background-color: transparent;
+    margin-bottom: 10px;
 }
 /*#endregion */
