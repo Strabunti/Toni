@@ -2,7 +2,7 @@
 #mainSection {
     display: flex;
     text-align: center;
-    background: no-repeat center url("../resources/images/aboutusBackground.png");
+    background: no-repeat center url("../resources/images/aboutusBackground.webp");
     background-size: cover;
     flex-direction: column;
     justify-content: center;
@@ -26,7 +26,7 @@
 
 @media screen and (max-width: 768px) {
     #mainSection {
-        height: auto;
+        height: 10em;
     }
 }
 /*#endregion*/
@@ -162,14 +162,16 @@
 /*#region CAROSELLO-SECTION*/
 #caroselloSection {
     background-color: #F2F0CF;
-    padding: 20px;
+    padding: 30px;
     position: relative;
 }
 
 .slideshow-container {
   max-width: 600px;
+  max-height: 400px;
   position: relative;
   margin: auto;
+  overflow: hidden;
 }
 
 .slides {
