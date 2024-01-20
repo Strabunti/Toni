@@ -22,42 +22,47 @@
     <?php include 'templates/header.html' ?>
 
 
-    <div id="title">Recensioni</div>
+    <!-- MAIN SECTION -->
+    <section id="mainSection">
+        <div class="rectangle" id="titleRectangle" aria-labelledby="mainSectionHeading"><h1 id="mainSectionHeading">RECENSIONI</h1></div>
+    </section>
 
+    <section id="recensioniSection">
     <?php include 'user/session/auth.php'; ?>
 
-    <?php
-    // Include your authentication file
-    session_start();
+<?php
+// Include your authentication file
+session_start();
 
-    // Check if the user is an admin
-    // Continue with the admin page content
+// Check if the user is an admin
+// Continue with the admin page content
 
-    // Include your database connection file or establish a connection here
-    include 'user/backend/comment-manager.php';
+// Include your database connection file or establish a connection here
+include 'user/backend/comment-manager.php';
 
-    // Query to retrieve comments with the highest rates
-    $bestComments = getBestComments(-1);
+// Query to retrieve comments with the highest rates
+$bestComments = getBestComments(-1);
 
-    // Check if the query was successful
-    if ($bestComments) {
-        // Fetch and display comments
-        foreach ($bestComments as $comment) {
-            include 'user/cards/comment-card.php';
-        }
-    } else {
-        // Display an error message if the query fails
-        echo "Error: No comments found.";
+// Check if the query was successful
+if ($bestComments) {
+    // Fetch and display comments
+    foreach ($bestComments as $comment) {
+        include 'user/cards/comment-card.php';
     }
+} else {
+    // Display an error message if the query fails
+    echo "Error: No comments found.";
+}
 
-    function getScreenWidthInPixels($screenWidth) {
-        // Extract the numerical part of the screen width from the user agent string
-        preg_match('/\d+/', $screenWidth, $matches);
-        return isset($matches[0]) ? (int)$matches[0] : 0;
-    }
+function getScreenWidthInPixels($screenWidth) {
+    // Extract the numerical part of the screen width from the user agent string
+    preg_match('/\d+/', $screenWidth, $matches);
+    return isset($matches[0]) ? (int)$matches[0] : 0;
+}
 
-    
-    ?>
+
+?>
+    </section>
 
     <?php include 'user/cards/popup/popup.php'; ?>
     <script src="user/cards/card.js"></script>
@@ -65,6 +70,6 @@
     <!-- FOOTER -->
     <?php include 'templates/footer.html' ?>
 
-
+    <script src="scripts/scriptHeader.js"></script>
 </body>
 </html>

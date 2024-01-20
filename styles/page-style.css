@@ -3,6 +3,7 @@ body {
     margin: 0;
     background-color: #896E4E;
     width: 100%;
+    background-color: #5D1E09;
 }
 
 .content {
@@ -35,4 +36,38 @@ a:hover{
     color: #FFF;
     margin-top: 10px;
     display: block;
+}
+
+/*#region MAIN-SECTION*/
+#mainSection {
+    display: flex;
+    text-align: center;
+    background: no-repeat center url("../resources/images/contattiBackground.webp");
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 30em;
+}
+
+#mainSection .rectangle {
+    background-color: #896E4E;
+    color: #F2F0CF;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #mainSection {
+        height: 10em;
+    }
+}
+/*#endregion*/
+
+#recensioniSection {
+    margin: 10px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    background-color: #896E4E;
 }

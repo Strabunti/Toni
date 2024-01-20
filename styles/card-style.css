@@ -131,6 +131,6 @@
 
 @media screen and (max-width: 550px) {
     .card {
-        width: 100%; /* 1 card per row for smaller screens */
+        width: 95%; /* 1 card per row for smaller screens */
     }
 }
