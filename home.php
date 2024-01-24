@@ -170,6 +170,10 @@
                         echo "No comments found";
                 ?>
             </div>
+
+            <div id="toRecensioniDiv">
+            <a href="comments-all.php" id="toCommentsButton" aria-label="Vai alle recensioni" class="standard-button">TUTTE LE RECENSIONI</a>
+            </div>
             
         </section>
     </main>

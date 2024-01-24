@@ -1,0 +1,40 @@
+body {
+    text-align: center;
+    background-color: #F2F0CF;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #453827;
+    font-size: 46px;
+}
+
+p {
+    color: #453827;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        margin: 50px auto;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}

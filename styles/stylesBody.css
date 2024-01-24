@@ -60,6 +60,22 @@ p {
     font-weight: bold;
 }
 
+@media screen and (min-width: 1200px) {
+    h3.align-right {
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        color: #012622;
+    }
+    
+    h3.align-left {
+        text-align: center;
+        margin-top: 15px;
+        margin-left: 15px;
+        margin-bottom: 30px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     h1 {
         font-size: 3em;

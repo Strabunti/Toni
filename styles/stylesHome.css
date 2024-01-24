@@ -250,6 +250,14 @@
     background-color: rgba(0,0,0,0.5);
 }
 
+@media screen and (min-width: 1200px) {
+    #sceltaSection h3.align-right {
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        color: #012622;
+    }
+}
 @media screen and (max-width: 1100px) {
     #sceltaSection h3.align-right {
         text-align: center;
@@ -323,5 +331,12 @@
     margin-top: 15px;
     margin-left: 15px;
     margin-bottom: 30px;
+}
+
+#toRecensioniDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
 }
 /*#endregion*/
