@@ -1,3 +1,7 @@
+CREATE USER 'toni'@'localhost' IDENTIFIED BY 'admin';
+GRANT ALL PRIVILEGES ON 'toni'.* TO 'toni'@localhost;
+FLUSH PRIVILEGES;
+
 DROP TABLE IF EXISTS `dish`;
 CREATE TABLE `dish` (
     id_dish INT AUTO_INCREMENT,
