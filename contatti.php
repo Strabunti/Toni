@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="it" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="it">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-    name="description"
-    content="Toni è una tramezzineria situata a Padova, che può deliziarti con panini, tramezzini e burger. Iniviaci i tui peniseri.">
-    <title>Contattaci - TONI'S TRAMEZZINERIA</title>
+    <meta name="keywords" content="contattaci, mail, numero, telefono, indirizzo, dove, Padova, Portello, fast-food, cucina, gourmet">
+    <meta description="Hai qualche domanda da fare a Tommy riguardo le sue creazioni? Contattaci per scoprire di più sul mondo di TONI'S TRAMEZZINERIA!">
+    <meta name="description" content="Contattaci per scoprire di più sul mondo di TONI'S TRAMEZZINERIA!">
     <link rel="stylesheet" type="text/css" href="styles/stylesContatti.css"/>
     <link rel="stylesheet" type="text/css" href="styles/stylesBody.css"/>
     <link rel="stylesheet" type="text/css" href="styles/stylesHeader.css"/>
     <link rel="stylesheet" type="text/css" href="styles/stylesFooter.css"/>
+    <title>Contattaci - TONI'S TRAMEZZINERIA</title>
 </head>
 <body>
 
@@ -39,7 +41,7 @@
 
         <hr>
 
-        <form action="#" method="post" id="contact-form">
+        <form action="mailto:info@tonistramezzineria.com" method="post" id="contact-form">
             <label for="name">Nome:</label>
             <input type="text" id="name" name="name" required aria-required="true" />
 
@@ -51,6 +53,7 @@
 
             <button type="submit">INVIA</button>
         </form>
+
     </section>
 </main>
 

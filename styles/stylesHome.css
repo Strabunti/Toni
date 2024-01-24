@@ -205,7 +205,7 @@
 }
 
 #sceltaSection .buttons-container {
-    width: 600.2px;
+    width: 650.2px;
     align-items: flex-start;
     display: flex;
 }
@@ -224,7 +224,7 @@
     height: 450px;
 }
 
-.image-button button {
+.image-button a {
     position: absolute;
     top: 0;
     left: 0;
@@ -237,17 +237,43 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background: url(../resources/images/porteo.webp) no-repeat;
-    background-size: contain;
     z-index: 2;
+    color: orange;
 }
 
-.image-button button h5 {
-    margin: 0;
+#image1 a {
+    background: url(../resources/images/porteo.webp) no-repeat;
+    background-size: contain;
+}
+
+#image2 a {
+    background: url(../resources/images/burgher.webp) no-repeat;
+    background-size: contain;
+}
+
+#image3 a {
+    background: url(../resources/images/default-dish-pic.webp) no-repeat;
+    background-size: contain;
+}
+
+.image-button a h5 {
+    margin: 5px;
     position: relative;
     font-size: 32px;
     color: orange;
     background-color: rgba(0,0,0,0.5);
+}
+
+#image1 {
+    display: block;
+}
+
+#image2 {
+    display: none;
+}
+
+#image3 {
+    display: none;
 }
 
 @media screen and (min-width: 1200px) {
@@ -308,8 +334,8 @@
         height: 200px;
     }
 
-    .image-button button h5 {
-        margin: 0;
+    .image-button a h5 {
+        margin: 5px;
         position: relative;
         font-size: 16px;
         color: orange;

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<html lang="it">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
 
 <head>
-    <title>Home - TONI'S TRAMEZZINERIA</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="TONI'S TRAMEZZINERIA! I migliori panini, hamburger e tramezzini di Padova">
     <meta name="keywords" content="tramezzini, panini, hamburger, fast-food, gourmet, cucina, Padova, Portello">
+    <meta description="TONI'S TRAMEZZINERIA! I migliori panini, hamburger e tramezzini di Padova! Vieni a provare la cucina di Tommy in zona Portello">
+    <meta name="description" content="TONI'S TRAMEZZINERIA! I migliori panini, hamburger e tramezzini di Padova">
     <link rel="stylesheet" type="text/css" href="styles/stylesHome.css" />
     <link rel="stylesheet" type="text/css" href="styles/stylesBody.css"/>
     <link rel="stylesheet" type="text/css" href="styles/stylesHeader.css"/>
@@ -15,6 +16,7 @@
     <link id="style" rel="stylesheet" href="styles/card-style.css">
     <link id="style" rel="stylesheet" href="styles/popup-style.css">
     <script src="user/cards/popup/popup.js"></script>
+    <title>Home - TONI'S TRAMEZZINERIA</title>
 </head>
 
 <?php session_start(); ?>
@@ -127,26 +129,43 @@
             <div class="side-by-side">
                 <div class="buttons-container">
                     <ul>
-                        <li><button class="category-button clicked" onclick="toggleClickedState(this)"><h4>HAMBURGER</h4></button></li>
-                        <li><button class="category-button" onclick="toggleClickedState(this)"><h4>PANINI</h4></button></li>
-                        <li><button class="category-button" onclick="toggleClickedState(this)"><h4>TRAMEZZINI</h4></button></li>
+                        <li><button class="category-button clicked" onclick="toggleClickedState(this), showImage(1)"><h4>HAMBURGER</h4></button></li>
+                        <li><button class="category-button" onclick="toggleClickedState(this), showImage(2)"><h4>PANINI</h4></button></li>
+                        <li><button class="category-button" onclick="toggleClickedState(this), showImage(3)"><h4>TRAMEZZINI</h4></button></li>
                     </ul>
                 </div>
 
                 <div class="mobile-buttons">
-                    <button class="mobile-category-button"><h4>HAMBURGER</h4></button>
-                    <button class="mobile-category-button"><h4>PANINI</h4></button>
-                    <button class="mobile-category-button"><h4>TRAMEZZINI</h4></button>
+                    <button class="mobile-category-button" onClick="showImage(1)"><h4>HAMBURGER</h4></button>
+                    <button class="mobile-category-button" onClick="showImage(2)"><h4>PANINI</h4></button>
+                    <button class="mobile-category-button" onClick="showImage(3)"><h4>TRAMEZZINI</h4></button>
                 </div>
 
-                <div class="image-button">
+                <div class="image-button" id="image1">
                     <img class="background-image" src="resources/images/vinileChiusoNew.webp" alt="Immagine di Background">
                     <div>
-                        <button href="menu.php" aria-label="Vai al Menu" role="button">
-                            <h5>PORTEO</h5>
-                        </button>
+                        <a href="menu.php#burgers" aria-label="Vai al Menu" role="button">
+                            <h5>HAMBURGER</h5>
+                        </a>
                     </div>
+                </div>
 
+                <div class="image-button" id="image2">
+                    <img class="background-image" src="resources/images/vinileChiusoNew.webp" alt="Immagine di Background">
+                    <div>
+                        <a href="menu.php#panini" aria-label="Vai al Menu" role="button">
+                            <h5>PANINI</h5>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="image-button" id="image3">
+                    <img class="background-image" src="resources/images/vinileChiusoNew.webp" alt="Immagine di Background">
+                    <div>
+                        <a href="menu.php#tramezzini" aria-label="Vai al Menu" role="button">
+                            <h5>TRAMEZZINI</h5>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

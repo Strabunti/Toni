@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="it">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="tramezzini, panini, hamburger, fast-food, gourmet, cucina, Padova, Portello, registrati">
+    <meta description="Registrati su TONI'S TRAMEZZINERIA!">
+    <meta name="description" content="Registrati su TONI'S TRAMEZZINERIA!">
     <link rel="stylesheet" href="styles/login-styles.css">
     <script src="session/validate.js" defer></script>
-    <title>Register</title>
+    <title>Register - TONI'S TRAMEZZINERIA</title>
 </head>
 <body>
     <div id="login-container">

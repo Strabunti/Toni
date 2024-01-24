@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="it">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="tramezzini, panini, hamburger, fast-food, gourmet, cucina, Padova, Portello, utente, profilo, impostazioni, foto, nome, mail, password">
+    <meta description="Aggiorna le tue informazioni utente su TONI'S TRAMEZZINERIA!">
+    <meta name="description" content="Aggiorna le tue informazioni utente su TONI'S TRAMEZZINERIA!">
     <link id="style" rel="stylesheet" href="styles/page-style.css">
     <link id="style" rel="stylesheet" href="styles/sidebar-style.css">
     <link id="style" rel="stylesheet" href="styles/form-style.css">
-    <title>User Profile</title>
+    <title>User Profile - TONI'S TRAMEZZINERIA</title>
 </head>
 <body>
 

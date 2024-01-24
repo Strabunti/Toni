@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it">
+<html lang="it">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-    name="description"
-    content="Toni è una tramezzineria situata a Padova, che può deliziarti con panini, tramezzini e burger. Scopri di più su Tommy e la sua passion.">
-    <title>About Us - TONI'S TRAMEZZINERIA</title>
+    <meta name="keywords" content="tramezzini, panini, hamburger, fast-food, gourmet, cucina, Padova, Portello, noi, Tommy, chef, cuoco, università, amore, cibo, qualità">
+    <meta description="Scopri di più su Tommy, il creatore degli incredibili piatti di TONI'S TRAMEZZINERIA!">
+    <meta name="description" content="Scopri di più su Tommy, il creatore degli incredibili piatti di TONI'S TRAMEZZINERIA!">
     <link rel="stylesheet" type="text/css" href="styles/stylesAboutus.css" />
     <link rel="stylesheet" type="text/css" href="styles/stylesBody.css"/>
     <link rel="stylesheet" type="text/css" href="styles/stylesHeader.css"/>
     <link rel="stylesheet" type="text/css" href="styles/stylesFooter.css"/>
+    <title>About Us - TONI'S TRAMEZZINERIA</title>
 </head>
 
 <body>

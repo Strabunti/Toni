@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="it">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="tramezzini, panini, hamburger, fast-food, gourmet, cucina, Padova, Portello, aggiungi, rimuovi, modifica, piatto, amministratore">
+    <meta description="Aggiungi, rimuovi o modifica un piatto nel tuo menu!">
+    <meta name="description" content="Aggiungi, rimuovi o modifica un piatto nel tuo menu!">
     <link id="style" rel="stylesheet" href="styles/page-style.css">
     <link id="style" rel="stylesheet" href="styles/sidebar-style.css">
     <link id="style" rel="stylesheet" href="styles/form-style.css">
-    <title>Add New Dish</title>
+    <title>Add New Dish - TONI'S TRAMEZZINERIA</title>
 </head>
 <body>
     <div class="content">
