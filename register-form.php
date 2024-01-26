@@ -9,8 +9,8 @@
     <meta description="Registrati su TONI'S TRAMEZZINERIA!">
     <meta name="description" content="Registrati su TONI'S TRAMEZZINERIA!">
     <link rel="stylesheet" href="styles/login-styles.css">
-    <script src="session/validate.js" defer></script>
-    <title>Register - TONI'S TRAMEZZINERIA</title>
+    <script src="user/session/validate.js" defer></script>
+    <title>Registrati - TONI'S TRAMEZZINERIA</title>
 </head>
 <body>
     <div id="login-container">
@@ -19,18 +19,19 @@
                 <img src="resources/images/logo.webp" alt="Toni's Logo">
             </div>
         </a>
-        <div class="title"><h1>Register</h1></div>
+        <div class="title"><h1>Registrati</h1></div>
         <form action = "user/backend/add-user.php" method = "post" onsubmit="return validateSignup()">
             <label for="username">Username:</label>
             <input type="text" name="username" id="username" placeholder="username" onblur="return validateUsername()" required>
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" placeholder="password" required minlength="8" onblur="return validatePassword()">
+            <label id="password-error" class="error-label"></label>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="email" required oninput="return validateEmail()">
 
-            <button type="submit">Register</button>
+            <button type="submit">Registrati</button>
         </form>
-        <p>Already have an account? <a href="login.php">Login here</a></p>
+        <p>Hai già un account? <a href="login.php">Esegui l'accesso qui</a></p>
     </div>
 </body>
 </html>
