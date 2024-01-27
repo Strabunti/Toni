@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html lang="it">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="menu, tramezzini, panini, hamburger, fast-food, gourmet, economico, economici, prezzo, cucina, Padova, Portello">
-    <meta description="Scopri il menù di TONI'S TRAMEZZINERIA! panini, hamburger e tramezzini gourmet economici a Padova! ">
-    <meta name="description" content="Scopri il menù di TONI'S TRAMEZZINERIA!">
-    <link rel="stylesheet" type="text/css" href="styles/stylesMenu.css"/>
-    <link rel="stylesheet" type="text/css" href="styles/stylesBody.css"/>
-    <link rel="stylesheet" type="text/css" href="styles/stylesHeader.css"/>
-    <link rel="stylesheet" type="text/css" href="styles/stylesFooter.css"/>
-    <title>Menu - TONI'S TRAMEZZINERIA</title>
-</head>
+    <head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="styles/stylesMenu.css"/>
+        <link rel="stylesheet" type="text/css" href="styles/stylesBody.css"/>
+        <link rel="stylesheet" type="text/css" href="styles/stylesHeader.css"/>
+        <link rel="stylesheet" type="text/css" href="styles/stylesFooter.css"/>
+		<title>Menu</title>
+    </head>
 
 <?php session_start(); ?>
 
@@ -130,7 +125,7 @@
             // Fetch information for the bestseller and dish of the month
             $burgers = getDishesByType("Burger");
         ?>
-    
+
         <h2 role="heading" aria-level="2">BURGERS</h2>
         <p>Esplora la nostra deliziosa selezione di burgers, autentiche creazioni italiane che trasformano il semplice pane in opere d'arte gastronomiche. 
             Dalle classiche combinazioni ai twist creativi, scopri le ricette che soddisferanno ogni palato.</p>
@@ -138,13 +133,13 @@
         <?php foreach ($burgers as $burger) { ?>
             <div class="prodotto-item">
                 <div class="menu-item-container">
-                     <div class="menu-item-images">
+                    <div class="menu-item-images">
                         <img class="left-image" src="resources/images/vinileChiusoNew.webp" alt="Immagine di Background 1">
                         <img class="right-image" src="resources/images/vinileSemiAperto.webp" alt="Immagine di Background 2">
                     </div>
 
                     <div>
-                        <button class="menu-item-button" aria-label="Vai al Menu" role="button" onclick="openPopup(
+                        <button class="menu-item-button" aria-label="Apri il pop-up" role="button" onclick="openPopup(
                             '<?php echo $burger['name']; ?>',
                             '<?php echo $burger['description']; ?>',
                             '<?php echo $burger['ingredients']; ?>',
@@ -164,7 +159,6 @@
     <?php include 'templates/footer.html' ?>
 
     <script src="scripts/scriptMenu.js"></script>
-    <script src="scripts/scriptHome.js"></script>
     <script src="scripts/scriptHeader.js"></script>
 
     <script>
@@ -183,4 +177,3 @@
     </script>
 </body>
 </html>
-
