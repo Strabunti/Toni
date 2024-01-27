@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="it">
-    <head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" type="text/css" href="styles/stylesMenu.css"/>
-        <link rel="stylesheet" type="text/css" href="styles/stylesBody.css"/>
-        <link rel="stylesheet" type="text/css" href="styles/stylesHeader.css"/>
-        <link rel="stylesheet" type="text/css" href="styles/stylesFooter.css"/>
-		<title>Menu</title>
-    </head>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="menu, tramezzini, panini, hamburger, fast-food, gourmet, economico, economici, prezzo, cucina, Padova, Portello">
+    <meta description="Scopri il menù di TONI'S TRAMEZZINERIA! panini, hamburger e tramezzini gourmet economici a Padova! ">
+    <meta name="description" content="Scopri il menù di TONI'S TRAMEZZINERIA!">
+    <link rel="stylesheet" type="text/css" href="styles/stylesMenu.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/stylesBody.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/stylesHeader.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/stylesFooter.css"/>
+    <title>Menu - TONI'S TRAMEZZINERIA</title>
+</head>
 
 <?php session_start(); ?>
 
