@@ -18,14 +18,19 @@
 
     <div id="popup" class="popup">
         <div class="popup-content">
-            <span class="popup-close" onclick="closePopup()">&times;</span>
-            <img id="popup-image" src="" alt="Popup Image">
-            <h2 id="popup-name"></h2>
-            <p id="popup-description"></p>
-            <p id="popup-ingredients"></p>
-            <p id="popup-price"></p>
+            <img id="popup-image1" class="popup-image1" src="resources/images/PngItem_6858950.png" alt="Popup Image 1">
+            <div class="popup-details">
+                <span class="popup-close" onclick="closePopup()">&times;</span>
+                <h2 id="popup-name" class="popup-name"></h2>
+                <p id="popup-description" class="popup-description"></p>
+                <p class="popup-ingredients-label">INGREDIENTI:</p>
+                <p id="popup-ingredients" class="popup-ingredients"></p>
+                <p id="popup-price" class="popup-price"></p>    
+            </div>
+            <img id="popup-image2" class="popup-image2" src="" alt="Popup Image2">
         </div>
     </div>
+
 
     <section id="mainSection">
         <div class="rectangle" id="titleRectangle"><h1>MENU</h1></div>  
@@ -128,7 +133,7 @@
         <?php foreach ($burgers as $burger) { ?>
             <div class="prodotto-item">
                 <div class="menu-item-container">
-                    <div class="menu-item-images">
+                     <div class="menu-item-images">
                         <img class="left-image" src="resources/images/vinileChiusoNew.webp" alt="Immagine di Background 1">
                         <img class="right-image" src="resources/images/vinileSemiAperto.webp" alt="Immagine di Background 2">
                     </div>
@@ -159,12 +164,11 @@
 
     <script>
         function openPopup(name, description, ingredients, price, imageSrc) {
-            console.log("Opening popup for", name);
             document.getElementById('popup-name').innerText = name;
             document.getElementById('popup-description').innerText = description;
             document.getElementById('popup-ingredients').innerText = ingredients;
             document.getElementById('popup-price').innerText = 'Prezzo: ' + price;
-            document.getElementById('popup-image').src = imageSrc;
+            document.getElementById('popup-image2').src = imageSrc;
             document.getElementById('popup').style.display = 'block';
         }
 
@@ -174,3 +178,4 @@
     </script>
 </body>
 </html>
+
