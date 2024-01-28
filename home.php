@@ -12,9 +12,9 @@
     <link rel="stylesheet" type="text/css" href="styles/stylesBody.css"/>
     <link rel="stylesheet" type="text/css" href="styles/stylesHeader.css"/>
     <link rel="stylesheet" type="text/css" href="styles/stylesFooter.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/popUp-styles.css"/>
     <link id="style" rel="stylesheet" href="styles/dashboard-style.css">
     <link id="style" rel="stylesheet" href="styles/card-style.css">
-    <link id="style" rel="stylesheet" href="styles/popup-style.css">
     <script src="user/cards/popup/popup.js"></script>
     <title>Home - TONI'S TRAMEZZINERIA</title>
 </head>
@@ -40,6 +40,7 @@
         <?php
             // Include your menu manager file
             include 'user/backend/menu-manager.php';
+            include 'templates/popUp.html';
 
             // Fetch information for the bestseller and dish of the month
             $bestSellerDish = getBestSellerDish();
@@ -63,7 +64,13 @@
                             </div>
 
                             <div>
-                                <button class="menu-item-button" aria-label="Vai al Menu" role="button">
+                                <button class="menu-item-button" aria-label="Vai al Menu" role="button"  onclick="openPopup(
+                                    '<?php echo $bestSellerDish['name']; ?>',
+                                    '<?php echo $bestSellerDish['description']; ?>',
+                                    '<?php echo $bestSellerDish['ingredients']; ?>',
+                                    '<?php echo $bestSellerDish['price']; ?>',
+                                    '<?php echo displayDishImage($bestSellerDish['id_dish']); ?>'
+                                )">
                                     <!-- Use $bestSellerDish properties for image source -->
                                     <img class="menu-item-image" src="<?php echo displayDishImage($bestSellerDish['id_dish']); ?>" alt="Bestseller Dish Image">    
                                     <p><?php echo $bestSellerDish['name']; ?></p>
@@ -86,7 +93,13 @@
                             </div>
 
                             <div>
-                                <button class="menu-item-button" aria-label="Vai al Menu" role="button">
+                                <button class="menu-item-button" aria-label="Vai al Menu" role="button"  onclick="openPopup(
+                                    '<?php echo $bestMonthDish['name']; ?>',
+                                    '<?php echo $bestMonthDish['description']; ?>',
+                                    '<?php echo $bestMonthDish['ingredients']; ?>',
+                                    '<?php echo $bestMonthDish['price']; ?>',
+                                    '<?php echo displayDishImage($bestMonthDish['id_dish']); ?>'
+                                )">
                                     <!-- Use $bestSellerDish properties for image source -->
                                     <img class="menu-item-image" src="<?php echo displayDishImage($bestMonthDish['id_dish']); ?>" alt="Bestseller Dish Image">    
                                     <p><?php echo $bestMonthDish['name']; ?></p>
@@ -199,7 +212,7 @@
 
 <!-- FOOTER -->
 <?php include 'templates/footer.html' ?>
-
+    <script src="scripts/popUp.js" defer></script>              
     <script src="scripts/scriptHome.js"></script>
     <script src="scripts/scriptHeader.js"></script>
 </body>

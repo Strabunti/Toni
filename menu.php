@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="styles/stylesBody.css"/>
     <link rel="stylesheet" type="text/css" href="styles/stylesHeader.css"/>
     <link rel="stylesheet" type="text/css" href="styles/stylesFooter.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/popUp-styles.css"/>
     <title>Menu - TONI'S TRAMEZZINERIA</title>
 </head>
 
@@ -20,21 +21,8 @@
 <body>
     <!-- HEADER -->
     <?php include 'templates/header.html' ?>
-
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <img id="popup-image1" class="popup-image1" src="resources/images/PngItem_6858950.png" alt="Popup Image 1">
-            <div class="popup-details">
-                <span class="popup-close" onclick="closePopup()">&times;</span>
-                <h2 id="popup-name" class="popup-name"></h2>
-                <p id="popup-description" class="popup-description"></p>
-                <p class="popup-ingredients-label">INGREDIENTI:</p>
-                <p id="popup-ingredients" class="popup-ingredients"></p>
-                <p id="popup-price" class="popup-price"></p>    
-            </div>
-            <img id="popup-image2" class="popup-image2" src="" alt="Popup Image2">
-        </div>
-    </div>
+    
+    <?php include 'templates/popUp.html' ?>
 
 
     <section id="mainSection">
@@ -69,12 +57,12 @@
             <div class="prodotto-item">
                 <div class="menu-item-container">
                     <div class="menu-item-images">
-                        <img class="left-image" src="resources/images/vinileChiusoNew.webp" alt="Immagine di Background 1">
-                        <img class="right-image" src="resources/images/vinileSemiAperto.webp" alt="Immagine di Background 2">
+                        <img class="left-image" src="resources/images/vinileChiusoNew.webp" alt="">
+                        <img class="right-image" src="resources/images/vinileSemiAperto.webp" alt="">
                     </div>
 
                     <div>
-                        <button class="menu-item-button" aria-label="Vai al Menu" role="button" onclick="openPopup(
+                        <button class="menu-item-button" aria-label="Vai al prodotto" role="button" onclick="openPopup(
                             '<?php echo $tramezzino['name']; ?>',
                             '<?php echo $tramezzino['description']; ?>',
                             '<?php echo $tramezzino['ingredients']; ?>',
@@ -104,12 +92,12 @@
             <div class="prodotto-item">
                 <div class="menu-item-container">
                     <div class="menu-item-images">
-                        <img class="left-image" src="resources/images/vinileChiusoNew.webp" alt="Immagine di Background 1">
-                        <img class="right-image" src="resources/images/vinileSemiAperto.webp" alt="Immagine di Background 2">
+                        <img class="left-image" src="resources/images/vinileChiusoNew.webp" alt="">
+                        <img class="right-image" src="resources/images/vinileSemiAperto.webp" alt="">
                     </div>
 
                     <div>
-                        <button class="menu-item-button" aria-label="Vai al Menu" role="button" onclick="openPopup(
+                        <button class="menu-item-button" aria-label="Vai al prodotto" role="button" onclick="openPopup(
                             '<?php echo $panino['name']; ?>',
                             '<?php echo $panino['description']; ?>',
                             '<?php echo $panino['ingredients']; ?>',
@@ -139,12 +127,12 @@
             <div class="prodotto-item">
                 <div class="menu-item-container">
                     <div class="menu-item-images">
-                        <img class="left-image" src="resources/images/vinileChiusoNew.webp" alt="Immagine di Background 1">
-                        <img class="right-image" src="resources/images/vinileSemiAperto.webp" alt="Immagine di Background 2">
+                        <img class="left-image" src="resources/images/vinileChiusoNew.webp" alt="">
+                        <img class="right-image" src="resources/images/vinileSemiAperto.webp" alt="">
                     </div>
 
                     <div>
-                        <button class="menu-item-button" aria-label="Apri il pop-up" role="button" onclick="openPopup(
+                        <button class="menu-item-button" aria-label="Vai al prodotto" role="button" onclick="openPopup(
                             '<?php echo $burger['name']; ?>',
                             '<?php echo $burger['description']; ?>',
                             '<?php echo $burger['ingredients']; ?>',
@@ -162,23 +150,8 @@
 
     <!-- FOOTER -->
     <?php include 'templates/footer.html' ?>
-
+    <script src="scripts/popUp.js" defer></script>
     <script src="scripts/scriptMenu.js"></script>
     <script src="scripts/scriptHeader.js"></script>
-
-    <script>
-        function openPopup(name, description, ingredients, price, imageSrc) {
-            document.getElementById('popup-name').innerText = name;
-            document.getElementById('popup-description').innerText = description;
-            document.getElementById('popup-ingredients').innerText = ingredients;
-            document.getElementById('popup-price').innerText = 'Prezzo: ' + price;
-            document.getElementById('popup-image2').src = imageSrc;
-            document.getElementById('popup').style.display = 'block';
-        }
-
-        function closePopup() {
-            document.getElementById('popup').style.display = 'none';
-        }
-    </script>
 </body>
 </html>
