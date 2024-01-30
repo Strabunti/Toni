@@ -57,10 +57,10 @@
                     echo "Access denied. Please log in as an admin.";
                 }
                 ?>
-            <div  class="card">
+            <div class="card">
                 <form class="new-comment-form" action="add-comment-form.php" method="post">
                     <button class="new-comment-button" type="submit">+
-                        <p class="new-comment-button-description">Aggiungi un nuovo commento</p>
+                        <span class="new-comment-button-description">Aggiungi un nuovo commento</span>
                     </button>
                 </form>
             </div>
