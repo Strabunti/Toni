@@ -6,7 +6,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="tramezzini, panini, hamburger, fast-food, gourmet, cucina, Padova, Portello, aggiungi, piatto, amministratore">
-    <meta description="L'amministratore del sito può aggiungere un nuovo piatto da far comparire nel menù di TONI'S TRAMEZZINERIA!">
     <meta name="description" content="L'amministratore del sito può aggiungere un nuovo piatto da far comparire nel menù di TONI'S TRAMEZZINERIA!">
     <link rel="stylesheet" type="text/css" href="styles/page-style.css">
     <link rel="stylesheet" type="text/css" href="styles/sidebar-style.css">

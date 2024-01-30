@@ -6,7 +6,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="tramezzini, panini, hamburger, fast-food, gourmet, cucina, Padova, Portello, menu, dashboard, amministratore">
-    <<meta name="description" content="Visualizza il menu attuale e modifica, aggiungi e rimuovi i piatti a tuo piacere.">
     <meta name="description" content="Visualizza il menu attuale e modifica, aggiungi e rimuovi i piatti a tuo piacere.">
     <link rel="stylesheet" type="text/css" href="styles/page-style.css">
     <link rel="stylesheet" type="text/css" href="styles/dashboard-style.css">

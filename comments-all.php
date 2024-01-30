@@ -6,7 +6,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="tramezzini, panini, hamburger, fast-food, gourmet, cucina, Padova, Portello, recensioni, visualizza, modifica, amministratore">
-    <<meta name="description" content="Qui puoi vedere tutte le recensioni che hanno lasciato gli utenti, e anche eliminarle.">
     <meta name="description" content="Qui puoi vedere tutte le recensioni che hanno lasciato gli utenti, e anche eliminarle.">
     <link rel="stylesheet" type="text/css" href="styles/stylesHeader.css"/>
     <link rel="stylesheet" type="text/css" href="styles/stylesFooter.css"/>
