@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="it">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="tramezzini, panini, hamburger, fast-food, gourmet, cucina, Padova, Portello">
-    <meta description="TONI'S TRAMEZZINERIA! I migliori panini, hamburger e tramezzini di Padova! Vieni a provare la cucina di Tommy in zona Portello">
+    <<meta name="description" content="TONI'S TRAMEZZINERIA! I migliori panini, hamburger e tramezzini di Padova! Vieni a provare la cucina di Tommy in zona Portello">
     <meta name="description" content="TONI'S TRAMEZZINERIA! I migliori panini, hamburger e tramezzini di Padova">
     <link rel="stylesheet" type="text/css" href="styles/stylesHome.css" />
     <link rel="stylesheet" type="text/css" href="styles/stylesBody.css"/>
     <link rel="stylesheet" type="text/css" href="styles/stylesHeader.css"/>
     <link rel="stylesheet" type="text/css" href="styles/stylesFooter.css"/>
     <link rel="stylesheet" type="text/css" href="styles/popUp-styles.css"/>
-    <link id="style" rel="stylesheet" href="styles/dashboard-style.css">
-    <link id="style" rel="stylesheet" href="styles/card-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/dashboard-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/card-style.css">
     <script src="user/cards/popup/popup.js"></script>
     <title>Home - TONI'S TRAMEZZINERIA</title>
 </head>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="it">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="contattaci, mail, numero, telefono, indirizzo, dove, Padova, Portello, fast-food, cucina, gourmet">
-    <meta description="Hai qualche domanda da fare a Tommy riguardo le sue creazioni? Contattaci per scoprire di più sul mondo di TONI'S TRAMEZZINERIA!">
+    <<meta name="description" content="Hai qualche domanda da fare a Tommy riguardo le sue creazioni? Contattaci per scoprire di più sul mondo di TONI'S TRAMEZZINERIA!">
     <meta name="description" content="Contattaci per scoprire di più sul mondo di TONI'S TRAMEZZINERIA!">
     <link rel="stylesheet" type="text/css" href="styles/stylesContatti.css"/>
     <link rel="stylesheet" type="text/css" href="styles/stylesBody.css"/>

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="it">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="tramezzini, panini, hamburger, fast-food, gourmet, cucina, Padova, Portello, noi, Tommy, chef, cuoco, università, amore, cibo, qualità">
-    <meta description="Scopri di più su Tommy, il creatore degli incredibili piatti di TONI'S TRAMEZZINERIA!">
     <meta name="description" content="Scopri di più su Tommy, il creatore degli incredibili piatti di TONI'S TRAMEZZINERIA!">
     <link rel="stylesheet" type="text/css" href="styles/stylesAboutus.css" />
     <link rel="stylesheet" type="text/css" href="styles/stylesBody.css"/>

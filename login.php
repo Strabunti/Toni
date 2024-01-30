@@ -16,14 +16,14 @@ if(isset($_SESSION['username'])){
 ?>
 
 <!DOCTYPE html>
-<html lang="it">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="tramezzini, panini, hamburger, fast-food, gourmet, cucina, Padova, Portello, login">
-    <meta description="Accedi a TONI'S TRAMEZZINERIA!">
+    <<meta name="description" content="Accedi a TONI'S TRAMEZZINERIA!">
     <meta name="description" content="Accedi a TONI'S TRAMEZZINERIA!">
     <link rel="stylesheet" href="styles/login-styles.css">
     <script src="user/session/validate.js" defer></script>

@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="it">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="tramezzini, panini, hamburger, fast-food, gourmet, cucina, Padova, Portello, aggiungi, recensione, utenti">
-    <meta description="Raccontaci la tua esperienza da TONI'S TRAMEZZINERIA! Aggiungi una recensione!">
-    <meta name="description" content="Aggiungi una recensione a TONI'S TRAMEZZINERIA!">
-    <link id="style" rel="stylesheet" href="styles/page-style.css">
-    <link id="style" rel="stylesheet" href="styles/sidebar-style.css">
-    <link id="style" rel="stylesheet" href="styles/form-style.css">
+    <meta name="description" content="Raccontaci la tua esperienza da TONI'S TRAMEZZINERIA! Aggiungi una recensione!">
+    <link rel="stylesheet" rel="stylesheet" href="styles/page-style.css">
+    <link rel="stylesheet" rel="stylesheet" href="styles/sidebar-style.css">
+    <link rel="stylesheet" rel="stylesheet" href="styles/form-style.css">
     <title>Add New Comment - TONI'S TRAMEZZINERIA</title>
 </head>
 <body>

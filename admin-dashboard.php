@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="it">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="tramezzini, panini, hamburger, fast-food, gourmet, cucina, Padova, Portello, pagina, amministratore">
-    <meta description="Benvenuto, amministratore, nella tua dashboard! Qui puoi rivedere le recensioni degli utenti, aggiungere, rimuovere o modificare i piatti!">
+    <<meta name="description" content="Benvenuto, amministratore, nella tua dashboard! Qui puoi rivedere le recensioni degli utenti, aggiungere, rimuovere o modificare i piatti!">
     <meta name="description" content="Qui puoi rivedere le recensioni degli utenti, aggiungere, rimuovere o modificare i piatti!">
-    <link id="style" rel="stylesheet" href="styles/page-style.css">
-    <link id="style" rel="stylesheet" href="styles/dashboard-style.css">
-    <link id="style" rel="stylesheet" href="styles/card-style.css">
-    <link id="style" rel="stylesheet" href="styles/popup-style.css">
-    <link id="style" rel="stylesheet" href="styles/sidebar-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/page-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/dashboard-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/card-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/popup-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/sidebar-style.css">
     <title>Admin Dashboard - TONI'S TRAMEZZINERIA</title>
     <script src="user/cards/popup/popup.js"></script>
 </head>

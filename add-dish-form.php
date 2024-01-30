@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="it">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
 
 <head>
     <meta charset="UTF-8" />
@@ -8,9 +8,9 @@
     <meta name="keywords" content="tramezzini, panini, hamburger, fast-food, gourmet, cucina, Padova, Portello, aggiungi, piatto, amministratore">
     <meta description="L'amministratore del sito può aggiungere un nuovo piatto da far comparire nel menù di TONI'S TRAMEZZINERIA!">
     <meta name="description" content="L'amministratore del sito può aggiungere un nuovo piatto da far comparire nel menù di TONI'S TRAMEZZINERIA!">
-    <link id="style" rel="stylesheet" href="styles/page-style.css">
-    <link id="style" rel="stylesheet" href="styles/sidebar-style.css">
-    <link id="style" rel="stylesheet" href="styles/form-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/page-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/sidebar-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/form-style.css">
     <title>Add New Dish - TONI'S TRAMEZZINERIA</title>
 </head>
 <body>

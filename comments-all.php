@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="it">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="tramezzini, panini, hamburger, fast-food, gourmet, cucina, Padova, Portello, recensioni, visualizza, modifica, amministratore">
-    <meta description="Qui puoi vedere tutte le recensioni che hanno lasciato gli utenti, e anche eliminarle.">
+    <<meta name="description" content="Qui puoi vedere tutte le recensioni che hanno lasciato gli utenti, e anche eliminarle.">
     <meta name="description" content="Qui puoi vedere tutte le recensioni che hanno lasciato gli utenti, e anche eliminarle.">
     <link rel="stylesheet" type="text/css" href="styles/stylesHeader.css"/>
     <link rel="stylesheet" type="text/css" href="styles/stylesFooter.css"/>
     <link rel="stylesheet" type="text/css" href="styles/stylesBody.css"/>
-    <link id="style" rel="stylesheet" href="styles/page-style.css">
-    <link id="style" rel="stylesheet" href="styles/sidebar-style.css">
-    <link id="style" rel="stylesheet" href="styles/popup-style.css">
-    <link id="style" rel="stylesheet" href="styles/card-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/page-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/sidebar-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/popup-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/card-style.css">
     <title>Admin Page - Comments - TONI'S TRAMEZZINERIA</title>
     <script src="user/cards/popup/popup.js"></script>
 </head>

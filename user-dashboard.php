@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html lang="it">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="tramezzini, panini, hamburger, fast-food, gourmet, cucina, Padova, Portello, pagina, utente">
-    <meta description="Benvenuto, utente, nella tua dashboard! Qui puoi rivedere le recensioni degli altri utenti e le tue, potendole anche rimuovere se desideri farlo.">
-    <meta name="description" content="Qui puoi rivedere le recensioni degli altri utenti e le tue, potendole anche rimuovere se desideri farlo.">
-    <link id="style" rel="stylesheet" href="styles/page-style.css">
-    <link id="style" rel="stylesheet" href="styles/dashboard-style.css">
-    <link id="style" rel="stylesheet" href="styles/card-style.css">
-    <link id="style" rel="stylesheet" href="styles/popup-style.css">
-    <link id="style" rel="stylesheet" href="styles/sidebar-style.css">
+    <meta name="description" content="Benvenuto, utente, nella tua dashboard! Qui puoi rivedere le recensioni degli altri utenti e le tue, potendole anche rimuovere se desideri farlo.">
+    <link rel="stylesheet" type="text/css" href="styles/page-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/dashboard-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/card-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/popup-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/sidebar-style.css">
     <title>User Dashboard - TONI'S TRAMEZZINERIA</title>
     <script src="user/cards/popup/popup.js"></script>
 </head>
