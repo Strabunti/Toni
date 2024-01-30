@@ -57,6 +57,21 @@ INSERT INTO `users` (`username`, `password`, `email`) VALUES
 
 INSERT INTO `admin` (`username`) VALUES ('admin');
 
+INSERT INTO dish (name, description, ingredients, image, price, type, bestseller, best_month) 
+VALUES 
+    ('CHEESEBURGER', 'Versione di Tommy del classico cheeseburger, rivistato con l\'incredibile salsa TONI\'S!', 'Hamburger, Cheddar, Insalata, Salsa TONI\'S', NULL, 6, 'Burger', FALSE, FALSE),
+    ('DOUBLE CHEESEBACON', 'Versione di Tommy del classico cheeseburger, con l\'aggiunta del bacon e dell\'inimitabile salsa TONI\'S', 'Hamburger, Cheddar, Bacon, Insalata, Salsa TONI\'S', 'NULL', '6.5', 'Burger', FALSE, FALSE),
+    ('PORTEO', 'Hamburger che grida Porta Portello fin dal midollo', 'Hamburger, Cheddar, Peperoni, Cipolla, Salsa TONI\'S', 'NULL', '6', 'Burger', FALSE, FALSE),
+    ('VENETO', 'Un hamburger che più patriottico di così non si può!', 'Salsiccia, Peperoni, Cipolla, Asiago, Salsa TONI\'S', 'NULL', '6', 'Burger', FALSE, TRUE),
+    ('PIOVEGO', 'In comune con le cattive acque del fiume Piovego, questo hamburger ha solo il nome! Il resto è pura poesia.', 'Salsiccia, Bacon, Insalata, Salsa TONI\'S', 'NULL', '6', 'Burger', FALSE, FALSE),
+    ('SPECIAL TOMMY', 'Quando abbiamo chiesto a Tommy di sorprenderci con un nuovo panino, non pensavamo se ne sarebbe uscito con la sua creazione migliore.', 'Prosciutto, Verdure grigliate, Asiago, Salsa TONI\'S', 'NULL', '5', 'Panino', FALSE, FALSE),
+    ('PULLED PORK', 'Ciò che ha reso TONI\'S ciò che oggi è TONI\'S.', 'Pulled Pork, Misticanza, Insalata russa', 'NULL', '5.5', 'Panino', TRUE, FALSE),
+    ('INTOPPATORE', 'Vuoi essere sopraffatto dal pork, ma il Pulled Pork non ti basta? Tommy ha la risposta.', 'Salsiccia, Pulled Pork, Patate al forno, Salsa TONI\'S', 'NULL', '6', 'Panino', FALSE, FALSE),
+    ('VEGETARIANO', 'Tommy non fa discriminazioni, e ci sono panini anche per chi preferisce solo le verdure!', 'Melanzane, Zucchine, Pomodori, Formaggio, qualsiasi cosa decida Tommy!', 'NULL', '4.5', 'Panino', FALSE, FALSE),
+    ('PICCANTINO', 'Re degli antipasti, la piccantezza di questo tramezzino vi lascerà il palato preparato a ogni altra esperienza di TONI\'S!', 'Peperoni, Salame Piccante, Peperoncino', 'NULL', '2.5', 'Tramezzino', FALSE, FALSE),
+    ('MARIUOLO', 'Per gli amici di Eraclea mare, un tramezzino che vi farà avere nostalgia di casa...', 'Tonno, Uova, Maionese', 'NULL', '2.5', 'Tramezzino', FALSE, FALSE),
+    ('VEGGIE', 'Per gli amanti di un antipasto leggero e salutare.', 'Zucchine, Pomodori Secchi, Maionese', 'NULL', '2.5', 'Tramezzino', FALSE, FALSE),
+
 INSERT INTO `comments` 
 (`comment_id`, `username`, `title`, `comment`, `rating`, `review_date`) 
 VALUES 
