@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html lang="it">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="tramezzini, panini, hamburger, fast-food, gourmet, cucina, Padova, Portello">
-    <meta description="TONI'S TRAMEZZINERIA! I migliori panini, hamburger e tramezzini di Padova! Vieni a provare la cucina di Tommy in zona Portello">
-    <meta name="description" content="TONI'S TRAMEZZINERIA! I migliori panini, hamburger e tramezzini di Padova">
+    <meta name="description" content="TONI'S TRAMEZZINERIA! I migliori panini, hamburger e tramezzini di Padova! Vieni a provare la cucina di Tommy in zona Portello">
     <link rel="stylesheet" type="text/css" href="styles/stylesHome.css" />
     <link rel="stylesheet" type="text/css" href="styles/stylesBody.css"/>
     <link rel="stylesheet" type="text/css" href="styles/stylesHeader.css"/>
     <link rel="stylesheet" type="text/css" href="styles/stylesFooter.css"/>
     <link rel="stylesheet" type="text/css" href="styles/popUp-styles.css"/>
-    <link id="style" rel="stylesheet" href="styles/dashboard-style.css">
-    <link id="style" rel="stylesheet" href="styles/card-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/dashboard-style.css">
+    <link rel="stylesheet" type="text/css" href="styles/card-style.css">
     <script src="user/cards/popup/popup.js"></script>
     <title>Home - TONI'S TRAMEZZINERIA</title>
 </head>
@@ -64,7 +62,7 @@
                             </div>
 
                             <div>
-                                <button class="menu-item-button" aria-label="Vai al Menu" role="button"  onclick="openPopup(
+                                <button class="menu-item-button" aria-label="Vai al Menu"  onclick="openPopup(
                                     '<?php echo $bestSellerDish['name']; ?>',
                                     '<?php echo $bestSellerDish['description']; ?>',
                                     '<?php echo $bestSellerDish['ingredients']; ?>',
@@ -73,7 +71,7 @@
                                 )">
                                     <!-- Use $bestSellerDish properties for image source -->
                                     <img class="menu-item-image" src="<?php echo displayDishImage($bestSellerDish['id_dish']); ?>" alt="Bestseller Dish Image">    
-                                    <p><?php echo $bestSellerDish['name']; ?></p>
+                                        <span><?php echo $bestSellerDish['name']; ?></span>
                                 </button>
                             </div>
                         </div>
@@ -93,7 +91,7 @@
                             </div>
 
                             <div>
-                                <button class="menu-item-button" aria-label="Vai al Menu" role="button"  onclick="openPopup(
+                                <button class="menu-item-button" aria-label="Vai al Menu" onclick="openPopup(
                                     '<?php echo $bestMonthDish['name']; ?>',
                                     '<?php echo $bestMonthDish['description']; ?>',
                                     '<?php echo $bestMonthDish['ingredients']; ?>',
@@ -102,7 +100,7 @@
                                 )">
                                     <!-- Use $bestSellerDish properties for image source -->
                                     <img class="menu-item-image" src="<?php echo displayDishImage($bestMonthDish['id_dish']); ?>" alt="Bestseller Dish Image">    
-                                    <p><?php echo $bestMonthDish['name']; ?></p>
+                                    <span><?php echo $bestMonthDish['name']; ?></span>
                                 </button>
                             </div>
                         </div>
@@ -122,7 +120,7 @@
             <h3 class="align-left" id="doveSiamoSectionTitle">DOV'E' TONI'S?</h3>
             <div class="side-by-side">
                 <div class="map-container">
-                    <iframe class="map" title="Mappa dove trovarci" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11204.230924611375!2d11.892494!3d45.4081754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477edaf723594ce7%3A0x822810e7e09bc854!2sToni&#39;s%20Tramezzineria!5e0!3m2!1sit!2sit!4v1705222707812!5m2!1sit!2sit" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" alt="Mappa Embedded di Google Maps"></iframe>
+                    <iframe class="map" title="Mappa dove trovarci" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11204.230924611375!2d11.892494!3d45.4081754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477edaf723594ce7%3A0x822810e7e09bc854!2sToni&#39;s%20Tramezzineria!5e0!3m2!1sit!2sit!4v1705222707812!5m2!1sit!2sit" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" name="Mappa Embedded di Google Maps"></iframe>
                 </div>
                 <div class="location-info">
                     <p>Ti abbiamo già convinto? Ottimo! <br> Vieni a trovarci a Padova, in zona Portello!</p>
@@ -142,16 +140,16 @@
             <div class="side-by-side">
                 <div class="buttons-container">
                     <ul>
-                        <li><button class="category-button clicked" onclick="toggleClickedState(this), showImage(1)"><h4>HAMBURGER</h4></button></li>
-                        <li><button class="category-button" onclick="toggleClickedState(this), showImage(2)"><h4>PANINI</h4></button></li>
-                        <li><button class="category-button" onclick="toggleClickedState(this), showImage(3)"><h4>TRAMEZZINI</h4></button></li>
+                        <li><button class="category-button clicked" onclick="toggleClickedState(this), showImage(1)"><span>HAMBURGER</span></button></li>
+                        <li><button class="category-button" onclick="toggleClickedState(this), showImage(2)"><span>PANINI</span></button></li>
+                        <li><button class="category-button" onclick="toggleClickedState(this), showImage(3)"><span>TRAMEZZINI</span></button></li>
                     </ul>
                 </div>
 
                 <div class="mobile-buttons">
-                    <button class="mobile-category-button" onClick="showImage(1)"><h4>HAMBURGER</h4></button>
-                    <button class="mobile-category-button" onClick="showImage(2)"><h4>PANINI</h4></button>
-                    <button class="mobile-category-button" onClick="showImage(3)"><h4>TRAMEZZINI</h4></button>
+                    <button class="mobile-category-button" onClick="showImage(1)"><span>HAMBURGER</span></button>
+                    <button class="mobile-category-button" onClick="showImage(2)"><span>PANINI</span></button>
+                    <button class="mobile-category-button" onClick="showImage(3)"><span>TRAMEZZINI</span></button>
                 </div>
 
                 <div class="image-button" id="image1">

@@ -192,16 +192,21 @@
     transform: translateX(20px);
 }
 
-#sceltaSection .category-button h4 {
+#sceltaSection .category-button span {
     display: inline-block;
     color: #F2F0CF;
     background-color: #896E4E;
     position: relative;
+    top:10px;
+    margin-top:0.8em;
     margin-bottom: 1.8em;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
     font-size: 3em;
-    padding-left: 20px;
-    padding-right: 20px;
-    right: 35%;
+    padding-top:5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    right: 36%;
 }
 
 #sceltaSection .buttons-container {
@@ -305,7 +310,7 @@
         display: flex;
         background-color: #896E4E;
         color: #F9F9F0;
-        padding: 0.1em 1em;
+        padding: 1em 1.5em;
         margin: 5px;
         font-size: 14px;
         border: none;

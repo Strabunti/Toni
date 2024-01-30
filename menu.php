@@ -70,7 +70,7 @@
                             '<?php echo displayDishImage($tramezzino['id_dish']); ?>'
                         )">
                             <img class="menu-item-image" src="<?php echo displayDishImage($tramezzino['id_dish']); ?>" alt="Dish Image">    
-                            <p><?php echo $tramezzino['name']; ?></p>
+                            <span><?php echo $tramezzino['name']; ?></span>
                         </button>
                     </div>
                 </div>
@@ -105,7 +105,7 @@
                             '<?php echo displayDishImage($panino['id_dish']); ?>'
                         )">
                             <img class="menu-item-image" src="<?php echo displayDishImage($panino['id_dish']); ?>" alt="Dish Image">    
-                            <p><?php echo $panino['name']; ?></p>
+                            <span><?php echo $panino['name']; ?></span>
                         </button>
                     </div>
                 </div>
@@ -140,7 +140,7 @@
                             '<?php echo displayDishImage($burger['id_dish']); ?>'
                         )">
                             <img class="menu-item-image" src="<?php echo displayDishImage($burger['id_dish']); ?>" alt="Dish Image">    
-                            <p><?php echo $burger['name']; ?></p>
+                            <span><?php echo $burger['name']; ?></span>
                         </button>
                     </div>
                 </div>
@@ -152,7 +152,7 @@
     <?php include 'templates/footer.html' ?>
     <script src="scripts/popUp.js" defer></script>
     <script src="scripts/scriptMenu.js"></script>
-    <script src="scripts/scriptHome.js"></script>
+    <script src="scripts/scriptMenuItem.js"></script>
     <script src="scripts/scriptHeader.js"></script>
 </body>
 </html>
