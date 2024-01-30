@@ -9,7 +9,7 @@ CREATE TABLE `dish` (
     description VARCHAR(255) NOT NULL,
     ingredients VARCHAR(255) NOT NULL,
     image MEDIUMBLOB,
-    price DECIMAL NOT NULL,
+    price FLOAT NOT NULL,
     type VARCHAR(255) NOT NULL,
     bestseller BOOLEAN NOT NULL,
     best_month BOOLEAN NOT NULL,
@@ -59,18 +59,18 @@ INSERT INTO `admin` (`username`) VALUES ('admin');
 
 INSERT INTO dish (name, description, ingredients, image, price, type, bestseller, best_month) 
 VALUES 
-    ('CHEESEBURGER', 'Versione di Tommy del classico cheeseburger, rivistato con l\'incredibile salsa TONI\'S!', 'Hamburger, Cheddar, Insalata, Salsa TONI\'S', NULL, 6, 'Burger', FALSE, FALSE),
-    ('DOUBLE CHEESEBACON', 'Versione di Tommy del classico cheeseburger, con l\'aggiunta del bacon e dell\'inimitabile salsa TONI\'S', 'Hamburger, Cheddar, Bacon, Insalata, Salsa TONI\'S', 'NULL', '6.5', 'Burger', FALSE, FALSE),
-    ('PORTEO', 'Hamburger che grida Porta Portello fin dal midollo', 'Hamburger, Cheddar, Peperoni, Cipolla, Salsa TONI\'S', 'NULL', '6', 'Burger', FALSE, FALSE),
-    ('VENETO', 'Un hamburger che più patriottico di così non si può!', 'Salsiccia, Peperoni, Cipolla, Asiago, Salsa TONI\'S', 'NULL', '6', 'Burger', FALSE, TRUE),
-    ('PIOVEGO', 'In comune con le cattive acque del fiume Piovego, questo hamburger ha solo il nome! Il resto è pura poesia.', 'Salsiccia, Bacon, Insalata, Salsa TONI\'S', 'NULL', '6', 'Burger', FALSE, FALSE),
-    ('SPECIAL TOMMY', 'Quando abbiamo chiesto a Tommy di sorprenderci con un nuovo panino, non pensavamo se ne sarebbe uscito con la sua creazione migliore.', 'Prosciutto, Verdure grigliate, Asiago, Salsa TONI\'S', 'NULL', '5', 'Panino', FALSE, FALSE),
-    ('PULLED PORK', 'Ciò che ha reso TONI\'S ciò che oggi è TONI\'S.', 'Pulled Pork, Misticanza, Insalata russa', 'NULL', '5.5', 'Panino', TRUE, FALSE),
-    ('INTOPPATORE', 'Vuoi essere sopraffatto dal pork, ma il Pulled Pork non ti basta? Tommy ha la risposta.', 'Salsiccia, Pulled Pork, Patate al forno, Salsa TONI\'S', 'NULL', '6', 'Panino', FALSE, FALSE),
-    ('VEGETARIANO', 'Tommy non fa discriminazioni, e ci sono panini anche per chi preferisce solo le verdure!', 'Melanzane, Zucchine, Pomodori, Formaggio, qualsiasi cosa decida Tommy!', 'NULL', '4.5', 'Panino', FALSE, FALSE),
-    ('PICCANTINO', 'Re degli antipasti, la piccantezza di questo tramezzino vi lascerà il palato preparato a ogni altra esperienza di TONI\'S!', 'Peperoni, Salame Piccante, Peperoncino', 'NULL', '2.5', 'Tramezzino', FALSE, FALSE),
-    ('MARIUOLO', 'Per gli amici di Eraclea mare, un tramezzino che vi farà avere nostalgia di casa...', 'Tonno, Uova, Maionese', 'NULL', '2.5', 'Tramezzino', FALSE, FALSE),
-    ('VEGGIE', 'Per gli amanti di un antipasto leggero e salutare.', 'Zucchine, Pomodori Secchi, Maionese', 'NULL', '2.5', 'Tramezzino', FALSE, FALSE),
+    ('CHEESEBURGER', 'Versione di Tommy del classico cheeseburger, rivistato con l\'incredibile salsa TONI\'S!', 'Hamburger, Cheddar, Insalata, Salsa TONI\'S', NULL, '6.0', 'Burger', FALSE, FALSE),
+    ('DOUBLE CHEESEBACON', 'Versione di Tommy del classico cheeseburger, con l\'aggiunta del bacon e dell\'inimitabile salsa TONI\'S', 'Hamburger, Cheddar, Bacon, Insalata, Salsa TONI\'S', NULL, '6.5', 'Burger', FALSE, FALSE),
+    ('PORTEO', 'Hamburger che grida Porta Portello fin dal midollo', 'Hamburger, Cheddar, Peperoni, Cipolla, Salsa TONI\'S', NULL, '6.0', 'Burger', FALSE, FALSE),
+    ('VENETO', 'Un hamburger che più patriottico di così non si può!', 'Salsiccia, Peperoni, Cipolla, Asiago, Salsa TONI\'S', NULL, '6.0', 'Burger', FALSE, TRUE),
+    ('PIOVEGO', 'In comune con le cattive acque del fiume Piovego, questo hamburger ha solo il nome! Il resto è pura poesia.', 'Salsiccia, Bacon, Insalata, Salsa TONI\'S', 'NULL', '6.0', 'Burger', FALSE, FALSE),
+    ('SPECIAL TOMMY', 'Quando abbiamo chiesto a Tommy di sorprenderci con un nuovo panino, non pensavamo se ne sarebbe uscito con la sua creazione migliore.', 'Prosciutto, Verdure grigliate, Asiago, Salsa TONI\'S', NULL, '5.0', 'Panini', FALSE, FALSE),
+    ('PULLED PORK', 'Ciò che ha reso TONI\'S ciò che oggi è TONI\'S.', 'Pulled Pork, Misticanza, Insalata russa', NULL, '5.5', 'Panini', TRUE, FALSE),
+    ('INTOPPATORE', 'Vuoi essere sopraffatto dal pork, ma il Pulled Pork non ti basta? Tommy ha la risposta.', 'Salsiccia, Pulled Pork, Patate al forno, Salsa TONI\'S', NULL, '6.0', 'Panini', FALSE, FALSE),
+    ('VEGETARIANO', 'Tommy non fa discriminazioni, e ci sono panini anche per chi preferisce solo le verdure!', 'Melanzane, Zucchine, Pomodori, Formaggio, qualsiasi cosa decida Tommy!', NULL, '4.5', 'Panini', FALSE, FALSE),
+    ('PICCANTINO', 'Re degli antipasti, la piccantezza di questo tramezzino vi lascerà il palato preparato a ogni altra esperienza di TONI\'S!', 'Peperoni, Salame Piccante, Peperoncino', NULL, '2.5', 'Tramezzini', FALSE, FALSE),
+    ('MARIUOLO', 'Per gli amici di Eraclea mare, un tramezzino che vi farà avere nostalgia di casa...', 'Tonno, Uova, Maionese', NULL, '2.5', 'Tramezzini', FALSE, FALSE),
+    ('VEGGIE', 'Per gli amanti di un antipasto leggero e salutare.', 'Zucchine, Pomodori Secchi, Maionese', NULL, '2.5', 'Tramezzini', FALSE, FALSE);
 
 INSERT INTO `comments` 
 (`comment_id`, `username`, `title`, `comment`, `rating`, `review_date`) 
@@ -98,3 +98,5 @@ VALUES
     (NULL, 'oliver', 'Il Toque di Toni: Panini e Tramezzini da Sogno!' , 'Il panino di Tommy è una vera e propria sinfonia di sapori che eleva l\'arte del panino a un livello stratosferico. La combinazione di ingredienti freschi e di alta qualità si fonde in una melodia gustativa unica e indimenticabile. Il pane, fragrante e appena sfornato, è la cornice perfetta per accogliere la carne succulenta, mentre il formaggio fuso avvolge ogni boccone in un abbraccio cremoso. Le verdure fresche, con la loro croccantezza, aggiungono una nota di freschezza e vitalità, mentre i condimenti segreti di Tommy sono la chiave magica che sblocca un mondo di sapori straordinari.\r\n\r\nIl panino di Tommy non è solo cibo, è un\'esperienza sensoriale che trasporta il palato in un viaggio emozionante. Ogni morso è un incontro con l\'eccellenza culinaria, un\'ode alla creatività gastronomica di Tommy. È un piacere culinario senza paragoni, un\'opera d\'arte che soddisfa non solo il desiderio di mangiare, ma anche la ricerca di emozioni gustative intense. Tommy ha veramente alzato l\'asticella del panino perfetto, creando un capolavoro che conquista il cuore e il palato di chiunque abbia il privilegio di assaporarlo.', '5', '2024-01-08'), 
     (NULL, 'andrea', 'Nel Cuore della Paninoteca: Toni e i Suoi Capolavori Gastronomici, dove Ogni Panino è una Celebrazione del Gusto Autentico.' , 'Il panino di Tommy è una vera delizia gastronomica! Con ingredienti freschi e di alta qualità, ogni morso è un\'esplosione di sapori unici. Il pane appena sfornato, la carne succulenta, il formaggio fuso e le verdure croccanti si combinano magistralmente, creando un\'esperienza culinaria indimenticabile. Tommy ha davvero colpito nel segno, regalandoci il miglior panino del mondo!', '4', '2024-01-07'), 
     (NULL, 'filippo', 'Tra Le Mani di un Maestro: Toni e la Sua Arte nel Creare Panini e Tramezzini che Trasformano il Pranzo in un Momento Indimenticabile.' , 'Il panino di Tommy è un\'esperienza culinaria straordinaria! Ingredienti freschi e sapori unici si fondono per creare il miglior panino del mondo. Impossibile resistere!', '4', '2024-01-13');
+
+
