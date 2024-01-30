@@ -23,7 +23,6 @@ if(isset($_SESSION['username'])){
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="tramezzini, panini, hamburger, fast-food, gourmet, cucina, Padova, Portello, login">
-    <<meta name="description" content="Accedi a TONI'S TRAMEZZINERIA!">
     <meta name="description" content="Accedi a TONI'S TRAMEZZINERIA!">
     <link rel="stylesheet" href="styles/login-styles.css">
     <script src="user/session/validate.js" defer></script>
