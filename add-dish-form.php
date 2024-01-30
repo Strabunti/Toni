@@ -43,6 +43,7 @@
 
                 <label for="type">Type:</label>
                 <select id="type" name="type" required>
+                    <option value="" disabled selected hidden>Seleziona...</option>
                     <option value="Burger">Burger</option>
                     <option value="Tramezzini">Tramezzini</option>
                     <option value="Panini">Panini</option>

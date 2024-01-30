@@ -30,7 +30,7 @@
 
         <div class="main-content">
             <div class="recensioni">
-                <div id="title">Recensioni</div>
+                <div class="title">Recensioni</div>
                 <a id="all-comments-link" class="link-to-page" href="comments-all.php">All Comments</a>
                 <?php
                     // Include your database connection file or establish a connection here
@@ -52,7 +52,7 @@
                 ?>
             </div>
             <div class="menu">
-                <div id="title">Menu</div>
+                <div class="title">Menu</div>
                 <a id="all-dish-link" class="link-to-page" href="menu-all.php">All Dishes</a>   
                 <?php
                     // Include your database connection file or establish a connection here

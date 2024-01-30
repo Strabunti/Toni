@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="tramezzini, panini, hamburger, fast-food, gourmet, cucina, Padova, Portello, aggiungi, recensione, utenti">
     <meta name="description" content="Raccontaci la tua esperienza da TONI'S TRAMEZZINERIA! Aggiungi una recensione!">
-    <link rel="stylesheet" rel="stylesheet" href="styles/page-style.css">
-    <link rel="stylesheet" rel="stylesheet" href="styles/sidebar-style.css">
-    <link rel="stylesheet" rel="stylesheet" href="styles/form-style.css">
+    <link rel="stylesheet" href="styles/page-style.css">
+    <link rel="stylesheet" href="styles/sidebar-style.css">
+    <link rel="stylesheet" href="styles/form-style.css">
     <title>Add New Comment - TONI'S TRAMEZZINERIA</title>
 </head>
 <body>
@@ -39,6 +39,7 @@
 
         <label for="rating">Rating:</label>
         <select id="rating" name="rating" required>
+            <option value="" disabled selected hidden>Seleziona...</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
