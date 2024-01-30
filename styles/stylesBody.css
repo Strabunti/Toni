@@ -195,11 +195,13 @@ p {
     z-index: 2;
 }
 
-.menu-item-button p {
+.menu-item-button span {
     margin: 0;
     position: relative;
     right: 50px;
     font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
     color: #E09200;
     background-color: black;
 }

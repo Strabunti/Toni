@@ -35,7 +35,6 @@
     position: absolute;
     left: -37%;;
     animation: rotate 5s linear infinite; /* Applica l'animazione di rotazione */
-    size-adjust: fixed;
 }
 
 .popup-image2 {
@@ -63,7 +62,6 @@
 
 h2 {
     text-transform: uppercase;
-    text-transform: bold;
     font-size: 40px;
 
 }
@@ -124,12 +122,13 @@ h2 {
     .popup-ingredients,
     .popup-price {
         margin-left: 0;
+        text-align: center;
     }
 
     .popup-close {
         top: 0;
         right: 0; 
         font-size: 14px; 
-        padding: 4px 8px; /
+        padding: 4px 8px;
     }
 }
