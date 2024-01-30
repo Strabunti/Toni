@@ -6,8 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="contattaci, mail, numero, telefono, indirizzo, dove, Padova, Portello, fast-food, cucina, gourmet">
-    <<meta name="description" content="Hai qualche domanda da fare a Tommy riguardo le sue creazioni? Contattaci per scoprire di più sul mondo di TONI'S TRAMEZZINERIA!">
-    <meta name="description" content="Contattaci per scoprire di più sul mondo di TONI'S TRAMEZZINERIA!">
+    <meta name="description" content="Hai qualche domanda da fare a Tommy riguardo le sue creazioni? Contattaci per scoprire di più sul mondo di TONI'S TRAMEZZINERIA!">
     <link rel="stylesheet" type="text/css" href="styles/stylesContatti.css"/>
     <link rel="stylesheet" type="text/css" href="styles/stylesBody.css"/>
     <link rel="stylesheet" type="text/css" href="styles/stylesHeader.css"/>
