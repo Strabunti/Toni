@@ -9,11 +9,11 @@
 </head>
 
 <?php
-header("Location: /toni/home.php");
+header("Location: home.php");
 exit();
 ?>
 
 <?php
 http_response_code(404);
-include('/toni/404.php');
+include('404.php');
 ?>
