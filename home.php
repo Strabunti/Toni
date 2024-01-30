@@ -212,6 +212,7 @@
 <?php include 'templates/footer.html' ?>
     <script src="scripts/popUp.js" defer></script>              
     <script src="scripts/scriptHome.js"></script>
+    <script src="scripts/scriptMenuItem.js"></script>
     <script src="scripts/scriptHeader.js"></script>
 </body>
 
