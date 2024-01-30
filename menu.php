@@ -62,15 +62,15 @@
                     </div>
 
                     <div>
-                        <button class="menu-item-button" aria-label="Vai al prodotto" role="button" onclick="openPopup(
-                            '<?php echo $tramezzino['name']; ?>',
-                            '<?php echo $tramezzino['description']; ?>',
-                            '<?php echo $tramezzino['ingredients']; ?>',
-                            '<?php echo $tramezzino['price']; ?>',
-                            '<?php echo displayDishImage($tramezzino['id_dish']); ?>'
-                        )">
+                        <button class="menu-item-button" aria-label="Vai al prodotto" role="button" onclick='openPopup(
+                            "<?php echo htmlspecialchars($tramezzino["name"]); ?>",
+                            "<?php echo htmlspecialchars($tramezzino["description"]); ?>",
+                            "<?php echo htmlspecialchars($tramezzino["ingredients"]); ?>",
+                            "<?php echo $tramezzino["price"]; ?>",
+                            "<?php echo displayDishImage($tramezzino["id_dish"]); ?>"
+                        )'>
                             <img class="menu-item-image" src="<?php echo displayDishImage($tramezzino['id_dish']); ?>" alt="Dish Image">    
-                            <span><?php echo $tramezzino['name']; ?></span>
+                            <span><?php echo htmlspecialchars($tramezzino['name']); ?></span>
                         </button>
                     </div>
                 </div>
@@ -97,15 +97,15 @@
                     </div>
 
                     <div>
-                        <button class="menu-item-button" aria-label="Vai al prodotto" role="button" onclick="openPopup(
-                            '<?php echo $panino['name']; ?>',
-                            '<?php echo $panino['description']; ?>',
-                            '<?php echo $panino['ingredients']; ?>',
-                            '<?php echo $panino['price']; ?>',
-                            '<?php echo displayDishImage($panino['id_dish']); ?>'
-                        )">
+                        <button class="menu-item-button" aria-label="Vai al prodotto" role="button" onclick='openPopup(
+                            "<?php echo htmlspecialchars($panino["name"]); ?>",
+                            "<?php echo htmlspecialchars($panino["description"]); ?>",
+                            "<?php echo htmlspecialchars($panino["ingredients"]); ?>",
+                            "<?php echo $panino["price"]; ?>",
+                            "<?php echo displayDishImage($panino["id_dish"]); ?>"
+                        )'>
                             <img class="menu-item-image" src="<?php echo displayDishImage($panino['id_dish']); ?>" alt="Dish Image">    
-                            <span><?php echo $panino['name']; ?></span>
+                            <span><?php echo htmlspecialchars($panino['name']); ?></span>
                         </button>
                     </div>
                 </div>
@@ -132,15 +132,15 @@
                     </div>
 
                     <div>
-                        <button class="menu-item-button" aria-label="Vai al prodotto" role="button" onclick="openPopup(
-                            '<?php echo $burger['name']; ?>',
-                            '<?php echo $burger['description']; ?>',
-                            '<?php echo $burger['ingredients']; ?>',
-                            '<?php echo $burger['price']; ?>',
-                            '<?php echo displayDishImage($burger['id_dish']); ?>'
-                        )">
+                        <button class="menu-item-button" aria-label="Vai al prodotto" role="button" onclick='openPopup(
+                            "<?php echo htmlspecialchars($burger["name"]); ?>",
+                            "<?php echo htmlspecialchars($burger["description"]); ?>",
+                            "<?php echo htmlspecialchars($burger["ingredients"]); ?>",
+                            "<?php echo $burger["price"]; ?>",
+                            "<?php echo displayDishImage($burger["id_dish"]); ?>"
+                        )'>
                             <img class="menu-item-image" src="<?php echo displayDishImage($burger['id_dish']); ?>" alt="Dish Image">    
-                            <span><?php echo $burger['name']; ?></span>
+                            <span><?php echo htmlspecialchars($burger['name']); ?></span>
                         </button>
                     </div>
                 </div>
