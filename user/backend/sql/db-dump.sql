@@ -63,7 +63,7 @@ VALUES
     ('DOUBLE CHEESEBACON', 'Versione di Tommy del classico cheeseburger, con l\'aggiunta del bacon e dell\'inimitabile salsa TONI\'S', 'Hamburger, Cheddar, Bacon, Insalata, Salsa TONI\'S', NULL, '6.5', 'Burger', FALSE, FALSE),
     ('PORTEO', 'Hamburger che grida Porta Portello fin dal midollo', 'Hamburger, Cheddar, Peperoni, Cipolla, Salsa TONI\'S', NULL, '6.0', 'Burger', FALSE, FALSE),
     ('VENETO', 'Un hamburger che più patriottico di così non si può!', 'Salsiccia, Peperoni, Cipolla, Asiago, Salsa TONI\'S', NULL, '6.0', 'Burger', FALSE, TRUE),
-    ('PIOVEGO', 'In comune con le cattive acque del fiume Piovego, questo hamburger ha solo il nome! Il resto è pura poesia.', 'Salsiccia, Bacon, Insalata, Salsa TONI\'S', 'NULL', '6.0', 'Burger', FALSE, FALSE),
+    ('PIOVEGO', 'In comune con le cattive acque del fiume Piovego, questo hamburger ha solo il nome! Il resto è pura poesia.', 'Salsiccia, Bacon, Insalata, Salsa TONI\'S', NULL, '6.0', 'Burger', FALSE, FALSE),
     ('SPECIAL TOMMY', 'Quando abbiamo chiesto a Tommy di sorprenderci con un nuovo panino, non pensavamo se ne sarebbe uscito con la sua creazione migliore.', 'Prosciutto, Verdure grigliate, Asiago, Salsa TONI\'S', NULL, '5.0', 'Panini', FALSE, FALSE),
     ('PULLED PORK', 'Ciò che ha reso TONI\'S ciò che oggi è TONI\'S.', 'Pulled Pork, Misticanza, Insalata russa', NULL, '5.5', 'Panini', TRUE, FALSE),
     ('INTOPPATORE', 'Vuoi essere sopraffatto dal pork, ma il Pulled Pork non ti basta? Tommy ha la risposta.', 'Salsiccia, Pulled Pork, Patate al forno, Salsa TONI\'S', NULL, '6.0', 'Panini', FALSE, FALSE),
