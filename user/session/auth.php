@@ -24,7 +24,7 @@ class AuthFunctions
 
     public static function connectToDB($hostname = "localhost", $username = "toni", $password = "admin", $database = "toni")
     {
-        DataBase::connect($hostname, $username, $password, $database);
+        DataBase::connect();
     }
 
     public static function login($username, $password)
