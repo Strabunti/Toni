@@ -247,17 +247,17 @@
 }
 
 #image1 a {
-    background: url(../resources/images/porteo.webp) no-repeat;
+    background: url(../resources/images/hamburger.webp) no-repeat;
     background-size: contain;
 }
 
 #image2 a {
-    background: url(../resources/images/burgher.webp) no-repeat;
+    background: url(../resources/images/panino.webp) no-repeat;
     background-size: contain;
 }
 
 #image3 a {
-    background: url(../resources/images/default-dish-pic.webp) no-repeat;
+    background: url(../resources/images/tramezzino.webp) no-repeat;
     background-size: contain;
 }
 
