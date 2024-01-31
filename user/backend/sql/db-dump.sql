@@ -54,6 +54,8 @@ INSERT INTO `users` (`username`, `password`, `email`) VALUES
 ('andrea', 'andrea', 'andreanegrin@negrilandia.ni'), 
 ('filippo', 'filippo', 'filippotonietto@fililililandia.fi');
 
+INSERT INTO `users` (`username`, `password`, `email`, `profile_pic`) VALUES ('user', 'user', 'user@user.it', NULL); 
+
 
 INSERT INTO `admin` (`username`) VALUES ('admin');
 
