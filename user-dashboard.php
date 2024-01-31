@@ -31,7 +31,7 @@
         <div class="main-content">
             <div class="recensioni">
                 <div id="title">Tutte le mie Recensioni</div>
-                <a id="all-comments-link" class="link-to-page" href="comments-all.php">All Comments</a>
+                <a id="all-comments-link" class="link-to-page" href="comments-all.php">Tutti i commenti</a>
 
                 <?php
 
