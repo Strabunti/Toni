@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($existingUser) {
         // Username already taken, display an error message
         $error_message = "Username already taken. Please choose a different username.";
+        $_SESSION['registration_error'] = $error_message;
     } else {
         $inserted = user_manager::add($username, $password, $email);
         header("Location: ../../login.php");
@@ -28,3 +29,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 header("Location: ../../register-form.php");
 ?>
+
