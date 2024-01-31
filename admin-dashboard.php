@@ -31,7 +31,7 @@
         <div class="main-content">
             <div class="recensioni">
                 <div class="title">Recensioni</div>
-                <a id="all-comments-link" class="link-to-page" href="comments-all.php">All Comments</a>
+                <a id="all-comments-link" class="link-to-page" href="comments-all.php">Tutti i commenti</a>
                 <?php
                     // Include your database connection file or establish a connection here
                     include 'user/backend/comment-manager.php';
@@ -53,7 +53,7 @@
             </div>
             <div class="menu">
                 <div class="title">Menu</div>
-                <a id="all-dish-link" class="link-to-page" href="menu-all.php">All Dishes</a>   
+                <a id="all-dish-link" class="link-to-page" href="menu-all.php">Tutti i piatti</a>   
                 <?php
                     // Include your database connection file or establish a connection here
                     include 'user/backend/menu-manager.php';
