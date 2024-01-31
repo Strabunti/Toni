@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+// Check for registration error message
+if (isset($_SESSION['registration_error'])) {
+    $error_message = $_SESSION['registration_error'];
+    unset($_SESSION['registration_error']); // Clear the error message
+} else {
+    $error_message = "";
+}
+?>
+
 <!DOCTYPE html>
 
 <html lang="it" xmlns="http://www.w3.org/1999/xhtml" xml:lang="it">
@@ -19,6 +31,9 @@
             </div>
         </a>
         <div class="title"><h1>Registrati</h1></div>
+        <?php if (!empty($error_message)): ?>
+            <p id="already-use-error" class="error-label"><?php echo $error_message; ?></p>
+        <?php endif; ?>
         <form action = "user/backend/add-user.php" method = "post" onsubmit="return validateSignup()">
             <label for="username">Username:</label>
             <input type="text" name="username" id="username" placeholder="username" onblur="return validateUsername()" required>
