@@ -31,10 +31,10 @@ if (isset($_SESSION['registration_error'])) {
             </div>
         </a>
         <div class="title"><h1>Registrati</h1></div>
-        <?php if (!empty($error_message)): ?>
-            <p id="already-use-error" class="error-label"><?php echo $error_message; ?></p>
-        <?php endif; ?>
-        <form action = "user/backend/add-user.php" method = "post" onsubmit="return validateSignup()">
+        <form action = "user/backend/add-user.php" method = "post">
+            <?php if (!empty($error_message)): ?>
+                <p id="already-use-error" class="error-label"><?php echo $error_message; ?></p>
+            <?php endif; ?>
             <label for="username">Username:</label>
             <input type="text" name="username" id="username" placeholder="username" onblur="return validateUsername()" required>
             <label for="password">Password:</label>
