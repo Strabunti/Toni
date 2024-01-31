@@ -34,6 +34,6 @@ if ($changed) {
     exit();
 } else {
     // Display an error message if the update fails
-    header("Location: ../forms/update-user-form.php");
+    header("Location: ../../update-user-form.php");
 }
 ?>
